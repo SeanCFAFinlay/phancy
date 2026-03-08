@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import AmazonButton from "@/components/amazon-button";
-import { getAllBlogPosts, getBlogBySlug, getProductById } from "@/lib/products";
+import { getAllBlogPosts, getBlogBySlug, getProductById, type BlogPost } from "@/lib/products";
 
 export function generateStaticParams() {
-  return getAllBlogPosts().map((post: any) => ({ slug: post.slug }));
+  return getAllBlogPosts().map((post: BlogPost) => ({ slug: post.slug }));
 }
 
 export default async function BlogPage({

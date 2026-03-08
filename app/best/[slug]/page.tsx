@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import ProductGrid from "@/components/product-grid";
-import { getAllBestOf, getBestOfBySlug, getProductById } from "@/lib/products";
+import { getAllBestOf, getBestOfBySlug, getProductById, type Product, type BestOfGuide } from "@/lib/products";
 
 export function generateStaticParams() {
-  return getAllBestOf().map((b: any) => ({ slug: b.slug }));
+  return getAllBestOf().map((b: BestOfGuide) => ({ slug: b.slug }));
 }
 
 export default async function BestOfPage({
@@ -16,9 +16,9 @@ export default async function BestOfPage({
 
   if (!guide) return notFound();
 
-  const products = guide.products
+  const products: Product[] = guide.products
     .map((id: string) => getProductById(id))
-    .filter(Boolean);
+    .filter((product): product is Product => Boolean(product));
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-10">

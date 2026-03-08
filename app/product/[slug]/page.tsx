@@ -20,6 +20,7 @@ export default async function ProductPage({
     <main className="phancy-container phancy-section-space">
       <div className="grid gap-8 lg:grid-cols-[1fr,0.95fr]">
         <div className="overflow-hidden rounded-[2.2rem] bg-gradient-to-b from-pink-50 to-white p-6 shadow-[0_18px_50px_rgba(233,30,99,0.08)]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={product.image}
             alt={product.name}

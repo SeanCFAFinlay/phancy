@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import ComparisonTable from "@/components/comparison-table";
-import { getAllComparisons, getComparisonBySlug, getProductById } from "@/lib/products";
+import { getAllComparisons, getComparisonBySlug, getProductById, type ComparisonGuide } from "@/lib/products";
 
 export function generateStaticParams() {
-  return getAllComparisons().map((c: any) => ({ slug: c.slug }));
+  return getAllComparisons().map((c: ComparisonGuide) => ({ slug: c.slug }));
 }
 
 export default async function ComparePage({

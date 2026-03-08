@@ -14,7 +14,7 @@ export default function SiteFooter() {
         <div>
           <div className="text-sm font-black uppercase tracking-[0.16em] text-zinc-800">Explore</div>
           <div className="mt-4 flex flex-col gap-3 text-sm text-zinc-600">
-            <Link href="/category/womens-health">Women's Health</Link>
+            <Link href="/category/womens-health">Women&apos;s Health</Link>
             <Link href="/category/vitamins">Vitamins</Link>
             <Link href="/trending">Trending</Link>
             <Link href="/deals">Deals</Link>
