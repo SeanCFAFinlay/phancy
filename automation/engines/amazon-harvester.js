@@ -32,17 +32,19 @@ async function fetchProducts() {
      }
    );
 
-   res.data.search_results.forEach(p=>{
+   const items = res.data.search_results || [];
+
+   for (const p of items) {
      results.push({
        name:p.title,
-       price:p.price,
-       rating:p.rating,
-       reviews:p.reviews,
+       price:p.price?.value || null,
+       rating:p.rating || null,
+       reviews:p.reviews || 0,
        image:p.image,
        url:p.link,
        category:category
      });
-   });
+   }
 
  }
 

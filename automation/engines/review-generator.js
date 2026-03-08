@@ -15,15 +15,15 @@ const products = JSON.parse(
 async function generateReview(product){
 
  const prompt = `
-Write a wellness product review.
+Write a neutral wellness product review.
 
 Product: ${product.name}
 
 Include:
-summary
-pros
-cons
-who it is best for
+- summary
+- pros
+- cons
+- who it is best for
 `;
 
  const res = await openai.chat.completions.create({
