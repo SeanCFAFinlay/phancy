@@ -1,0 +1,3902 @@
+﻿[
+    {
+        "id":  1,
+        "category":  "camping",
+        "title":  "Suspicious Headphones",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  2,
+        "category":  "camping",
+        "title":  "Chronically Optimistic Air Fryer",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  3,
+        "category":  "tools",
+        "title":  "Certified Questionable Backpack",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  4,
+        "category":  "camping",
+        "title":  "Left-Handed Backpack",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  5,
+        "category":  "coffee",
+        "title":  "Pocket-Sized Spoon",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  6,
+        "category":  "camping",
+        "title":  "Mildly Cursed Cutting Board",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  7,
+        "category":  "camping",
+        "title":  "Regret-Proof Lantern",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  8,
+        "category":  "camping",
+        "title":  "Turbo Coffee Grinder",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  9,
+        "category":  "tools",
+        "title":  "Soggy Backpack",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  10,
+        "category":  "coffee",
+        "title":  "Regret-Proof Apron",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  11,
+        "category":  "camping",
+        "title":  "Chronically Optimistic Socks",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  12,
+        "category":  "coffee",
+        "title":  "Ninja Flashlight",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  13,
+        "category":  "coffee",
+        "title":  "Hyper-Local Mouse",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  14,
+        "category":  "coffee",
+        "title":  "Suspicious Frying Pan",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  15,
+        "category":  "coffee",
+        "title":  "Stealth Screwdriver",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  16,
+        "category":  "camping",
+        "title":  "Suspicious Frying Pan",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "stares back (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  17,
+        "category":  "tools",
+        "title":  "Regret-Proof Tent",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  18,
+        "category":  "camping",
+        "title":  "Polite Stapler",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  19,
+        "category":  "coffee",
+        "title":  "Turbo Keyboard",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  20,
+        "category":  "tools",
+        "title":  "Budget-Luxury Coffee Grinder",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  21,
+        "category":  "camping",
+        "title":  "Stealth Lawn Gnome",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  22,
+        "category":  "camping",
+        "title":  "Chronically Optimistic Measuring Tape",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  23,
+        "category":  "camping",
+        "title":  "Polite Water Bottle",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  24,
+        "category":  "coffee",
+        "title":  "Soggy Umbrella",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  25,
+        "category":  "coffee",
+        "title":  "Soggy Travel Pillow",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  26,
+        "category":  "coffee",
+        "title":  "Chronically Optimistic Water Bottle",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  27,
+        "category":  "camping",
+        "title":  "Turbo Stapler",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  28,
+        "category":  "coffee",
+        "title":  "Emotionally Support Travel Pillow",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  29,
+        "category":  "coffee",
+        "title":  "Soggy Spatula",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  30,
+        "category":  "coffee",
+        "title":  "Meteor-Approved Lawn Gnome",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  31,
+        "category":  "camping",
+        "title":  "Tactical Headphones",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  32,
+        "category":  "tools",
+        "title":  "Emotionally Support Sleep Mask",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  33,
+        "category":  "coffee",
+        "title":  "Mildly Cursed Vacuum",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  34,
+        "category":  "coffee",
+        "title":  "Suspicious Hammer",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  35,
+        "category":  "tools",
+        "title":  "Budget-Luxury Mug",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  36,
+        "category":  "coffee",
+        "title":  "Cosmic Thermos",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  37,
+        "category":  "tools",
+        "title":  "Emergency Clipboard",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  38,
+        "category":  "coffee",
+        "title":  "Hyper-Local Backpack",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  39,
+        "category":  "tools",
+        "title":  "DIY-ish Stapler",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  40,
+        "category":  "tools",
+        "title":  "Underwater Kettle",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  41,
+        "category":  "camping",
+        "title":  "Haunted Keyboard",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  42,
+        "category":  "coffee",
+        "title":  "Pocket-Sized Lantern",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "stares back (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  43,
+        "category":  "camping",
+        "title":  "Aggressively Beige Screwdriver",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  44,
+        "category":  "camping",
+        "title":  "Cosmic Backpack",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  45,
+        "category":  "tools",
+        "title":  "Soggy Flashlight",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  46,
+        "category":  "tools",
+        "title":  "Overqualified Frying Pan",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  47,
+        "category":  "camping",
+        "title":  "Emergency Lawn Gnome",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  48,
+        "category":  "coffee",
+        "title":  "Soggy Planner",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  49,
+        "category":  "coffee",
+        "title":  "Chronically Optimistic Clipboard",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  50,
+        "category":  "camping",
+        "title":  "Meteor-Approved Thermos",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  51,
+        "category":  "tools",
+        "title":  "Meteor-Approved Keyboard",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  52,
+        "category":  "coffee",
+        "title":  "Anti-Gravity Planner",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  53,
+        "category":  "camping",
+        "title":  "Budget-Luxury Sleep Mask",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  54,
+        "category":  "camping",
+        "title":  "Left-Handed Umbrella",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  55,
+        "category":  "coffee",
+        "title":  "Stealth Stapler",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  56,
+        "category":  "coffee",
+        "title":  "Emergency Desk Fan",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  57,
+        "category":  "coffee",
+        "title":  "Emotionally Support Measuring Tape",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  58,
+        "category":  "coffee",
+        "title":  "Pocket-Sized Toaster",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  59,
+        "category":  "coffee",
+        "title":  "Underwater Toaster",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  60,
+        "category":  "camping",
+        "title":  "Left-Handed Kettle",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  61,
+        "category":  "camping",
+        "title":  "Tactical Desk Fan",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  62,
+        "category":  "tools",
+        "title":  "Cosmic Hammer",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  63,
+        "category":  "tools",
+        "title":  "Suspicious Coffee Grinder",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  64,
+        "category":  "tools",
+        "title":  "Portable Notebook",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  65,
+        "category":  "tools",
+        "title":  "Budget-Luxury Desk Fan",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  66,
+        "category":  "camping",
+        "title":  "Suspicious Wrench",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  67,
+        "category":  "tools",
+        "title":  "Turbo Stapler",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  68,
+        "category":  "camping",
+        "title":  "Tactical Lantern",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  69,
+        "category":  "coffee",
+        "title":  "Chronically Optimistic Tripod",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "stares back (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  70,
+        "category":  "camping",
+        "title":  "Chronically Optimistic Lawn Gnome",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  71,
+        "category":  "coffee",
+        "title":  "Pocket-Sized Headphones",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  72,
+        "category":  "coffee",
+        "title":  "Hyper-Local Notebook",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  73,
+        "category":  "tools",
+        "title":  "Cosmic Measuring Tape",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  74,
+        "category":  "tools",
+        "title":  "Left-Handed Lantern",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  75,
+        "category":  "camping",
+        "title":  "Underwater Lantern",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  76,
+        "category":  "camping",
+        "title":  "Quantum Headphones",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  77,
+        "category":  "tools",
+        "title":  "Anti-Gravity Toaster",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  78,
+        "category":  "camping",
+        "title":  "Soggy Umbrella",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  79,
+        "category":  "camping",
+        "title":  "Polite Desk Fan",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  80,
+        "category":  "tools",
+        "title":  "Haunted Backpack",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  81,
+        "category":  "tools",
+        "title":  "Suspicious Lawn Gnome",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  82,
+        "category":  "camping",
+        "title":  "Underwater Screwdriver",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  83,
+        "category":  "coffee",
+        "title":  "Mildly Cursed Keyboard",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  84,
+        "category":  "tools",
+        "title":  "Polite Clipboard",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  85,
+        "category":  "tools",
+        "title":  "Budget-Luxury Mug",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  86,
+        "category":  "camping",
+        "title":  "Fire-Adjacent Tent",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  87,
+        "category":  "tools",
+        "title":  "Unreasonably Tiny Cooler",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "stares back (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  88,
+        "category":  "tools",
+        "title":  "Haunted Wrench",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  89,
+        "category":  "coffee",
+        "title":  "Emergency Screwdriver",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  90,
+        "category":  "camping",
+        "title":  "DIY-ish Desk Fan",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  91,
+        "category":  "tools",
+        "title":  "Hyper-Local Tripod",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  92,
+        "category":  "camping",
+        "title":  "Cosmic Air Fryer",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  93,
+        "category":  "camping",
+        "title":  "Overqualified Kettle",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  94,
+        "category":  "coffee",
+        "title":  "Cosmic Tent",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  95,
+        "category":  "tools",
+        "title":  "Suspicious Mug",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  96,
+        "category":  "camping",
+        "title":  "Soggy Toaster",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  97,
+        "category":  "coffee",
+        "title":  "Emergency Kettle",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  98,
+        "category":  "tools",
+        "title":  "Portable Sleep Mask",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  99,
+        "category":  "coffee",
+        "title":  "Ninja Stapler",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  100,
+        "category":  "tools",
+        "title":  "Hyper-Local Wrench",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  101,
+        "category":  "camping",
+        "title":  "Overqualified Tent",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  102,
+        "category":  "camping",
+        "title":  "DIY-ish Backpack",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  103,
+        "category":  "coffee",
+        "title":  "Quantum Lawn Gnome",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  104,
+        "category":  "camping",
+        "title":  "Stealth Spatula",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  105,
+        "category":  "camping",
+        "title":  "Budget-Luxury Cooler",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  106,
+        "category":  "tools",
+        "title":  "Chronically Optimistic Clipboard",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  107,
+        "category":  "camping",
+        "title":  "Budget-Luxury Stapler",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  108,
+        "category":  "tools",
+        "title":  "Portable Toaster",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "stares back (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  109,
+        "category":  "coffee",
+        "title":  "Haunted Tripod",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  110,
+        "category":  "coffee",
+        "title":  "Meteor-Approved Cooler",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  111,
+        "category":  "camping",
+        "title":  "Cosmic Notebook",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  112,
+        "category":  "tools",
+        "title":  "Overqualified Wrench",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  113,
+        "category":  "coffee",
+        "title":  "Portable Umbrella",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  114,
+        "category":  "tools",
+        "title":  "Cosmic Socks",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  115,
+        "category":  "camping",
+        "title":  "Certified Questionable Headphones",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  116,
+        "category":  "tools",
+        "title":  "Suspicious Lawn Gnome",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  117,
+        "category":  "tools",
+        "title":  "Regret-Proof Measuring Tape",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  118,
+        "category":  "camping",
+        "title":  "Quantum Apron",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  119,
+        "category":  "camping",
+        "title":  "Overqualified Spatula",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  120,
+        "category":  "camping",
+        "title":  "DIY-ish Planner",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  121,
+        "category":  "camping",
+        "title":  "DIY-ish Water Bottle",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  122,
+        "category":  "camping",
+        "title":  "Soggy Frying Pan",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  123,
+        "category":  "camping",
+        "title":  "Stealth Thermos",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  124,
+        "category":  "tools",
+        "title":  "Pocket-Sized Tent",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  125,
+        "category":  "coffee",
+        "title":  "Quantum Frying Pan",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  126,
+        "category":  "coffee",
+        "title":  "Certified Questionable Mouse",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "stares back (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  127,
+        "category":  "tools",
+        "title":  "Budget-Luxury Mouse",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  128,
+        "category":  "camping",
+        "title":  "Anti-Gravity Wrench",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  129,
+        "category":  "coffee",
+        "title":  "DIY-ish Vacuum",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  130,
+        "category":  "tools",
+        "title":  "Overqualified Hammer",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  131,
+        "category":  "tools",
+        "title":  "Certified Questionable Lawn Gnome",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  132,
+        "category":  "camping",
+        "title":  "Ninja Measuring Tape",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  133,
+        "category":  "camping",
+        "title":  "Stealth Headphones",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  134,
+        "category":  "coffee",
+        "title":  "Certified Questionable Apron",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  135,
+        "category":  "camping",
+        "title":  "Fire-Adjacent Thermos",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  136,
+        "category":  "coffee",
+        "title":  "Left-Handed Kettle",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  137,
+        "category":  "coffee",
+        "title":  "Budget-Luxury Lawn Gnome",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  138,
+        "category":  "camping",
+        "title":  "Meteor-Approved Air Fryer",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  139,
+        "category":  "camping",
+        "title":  "Emotionally Support Cutting Board",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  140,
+        "category":  "coffee",
+        "title":  "Emergency Cooler",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  141,
+        "category":  "coffee",
+        "title":  "Soggy Frying Pan",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  142,
+        "category":  "tools",
+        "title":  "Unreasonably Tiny Wrench",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  143,
+        "category":  "camping",
+        "title":  "Stealth Cutting Board",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  144,
+        "category":  "tools",
+        "title":  "Overqualified Coffee Grinder",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  145,
+        "category":  "camping",
+        "title":  "Tactical Tent",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  146,
+        "category":  "tools",
+        "title":  "Overqualified Apron",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  147,
+        "category":  "tools",
+        "title":  "Turbo Cooler",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  148,
+        "category":  "tools",
+        "title":  "DIY-ish Frying Pan",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  149,
+        "category":  "tools",
+        "title":  "Caffeinated Water Bottle",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  150,
+        "category":  "camping",
+        "title":  "Meteor-Approved Headphones",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  151,
+        "category":  "coffee",
+        "title":  "Aggressively Beige Notebook",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  152,
+        "category":  "camping",
+        "title":  "Anti-Gravity Tripod",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  153,
+        "category":  "coffee",
+        "title":  "Suspicious Kettle",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  154,
+        "category":  "coffee",
+        "title":  "Regret-Proof Wrench",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  155,
+        "category":  "camping",
+        "title":  "Unreasonably Tiny Clipboard",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  156,
+        "category":  "coffee",
+        "title":  "Mildly Cursed Water Bottle",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  157,
+        "category":  "tools",
+        "title":  "Turbo Headphones",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  158,
+        "category":  "tools",
+        "title":  "Tactical Vacuum",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  159,
+        "category":  "camping",
+        "title":  "Emergency Camping Stove",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  160,
+        "category":  "camping",
+        "title":  "Fire-Adjacent Coffee Grinder",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  161,
+        "category":  "tools",
+        "title":  "Emotionally Support Sleep Mask",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  162,
+        "category":  "camping",
+        "title":  "Underwater Tent",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  163,
+        "category":  "tools",
+        "title":  "Ninja Headphones",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  164,
+        "category":  "tools",
+        "title":  "Anti-Gravity Lantern",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  165,
+        "category":  "tools",
+        "title":  "Fire-Adjacent Apron",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  166,
+        "category":  "tools",
+        "title":  "Regret-Proof Vacuum",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  167,
+        "category":  "tools",
+        "title":  "Meteor-Approved Umbrella",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  168,
+        "category":  "camping",
+        "title":  "Soggy Socks",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  169,
+        "category":  "camping",
+        "title":  "Cosmic Mouse",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  170,
+        "category":  "coffee",
+        "title":  "Unreasonably Tiny Thermos",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  171,
+        "category":  "camping",
+        "title":  "DIY-ish Mouse",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  172,
+        "category":  "camping",
+        "title":  "Left-Handed Travel Pillow",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  173,
+        "category":  "camping",
+        "title":  "Cosmic Lawn Gnome",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  174,
+        "category":  "coffee",
+        "title":  "Overqualified Backpack",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  175,
+        "category":  "tools",
+        "title":  "Fire-Adjacent Desk Fan",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  176,
+        "category":  "tools",
+        "title":  "Underwater Toaster",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  177,
+        "category":  "coffee",
+        "title":  "Tactical Stapler",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  178,
+        "category":  "coffee",
+        "title":  "Caffeinated Thermos",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  179,
+        "category":  "coffee",
+        "title":  "Unreasonably Tiny Spatula",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  180,
+        "category":  "tools",
+        "title":  "Unreasonably Tiny Air Fryer",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  181,
+        "category":  "tools",
+        "title":  "Fire-Adjacent Apron",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  182,
+        "category":  "camping",
+        "title":  "Soggy Air Fryer",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  183,
+        "category":  "tools",
+        "title":  "Chronically Optimistic Air Fryer",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "stares back (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  184,
+        "category":  "tools",
+        "title":  "Unreasonably Tiny Stapler",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  185,
+        "category":  "camping",
+        "title":  "Left-Handed Hammer",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  186,
+        "category":  "coffee",
+        "title":  "Soggy Measuring Tape",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  187,
+        "category":  "camping",
+        "title":  "Emergency Frying Pan",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  188,
+        "category":  "tools",
+        "title":  "Pocket-Sized Measuring Tape",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  189,
+        "category":  "coffee",
+        "title":  "Haunted Camping Stove",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  190,
+        "category":  "tools",
+        "title":  "Tactical Socks",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  191,
+        "category":  "coffee",
+        "title":  "Haunted Sleep Mask",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  192,
+        "category":  "coffee",
+        "title":  "Regret-Proof Frying Pan",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  193,
+        "category":  "tools",
+        "title":  "Emergency Flashlight",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  194,
+        "category":  "tools",
+        "title":  "Polite Notebook",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  195,
+        "category":  "camping",
+        "title":  "Stealth Measuring Tape",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  196,
+        "category":  "camping",
+        "title":  "Polite Apron",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  197,
+        "category":  "tools",
+        "title":  "Soggy Thermos",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  198,
+        "category":  "tools",
+        "title":  "Haunted Lawn Gnome",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  199,
+        "category":  "camping",
+        "title":  "Unreasonably Tiny Headphones",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  200,
+        "category":  "coffee",
+        "title":  "Soggy Notebook",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  201,
+        "category":  "coffee",
+        "title":  "Emergency Keyboard",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  202,
+        "category":  "coffee",
+        "title":  "Unreasonably Tiny Lantern",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  203,
+        "category":  "coffee",
+        "title":  "Haunted Thermos",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  204,
+        "category":  "tools",
+        "title":  "Anti-Gravity Socks",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  205,
+        "category":  "camping",
+        "title":  "Anti-Gravity Socks",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  206,
+        "category":  "coffee",
+        "title":  "Soggy Headphones",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  207,
+        "category":  "camping",
+        "title":  "Quantum Wrench",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  208,
+        "category":  "tools",
+        "title":  "Anti-Gravity Measuring Tape",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  209,
+        "category":  "camping",
+        "title":  "Chronically Optimistic Frying Pan",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  210,
+        "category":  "camping",
+        "title":  "Aggressively Beige Mouse",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "stares back (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  211,
+        "category":  "tools",
+        "title":  "Tactical Cutting Board",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  212,
+        "category":  "coffee",
+        "title":  "Certified Questionable Screwdriver",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  213,
+        "category":  "tools",
+        "title":  "Regret-Proof Clipboard",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  214,
+        "category":  "tools",
+        "title":  "Aggressively Beige Camping Stove",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  215,
+        "category":  "camping",
+        "title":  "Haunted Sleep Mask",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  216,
+        "category":  "coffee",
+        "title":  "Stealth Backpack",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  217,
+        "category":  "tools",
+        "title":  "Anti-Gravity Toaster",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  218,
+        "category":  "camping",
+        "title":  "Haunted Umbrella",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  219,
+        "category":  "camping",
+        "title":  "DIY-ish Cutting Board",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  220,
+        "category":  "tools",
+        "title":  "Regret-Proof Lantern",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  221,
+        "category":  "coffee",
+        "title":  "Emotionally Support Apron",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  222,
+        "category":  "tools",
+        "title":  "Budget-Luxury Keyboard",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "stares back (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  223,
+        "category":  "coffee",
+        "title":  "Suspicious Apron",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  224,
+        "category":  "tools",
+        "title":  "Aggressively Beige Spatula",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  225,
+        "category":  "camping",
+        "title":  "Cosmic Air Fryer",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  226,
+        "category":  "coffee",
+        "title":  "Suspicious Cutting Board",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "stares back (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  227,
+        "category":  "tools",
+        "title":  "Haunted Wrench",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  228,
+        "category":  "coffee",
+        "title":  "Unreasonably Tiny Screwdriver",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  229,
+        "category":  "tools",
+        "title":  "Cosmic Sleep Mask",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  230,
+        "category":  "coffee",
+        "title":  "Cosmic Backpack",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  231,
+        "category":  "coffee",
+        "title":  "Ninja Mouse",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  232,
+        "category":  "camping",
+        "title":  "Budget-Luxury Screwdriver",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  233,
+        "category":  "coffee",
+        "title":  "Emergency Cutting Board",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  234,
+        "category":  "tools",
+        "title":  "Overqualified Backpack",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  235,
+        "category":  "coffee",
+        "title":  "Emergency Clipboard",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  236,
+        "category":  "camping",
+        "title":  "Stealth Tripod",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "stares back (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  237,
+        "category":  "coffee",
+        "title":  "Hyper-Local Kettle",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "stares back (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  238,
+        "category":  "tools",
+        "title":  "Certified Questionable Backpack",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "certified by a guy named Dave (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  239,
+        "category":  "coffee",
+        "title":  "Stealth Spatula",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  240,
+        "category":  "tools",
+        "title":  "Soggy Tripod",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "stares back (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  241,
+        "category":  "coffee",
+        "title":  "DIY-ish Thermos",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  242,
+        "category":  "coffee",
+        "title":  "Mildly Cursed Spoon",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "stares back (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  243,
+        "category":  "coffee",
+        "title":  "Pocket-Sized Water Bottle",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  244,
+        "category":  "tools",
+        "title":  "Suspicious Thermos",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  245,
+        "category":  "tools",
+        "title":  "Polite Measuring Tape",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  246,
+        "category":  "camping",
+        "title":  "Suspicious Sleep Mask",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  247,
+        "category":  "coffee",
+        "title":  "Chronically Optimistic Mug",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "stares back (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  248,
+        "category":  "coffee",
+        "title":  "Tactical Water Bottle",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  249,
+        "category":  "coffee",
+        "title":  "Chronically Optimistic Notebook",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  250,
+        "category":  "tools",
+        "title":  "Hyper-Local Tripod",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  251,
+        "category":  "camping",
+        "title":  "Caffeinated Camping Stove",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  252,
+        "category":  "tools",
+        "title":  "Fire-Adjacent Mouse",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "works best under moonlight (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  253,
+        "category":  "camping",
+        "title":  "Portable Tripod",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "stares back (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  254,
+        "category":  "tools",
+        "title":  "Mildly Cursed Socks",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  255,
+        "category":  "coffee",
+        "title":  "Left-Handed Frying Pan",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  256,
+        "category":  "coffee",
+        "title":  "Soggy Lantern",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  257,
+        "category":  "coffee",
+        "title":  "Regret-Proof Socks",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  258,
+        "category":  "coffee",
+        "title":  "Left-Handed Planner",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  259,
+        "category":  "coffee",
+        "title":  "Regret-Proof Mouse",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "stares back (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  260,
+        "category":  "coffee",
+        "title":  "Unreasonably Tiny Desk Fan",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For kitchen chaos"
+    },
+    {
+        "id":  261,
+        "category":  "camping",
+        "title":  "Cosmic Hammer",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  262,
+        "category":  "tools",
+        "title":  "Overqualified Water Bottle",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  263,
+        "category":  "coffee",
+        "title":  "Aggressively Beige Measuring Tape",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  264,
+        "category":  "coffee",
+        "title":  "Ninja Measuring Tape",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "stares back (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  265,
+        "category":  "camping",
+        "title":  "Caffeinated Flashlight",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "folds into something it shouldn’t (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  266,
+        "category":  "coffee",
+        "title":  "Turbo Keyboard",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "stares back (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  267,
+        "category":  "camping",
+        "title":  "Portable Camping Stove",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "folds into something it shouldn’t (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  268,
+        "category":  "camping",
+        "title":  "Aggressively Beige Mouse",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "may summon productivity (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  269,
+        "category":  "tools",
+        "title":  "Tactical Lawn Gnome",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  270,
+        "category":  "tools",
+        "title":  "Tactical Spatula",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  271,
+        "category":  "tools",
+        "title":  "Overqualified Stapler",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  272,
+        "category":  "camping",
+        "title":  "Ninja Sleep Mask",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "designed for humans with chaotic energy (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  273,
+        "category":  "coffee",
+        "title":  "Suspicious Kettle",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "works even when you forget why you bought it (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  274,
+        "category":  "camping",
+        "title":  "Aggressively Beige Keyboard",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "works even when you forget why you bought it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  275,
+        "category":  "tools",
+        "title":  "Ninja Coffee Grinder",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "optimized for snack-related emergencies (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  276,
+        "category":  "camping",
+        "title":  "Caffeinated Socks",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "certified by a guy named Dave (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  277,
+        "category":  "tools",
+        "title":  "Meteor-Approved Keyboard",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  278,
+        "category":  "camping",
+        "title":  "Anti-Gravity Kettle",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "low drama, high confusion (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  279,
+        "category":  "tools",
+        "title":  "Tactical Toaster",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "suspiciously aerodynamic (placeholder)",
+                        "includes a sticker that judges you (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  280,
+        "category":  "camping",
+        "title":  "Caffeinated Lawn Gnome",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  281,
+        "category":  "coffee",
+        "title":  "Underwater Notebook",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "suspiciously aerodynamic (placeholder)",
+                        "charges faster if you compliment it (placeholder)",
+                        "may summon productivity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  282,
+        "category":  "camping",
+        "title":  "Emergency Desk Fan",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  283,
+        "category":  "camping",
+        "title":  "Mildly Cursed Frying Pan",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For coffee rituals"
+    },
+    {
+        "id":  284,
+        "category":  "tools",
+        "title":  "Overqualified Water Bottle",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "surprisingly good vibes, zero guarantees (placeholder)",
+                        "low drama, high confusion (placeholder)",
+                        "folds into something it shouldn’t (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  285,
+        "category":  "coffee",
+        "title":  "Ninja Clipboard",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "comes with instructions written in vibes (placeholder)",
+                        "approved by imaginary committee (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For pretending you’re organized"
+    },
+    {
+        "id":  286,
+        "category":  "camping",
+        "title":  "Left-Handed Umbrella",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "comes with instructions written in vibes (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  287,
+        "category":  "tools",
+        "title":  "Pocket-Sized Planner",
+        "tag":  "Top Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "stares back (placeholder)",
+                        "charges faster if you compliment it (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  288,
+        "category":  "coffee",
+        "title":  "Left-Handed Travel Pillow",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "works best under moonlight (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "adds +3 to confidence, -1 to dignity (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  289,
+        "category":  "camping",
+        "title":  "Emotionally Support Stapler",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "adds +3 to confidence, -1 to dignity (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  290,
+        "category":  "tools",
+        "title":  "Meteor-Approved Cutting Board",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "works even when you forget why you bought it (placeholder)",
+                        "surprisingly good vibes, zero guarantees (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For gift emergencies"
+    },
+    {
+        "id":  291,
+        "category":  "camping",
+        "title":  "Suspicious Socks",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "approved by imaginary committee (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)",
+                        "works best under moonlight (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For backyard camping"
+    },
+    {
+        "id":  292,
+        "category":  "tools",
+        "title":  "Chronically Optimistic Lantern",
+        "tag":  "Quiet Pick",
+        "bullets":  [
+                        "low drama, high confusion (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For minimalism (but still buying stuff)"
+    },
+    {
+        "id":  293,
+        "category":  "camping",
+        "title":  "Meteor-Approved Mug",
+        "tag":  "Weird Pick",
+        "bullets":  [
+                        "includes a sticker that judges you (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "comes with instructions written in vibes (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For outdoor humans"
+    },
+    {
+        "id":  294,
+        "category":  "tools",
+        "title":  "Fire-Adjacent Coffee Grinder",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "whispers encouragement at 2am (placeholder)",
+                        "whispers encouragement at 2am (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For people who lose everything"
+    },
+    {
+        "id":  295,
+        "category":  "tools",
+        "title":  "Tactical Stapler",
+        "tag":  "Overkill Pick",
+        "bullets":  [
+                        "optimized for snack-related emergencies (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "approved by imaginary committee (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  296,
+        "category":  "tools",
+        "title":  "Chronically Optimistic Cooler",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "whispers encouragement at 2am (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    },
+    {
+        "id":  297,
+        "category":  "camping",
+        "title":  "Pocket-Sized Coffee Grinder",
+        "tag":  "Fancy Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "suspiciously aerodynamic (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For living room expeditions"
+    },
+    {
+        "id":  298,
+        "category":  "coffee",
+        "title":  "Emotionally Support Tripod",
+        "tag":  "Tiny Pick",
+        "bullets":  [
+                        "charges faster if you compliment it (placeholder)",
+                        "may summon productivity (placeholder)",
+                        "water-resistant to ‘mild panic’ (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For tool hoarding"
+    },
+    {
+        "id":  299,
+        "category":  "coffee",
+        "title":  "Emotionally Support Headphones",
+        "tag":  "Budget Pick",
+        "bullets":  [
+                        "makes you feel like a professional for 11 seconds (placeholder)",
+                        "designed for humans with chaotic energy (placeholder)",
+                        "built like a tank, emotionally fragile (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For work-from-home gremlins"
+    },
+    {
+        "id":  300,
+        "category":  "camping",
+        "title":  "Aggressively Beige Air Fryer",
+        "tag":  "Chaos Pick",
+        "bullets":  [
+                        "certified by a guy named Dave (placeholder)",
+                        "includes a sticker that judges you (placeholder)",
+                        "makes you feel like a professional for 11 seconds (placeholder)"
+                    ],
+        "href":  "#",
+        "vibe":  "For late-night snack diplomacy"
+    }
+]

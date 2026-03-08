@@ -1,0 +1,123 @@
+[
+  {
+    "id": "pink-probiotic-for-her",
+    "slug": "pink-probiotic-for-her",
+    "name": "Pink Probiotic for Her + Cranberry",
+    "brand": "Phancy Picks",
+    "category": "womens-health",
+    "subCategory": "probiotics",
+    "image": "/products/placeholder-product.svg",
+    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER1?tag=phcfastore-20",
+    "price": 24.99,
+    "rating": 4.6,
+    "reviewCount": 1243,
+    "badge": "Best for Women",
+    "description": "A daily probiotic formula with cranberry support for digestive and urinary wellness.",
+    "ingredients": [
+      "Probiotic blend",
+      "Cranberry extract",
+      "Vegetable capsule"
+    ],
+    "pros": [
+      "Supports digestive balance",
+      "Includes cranberry support",
+      "Easy daily format"
+    ],
+    "cons": [
+      "Bottle size may feel small",
+      "Premium supplement pricing"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "womens-multi-daily",
+    "slug": "womens-multi-daily",
+    "name": "Women's Multi Daily Vitamin",
+    "brand": "Phancy Picks",
+    "category": "vitamins",
+    "subCategory": "multivitamins",
+    "image": "/products/placeholder-product.svg",
+    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER2?tag=phcfastore-20",
+    "price": 19.99,
+    "rating": 4.5,
+    "reviewCount": 902,
+    "badge": "Daily Essential",
+    "description": "A convenient daily multivitamin for women focused on wellness, energy, and routine support.",
+    "ingredients": [
+      "Vitamin D",
+      "B complex",
+      "Biotin"
+    ],
+    "pros": [
+      "Simple daily support",
+      "Broad vitamin profile",
+      "Affordable"
+    ],
+    "cons": [
+      "Not condition-specific",
+      "May require long-term use"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "lions-mane-focus",
+    "slug": "lions-mane-focus",
+    "name": "Lion's Mane Mushroom Focus Support",
+    "brand": "Phancy Picks",
+    "category": "brain-health",
+    "subCategory": "mushrooms",
+    "image": "/products/placeholder-product.svg",
+    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER3?tag=phcfastore-20",
+    "price": 29.99,
+    "rating": 4.4,
+    "reviewCount": 677,
+    "badge": "Focus Support",
+    "description": "A mushroom-based supplement aimed at supporting focus, clarity, and cognitive routine wellness.",
+    "ingredients": [
+      "Lion's mane extract",
+      "Capsule blend"
+    ],
+    "pros": [
+      "Popular nootropic category",
+      "Easy capsule format",
+      "Brain-health angle"
+    ],
+    "cons": [
+      "Results vary by user",
+      "Higher price point"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "collagen-beauty-support",
+    "slug": "collagen-beauty-support",
+    "name": "Collagen Beauty Support Powder",
+    "brand": "Phancy Picks",
+    "category": "collagen",
+    "subCategory": "beauty-wellness",
+    "image": "/products/placeholder-product.svg",
+    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER4?tag=phcfastore-20",
+    "price": 34.99,
+    "rating": 4.7,
+    "reviewCount": 1860,
+    "badge": "Beauty Wellness",
+    "description": "A collagen powder designed for daily beauty and wellness support with easy mixing.",
+    "ingredients": [
+      "Hydrolyzed collagen peptides"
+    ],
+    "pros": [
+      "High-demand category",
+      "Versatile daily use",
+      "Strong review profile"
+    ],
+    "cons": [
+      "Powder may not suit everyone",
+      "Premium category pricing"
+    ],
+    "featured": true,
+    "trending": false
+  }
+]

@@ -1,27 +1,15 @@
 import type { NextConfig } from "next";
-import createMDX from "@next/mdx";
+import withPWAInit from "next-pwa";
 
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
+const withPWA = withPWAInit({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+  register: true,
+  skipWaiting: true
 });
 
 const nextConfig: NextConfig = {
-  pageExtensions: ["ts", "tsx", "mdx"],
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "m.media-amazon.com",
-      },
-    ],
-  },
+  reactStrictMode: true,
 };
 
-export default withMDX(nextConfig);
+export default withPWA(nextConfig);
