@@ -1,9 +1,9 @@
 import ProductGrid from "@/components/product-grid";
 import {
   getAllBestOf,
-  getAllCategories,
   getAllProducts,
   getFeaturedProducts,
+  getHighMarginProducts,
   getTrendingProducts,
   type BestOfGuide,
   type Product,
@@ -53,6 +53,7 @@ export default function HomePage() {
   const allProducts = getAllProducts();
   const categories = categoryStats(allProducts);
   const guides = featuredGuides(getAllBestOf());
+  const highMargin = getHighMarginProducts(8);
 
   return (
     <main>
@@ -256,6 +257,29 @@ export default function HomePage() {
           </p>
         </div>
         <ProductGrid products={trending} />
+      </section>
+
+      <section className="phancy-wrap phancy-section">
+        <div className="grid gap-6 xl:grid-cols-[0.85fr,1.15fr]">
+          <div className="overflow-hidden rounded-[40px] bg-gradient-to-br from-fuchsia-600 via-pink-600 to-rose-600 p-8 text-white shadow-[0_32px_100px_rgba(233,30,99,0.24)] md:p-10">
+            <div className="phancy-pill bg-white/15 text-white">Margin intelligence</div>
+            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+              Highest gross margin picks.
+            </h2>
+            <p className="mt-4 max-w-xl text-base leading-8 text-pink-50">
+              Our automation engine ranks every wellness product by estimated gross margin — so you always know which products deliver the strongest marketing ROI.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/high-margin" className="phancy-btn bg-white text-pink-700">
+                See All High-Margin Picks
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <ProductGrid products={highMargin.slice(0, 4)} showMargin />
+          </div>
+        </div>
       </section>
 
       <section className="phancy-wrap phancy-section">

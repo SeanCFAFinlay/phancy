@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const nav = [
+  { href: "/high-margin", label: "High Margin" },
   { href: "/category/womens-health", label: "Women&apos;s Health" },
   { href: "/category/vitamins", label: "Vitamins" },
   { href: "/category/brain-health", label: "Brain Health" },
