@@ -1,7 +1,13 @@
 import Link from "next/link";
 import type { Product } from "@/lib/products";
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({
+  product,
+  showMargin = false,
+}: {
+  product: Product;
+  showMargin?: boolean;
+}) {
   return (
     <article className="group overflow-hidden rounded-[30px] border border-pink-100 bg-white p-5 shadow-[0_18px_50px_rgba(233,30,99,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(233,30,99,0.14)]">
       <Link href={`/product/${product.slug}`}>
@@ -24,6 +30,11 @@ export default function ProductCard({ product }: { product: Product }) {
         <span className="rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-zinc-600">
           {product.category.replace(/-/g, " ")}
         </span>
+        {showMargin && product.grossMarginPct !== undefined ? (
+          <span className="rounded-full bg-fuchsia-100 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-fuchsia-700">
+            {product.grossMarginPct}% margin
+          </span>
+        ) : null}
       </div>
 
       <Link href={`/product/${product.slug}`}>

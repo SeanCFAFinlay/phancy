@@ -17,7 +17,9 @@ products.forEach(p=>{
   price:p.price,
   rating:p.rating,
   category:p.category,
-  amazonUrl:p.url
+  amazonUrl:p.url,
+  grossMarginPct:p.estimatedMarginPct ?? null,
+  marginScore:p.marginScore ?? null,
  });
 
 });
