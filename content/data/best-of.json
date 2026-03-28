@@ -12,7 +12,8 @@
     "title": "Best vitamins in Canada",
     "description": "Top vitamins products available on Amazon Canada.",
     "products": [
-      "womens-multi-daily"
+      "womens-multi-daily",
+      "vitamin-d3-k2-5000iu"
     ]
   },
   {
@@ -28,7 +29,99 @@
     "title": "Best collagen in Canada",
     "description": "Top collagen products available on Amazon Canada.",
     "products": [
-      "collagen-beauty-support"
+      "collagen-beauty-support",
+      "marine-collagen-peptides",
+      "collagen-gummies-beauty"
+    ]
+  },
+  {
+    "slug": "best-adaptogens-canada",
+    "title": "Best adaptogens in Canada",
+    "description": "Top adaptogens products available on Amazon Canada.",
+    "products": [
+      "ashwagandha-ksm66",
+      "cortisol-balance-adrenal"
+    ]
+  },
+  {
+    "slug": "best-longevity-canada",
+    "title": "Best longevity in Canada",
+    "description": "Top longevity products available on Amazon Canada.",
+    "products": [
+      "nad-plus-booster"
+    ]
+  },
+  {
+    "slug": "best-minerals-canada",
+    "title": "Best minerals in Canada",
+    "description": "Top minerals products available on Amazon Canada.",
+    "products": [
+      "magnesium-glycinate-complex"
+    ]
+  },
+  {
+    "slug": "best-metabolic-health-canada",
+    "title": "Best metabolic health in Canada",
+    "description": "Top metabolic health products available on Amazon Canada.",
+    "products": [
+      "berberine-500mg"
+    ]
+  },
+  {
+    "slug": "best-omegas-canada",
+    "title": "Best omegas in Canada",
+    "description": "Top omegas products available on Amazon Canada.",
+    "products": [
+      "omega3-triple-strength"
+    ]
+  },
+  {
+    "slug": "best-gut-health-canada",
+    "title": "Best gut health in Canada",
+    "description": "Top gut health products available on Amazon Canada.",
+    "products": [
+      "probiotic-50-billion",
+      "gut-health-l-glutamine"
+    ]
+  },
+  {
+    "slug": "best-sports-performance-canada",
+    "title": "Best sports performance in Canada",
+    "description": "Top sports performance products available on Amazon Canada.",
+    "products": [
+      "creatine-monohydrate-micronized"
+    ]
+  },
+  {
+    "slug": "best-anti-inflammatory-canada",
+    "title": "Best anti inflammatory in Canada",
+    "description": "Top anti inflammatory products available on Amazon Canada.",
+    "products": [
+      "turmeric-curcumin-bioperine"
+    ]
+  },
+  {
+    "slug": "best-sleep-wellness-canada",
+    "title": "Best sleep wellness in Canada",
+    "description": "Top sleep wellness products available on Amazon Canada.",
+    "products": [
+      "sleep-formula-melatonin-free"
+    ]
+  },
+  {
+    "slug": "best-immune-support-canada",
+    "title": "Best immune support in Canada",
+    "description": "Top immune support products available on Amazon Canada.",
+    "products": [
+      "immune-defense-elderberry"
+    ]
+  },
+  {
+    "slug": "best-hair-wellness-canada",
+    "title": "Best hair wellness in Canada",
+    "description": "Top hair wellness products available on Amazon Canada.",
+    "products": [
+      "hair-growth-biotin-complex"
     ]
   }
 ]

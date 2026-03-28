@@ -8,6 +8,7 @@ cron.schedule("0 3 * * 1", ()=>{
  console.log("Running weekly automation");
 
  exec("node automation/engines/amazon-harvester.js");
+ exec("node automation/engines/margin-score-engine.js");
  exec("node automation/engines/review-generator.js");
  exec("node automation/engines/seo-page-generator.js");
  exec("node automation/engines/trending-engine.js");

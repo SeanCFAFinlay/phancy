@@ -17,6 +17,7 @@ export type Product = {
   rating: number;
   reviewCount: number;
   badge?: string;
+  grossMarginPct?: number;
   description: string;
   ingredients?: string[];
   pros: string[];
@@ -73,6 +74,13 @@ export function getFeaturedProducts(): Product[] {
 
 export function getTrendingProducts(): Product[] {
   return getAllProducts().filter((p) => p.trending).slice(0, 12);
+}
+
+export function getHighMarginProducts(limit = 12): Product[] {
+  return getAllProducts()
+    .filter((p) => p.grossMarginPct !== undefined)
+    .sort((a, b) => (b.grossMarginPct ?? 0) - (a.grossMarginPct ?? 0))
+    .slice(0, limit);
 }
 
 export function getBestOfBySlug(slug: string): BestOfGuide | undefined {

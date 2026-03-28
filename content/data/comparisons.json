@@ -10,5 +10,53 @@
     "title": "Lion's Mane Mushroom Focus Support vs Collagen Beauty Support Powder",
     "productA": "lions-mane-focus",
     "productB": "collagen-beauty-support"
+  },
+  {
+    "slug": "marine-collagen-peptides-vs-ashwagandha-ksm66",
+    "title": "Marine Collagen Peptides + Hyaluronic Acid vs Ashwagandha KSM-66 Stress Relief",
+    "productA": "marine-collagen-peptides",
+    "productB": "ashwagandha-ksm66"
+  },
+  {
+    "slug": "nad-plus-booster-vs-magnesium-glycinate-complex",
+    "title": "NAD+ Cellular Energy Booster (NMN 500mg) vs Magnesium Glycinate 400mg Sleep + Calm",
+    "productA": "nad-plus-booster",
+    "productB": "magnesium-glycinate-complex"
+  },
+  {
+    "slug": "berberine-500mg-vs-vitamin-d3-k2-5000iu",
+    "title": "Berberine HCl 500mg Metabolic Support vs Vitamin D3 5000 IU + K2 MK-7",
+    "productA": "berberine-500mg",
+    "productB": "vitamin-d3-k2-5000iu"
+  },
+  {
+    "slug": "omega3-triple-strength-vs-probiotic-50-billion",
+    "title": "Triple-Strength Omega-3 Fish Oil 3000mg vs Advanced Probiotic 50 Billion CFU (12 Strains)",
+    "productA": "omega3-triple-strength",
+    "productB": "probiotic-50-billion"
+  },
+  {
+    "slug": "collagen-gummies-beauty-vs-cortisol-balance-adrenal",
+    "title": "Collagen Beauty Gummies + Biotin vs Cortisol Balance + Adrenal Support Formula",
+    "productA": "collagen-gummies-beauty",
+    "productB": "cortisol-balance-adrenal"
+  },
+  {
+    "slug": "creatine-monohydrate-micronized-vs-turmeric-curcumin-bioperine",
+    "title": "Micronized Creatine Monohydrate 300g vs Turmeric Curcumin 1500mg + BioPerine",
+    "productA": "creatine-monohydrate-micronized",
+    "productB": "turmeric-curcumin-bioperine"
+  },
+  {
+    "slug": "sleep-formula-melatonin-free-vs-immune-defense-elderberry",
+    "title": "Deep Sleep Formula — Melatonin-Free vs Elderberry Immune Defence + Zinc & Vitamin C",
+    "productA": "sleep-formula-melatonin-free",
+    "productB": "immune-defense-elderberry"
+  },
+  {
+    "slug": "hair-growth-biotin-complex-vs-gut-health-l-glutamine",
+    "title": "Hair Growth Biotin 10000mcg + Keratin Complex vs Gut Repair L-Glutamine Powder 300g",
+    "productA": "hair-growth-biotin-complex",
+    "productB": "gut-health-l-glutamine"
   }
 ]
