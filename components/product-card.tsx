@@ -1,68 +1,153 @@
+"use client";
+
 import Link from "next/link";
 import type { Product } from "@/lib/products";
 
-export default function ProductCard({ product }: { product: Product }) {
+type ProductCardProps = {
+  product: Product;
+  compact?: boolean;
+};
+
+export default function ProductCard({
+  product,
+  compact = false,
+}: ProductCardProps) {
+  // Track affiliate clicks
+  const handleAffiliateClick = async () => {
+    try {
+      await fetch("/api/analytics", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "affiliate_click",
+          productId: product.id,
+        }),
+      });
+    } catch (e) {
+      console.error("Analytics error:", e);
+    }
+  };
+
+  if (compact) {
+    return (
+      <article className="phancy-product-card group">
+        <Link href={`/product/${product.slug}`}>
+          <div className="phancy-product-image aspect-square">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={product.image}
+              alt={product.name}
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+            {/* Hover overlay */}
+            <div className="absolute inset-0 bg-[var(--forest)]/0 group-hover:bg-[var(--forest)]/5 transition-colors duration-300" />
+          </div>
+        </Link>
+
+        <div className="p-5">
+          {product.badge && (
+            <span className="phancy-badge phancy-badge-sm mb-3 inline-block">
+              {product.badge}
+            </span>
+          )}
+
+          <Link href={`/product/${product.slug}`}>
+            <h3 className="font-[var(--font-display)] text-[15px] font-semibold leading-snug text-[var(--off-black)] group-hover:text-[var(--forest)] transition-colors duration-200">
+              {product.name}
+            </h3>
+          </Link>
+
+          <div className="mt-3 flex items-center justify-between">
+            <span className="font-[var(--font-display)] text-lg font-bold text-[var(--forest)]">
+              ${product.price.toFixed(2)}
+            </span>
+            <span className="font-[var(--font-display)] text-xs text-[var(--muted)]">
+              {product.brand}
+            </span>
+          </div>
+        </div>
+      </article>
+    );
+  }
+
   return (
-    <article className="group overflow-hidden rounded-[30px] border border-pink-100 bg-white p-5 shadow-[0_18px_50px_rgba(233,30,99,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(233,30,99,0.14)]">
+    <article className="phancy-product-card group">
       <Link href={`/product/${product.slug}`}>
-        <div className="overflow-hidden rounded-[24px] bg-gradient-to-b from-pink-50 to-[#fff1f7] p-5">
+        <div className="phancy-product-image aspect-square relative">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={product.image}
             alt={product.name}
-            className="h-64 w-full object-contain transition duration-300 group-hover:scale-[1.03]"
+            className="h-full w-full object-cover"
+            loading="lazy"
           />
+          {/* Hover overlay with quick action */}
+          <div className="absolute inset-0 bg-[var(--off-black)]/0 group-hover:bg-[var(--off-black)]/10 transition-all duration-300 flex items-center justify-center">
+            <span className="opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 phancy-btn phancy-btn-white phancy-btn-sm shadow-lg">
+              Quick View
+            </span>
+          </div>
         </div>
       </Link>
 
-      <div className="mt-5 flex flex-wrap gap-2">
-        {product.badge ? (
-          <span className="rounded-full bg-pink-100 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-pink-700">
-            {product.badge}
+      <div className="p-6">
+        <div className="flex flex-wrap gap-2 mb-3">
+          {product.badge && (
+            <span className="phancy-badge phancy-badge-sm">{product.badge}</span>
+          )}
+          <span className="phancy-badge phancy-badge-sm phancy-badge-cream">
+            {product.brand}
           </span>
-        ) : null}
-        <span className="rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-zinc-600">
-          {product.category.replace(/-/g, " ")}
-        </span>
-      </div>
+        </div>
 
-      <Link href={`/product/${product.slug}`}>
-        <h3 className="mt-4 text-2xl font-black leading-tight tracking-tight text-zinc-950">
-          {product.name}
-        </h3>
-      </Link>
-
-      <div className="mt-3 flex items-center gap-2 text-sm text-zinc-600">
-        <span className="text-amber-500">★</span>
-        <span>{product.rating}</span>
-        <span>·</span>
-        <span>{product.reviewCount.toLocaleString()} reviews</span>
-      </div>
-
-      <div className="mt-4 text-3xl font-black tracking-tight text-pink-700">
-        ${product.price.toFixed(2)}
-      </div>
-
-      <p className="mt-4 text-sm leading-7 text-zinc-600">
-        {product.description}
-      </p>
-
-      <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-        <Link
-          href={`/product/${product.slug}`}
-          className="inline-flex items-center justify-center rounded-full border border-pink-200 px-5 py-3 text-sm font-black text-pink-700 transition hover:bg-pink-50"
-        >
-          Read Review
+        <Link href={`/product/${product.slug}`}>
+          <h3 className="font-[var(--font-display)] text-lg font-semibold leading-snug text-[var(--off-black)] group-hover:text-[var(--forest)] transition-colors duration-200 line-clamp-2">
+            {product.name}
+          </h3>
         </Link>
 
-        <a
-          href={product.amazonUrl}
-          target="_blank"
-          rel="nofollow sponsored noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-pink-600 to-fuchsia-600 px-5 py-3 text-sm font-black text-white shadow-lg shadow-pink-500/20 transition hover:scale-[1.02] hover:from-pink-700 hover:to-fuchsia-700"
-        >
-          View on Amazon
-        </a>
+        <div className="mt-3 flex items-center gap-3">
+          <div className="flex items-center gap-1.5">
+            <span className="text-[var(--terracotta)]">★</span>
+            <span className="font-[var(--font-display)] text-sm font-medium text-[var(--off-black)]">
+              {product.rating}
+            </span>
+          </div>
+          <span className="w-1 h-1 rounded-full bg-[var(--line)]" />
+          <span className="font-[var(--font-display)] text-sm text-[var(--muted)]">
+            {product.reviewCount.toLocaleString()} reviews
+          </span>
+        </div>
+
+        <p className="mt-4 font-[var(--font-body)] text-[15px] leading-relaxed text-[var(--muted)] line-clamp-2">
+          {product.description}
+        </p>
+
+        <div className="mt-5 flex items-center justify-between">
+          <span className="font-[var(--font-display)] text-2xl font-bold text-[var(--forest)]">
+            ${product.price.toFixed(2)}
+          </span>
+        </div>
+
+        <div className="mt-5 grid grid-cols-2 gap-3">
+          <Link
+            href={`/product/${product.slug}`}
+            className="phancy-btn phancy-btn-secondary phancy-btn-sm text-center justify-center"
+          >
+            Details
+          </Link>
+
+          <a
+            href={product.amazonUrl}
+            target="_blank"
+            rel="nofollow sponsored noopener noreferrer"
+            onClick={handleAffiliateClick}
+            className="phancy-btn phancy-btn-primary phancy-btn-sm text-center justify-center"
+          >
+            View on Amazon
+          </a>
+        </div>
       </div>
     </article>
   );

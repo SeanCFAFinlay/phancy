@@ -1,11 +1,16 @@
 import ProductCard from "./product-card";
 import type { Product } from "@/lib/products";
 
-export default function ProductGrid({ products }: { products: Product[] }) {
+type ProductGridProps = {
+  products: Product[];
+  compact?: boolean;
+};
+
+export default function ProductGrid({ products, compact = false }: ProductGridProps) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+    <div className="phancy-collection-grid">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.id} product={product} compact={compact} />
       ))}
     </div>
   );

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri ''http://localhost:4500'' -UseBasicParsing -TimeoutSec 5; Write-Host ''Server running on http://localhost:4500'' } catch { Write-Host ''Server starting...'' }\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 5; try { $r = Invoke-WebRequest -Uri ''http://localhost:4500'' -UseBasicParsing -TimeoutSec 5; Write-Host ''Server running on http://localhost:4500'' } catch { Write-Host $_Exception.Message }\")"
+    ]
+  }
+}

@@ -1,32 +1,75 @@
-import ProductGrid from "@/components/product-grid";
-import SectionTitle from "@/components/section-title";
 import { getTrendingProducts } from "@/lib/products";
+import ProductCard from "@/components/product-card";
+
+export const metadata = {
+  title: "Trending | Phancy",
+  description: "The pieces currently drawing the most attention in our curated collection.",
+};
 
 export default function TrendingPage() {
   const products = getTrendingProducts();
 
   return (
-    <main className="phancy-container phancy-section-space">
-      <div className="rounded-[2.2rem] phancy-gradient p-8 text-white shadow-[0_25px_80px_rgba(233,30,99,0.20)]">
-        <div className="inline-flex rounded-full bg-white/20 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em] text-white">
-          Trending now
+    <>
+      {/* Hero */}
+      <section className="bg-[var(--forest)]">
+        <div className="phancy-wrap py-16 md:py-24">
+          <div className="max-w-3xl">
+            <div className="font-[var(--font-display)] text-xs font-semibold uppercase tracking-[0.2em] text-[var(--sage-light)] mb-6">
+              Currently Popular
+            </div>
+            <h1 className="font-[var(--font-display)] text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+              Trending This Season
+            </h1>
+            <p className="font-[var(--font-body)] text-lg text-[var(--sage-light)] leading-relaxed max-w-xl">
+              The pieces currently drawing the most attention. Selected by our
+              editorial team for quality, design, and the way they elevate
+              everyday rituals.
+            </p>
+          </div>
         </div>
-        <h1 className="mt-4 text-4xl font-black tracking-tight md:text-6xl">
-          Trending Wellness Products
-        </h1>
-        <p className="mt-4 max-w-2xl text-base leading-8 text-pink-50">
-          A stronger editorial presentation for the products drawing the most interest right now.
-        </p>
-      </div>
-
-      <section className="pt-10">
-        <SectionTitle
-          kicker="Popular now"
-          title="Products driving the current Phancy trend edit"
-          subtitle="Designed to look stronger on mobile, desktop, and future PWA installs."
-        />
-        <ProductGrid products={products} />
       </section>
-    </main>
+
+      {/* Products Grid */}
+      <section className="phancy-wrap phancy-section">
+        <div className="mb-12">
+          <div className="phancy-eyebrow mb-4">Editor&apos;s Selection</div>
+          <h2 className="phancy-h2">What&apos;s Moving Now</h2>
+          <p className="phancy-body mt-4 max-w-xl">
+            These products are resonating with our community. Each has been
+            verified for quality and aligned with our editorial standards.
+          </p>
+        </div>
+
+        <div className="phancy-collection-grid">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <section className="bg-[var(--cream-dark)] border-t border-[var(--line)]">
+        <div className="phancy-wrap phancy-section-sm">
+          <div className="text-center max-w-xl mx-auto">
+            <div className="phancy-eyebrow mb-4">Stay Updated</div>
+            <h2 className="phancy-h3 mb-4">Get the Weekly Edit</h2>
+            <p className="phancy-body text-sm mb-6">
+              Be the first to know about new arrivals and trending pieces.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <input
+                type="email"
+                placeholder="your@email.com"
+                className="rounded-[var(--radius-md)] border border-[var(--line)] bg-white px-5 py-3 font-[var(--font-display)] text-sm outline-none focus:border-[var(--forest)]"
+              />
+              <button className="phancy-btn phancy-btn-primary">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

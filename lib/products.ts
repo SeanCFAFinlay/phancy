@@ -3,6 +3,7 @@ import bestOfData from "@/content/data/best-of.json";
 import comparisonsData from "@/content/data/comparisons.json";
 import blogData from "@/content/data/blog.json";
 import { withAffiliateTag } from "./affiliate";
+import { collections } from "./site";
 
 export type Product = {
   id: string;
@@ -11,6 +12,7 @@ export type Product = {
   brand: string;
   category: string;
   subCategory?: string;
+  collection?: string;
   image: string;
   amazonUrl: string;
   price: number;
@@ -23,6 +25,14 @@ export type Product = {
   cons: string[];
   featured?: boolean;
   trending?: boolean;
+};
+
+export type Collection = {
+  id: string;
+  name: string;
+  subtitle: string;
+  editorsNote: string;
+  products: Product[];
 };
 
 export type BestOfGuide = {
@@ -67,12 +77,50 @@ export function getProductsByCategory(category: string): Product[] {
   return getAllProducts().filter((p) => p.category === category);
 }
 
+export function getProductsByCollection(collectionId: string): Product[] {
+  return getAllProducts().filter((p) => p.collection === collectionId);
+}
+
 export function getFeaturedProducts(): Product[] {
   return getAllProducts().filter((p) => p.featured).slice(0, 8);
 }
 
 export function getTrendingProducts(): Product[] {
   return getAllProducts().filter((p) => p.trending).slice(0, 12);
+}
+
+// Collection helpers
+export function getMorningRitualProducts(): Product[] {
+  return getProductsByCollection("morning-ritual");
+}
+
+export function getHighEndHomeProducts(): Product[] {
+  return getProductsByCollection("high-end-home");
+}
+
+export function getLifestyleAccessoriesProducts(): Product[] {
+  return getProductsByCollection("lifestyle-accessories");
+}
+
+export function getAllCollections(): Collection[] {
+  return [
+    {
+      ...collections.morningRitual,
+      products: getMorningRitualProducts(),
+    },
+    {
+      ...collections.highEndHome,
+      products: getHighEndHomeProducts(),
+    },
+    {
+      ...collections.lifestyleAccessories,
+      products: getLifestyleAccessoriesProducts(),
+    },
+  ];
+}
+
+export function getCollectionById(id: string): Collection | undefined {
+  return getAllCollections().find((c) => c.id === id);
 }
 
 export function getBestOfBySlug(slug: string): BestOfGuide | undefined {

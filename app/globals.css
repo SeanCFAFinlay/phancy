@@ -1,160 +1,1162 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 @import "tailwindcss";
 
-:root{
-  --bg:#fcfafc;
-  --surface:#ffffff;
-  --surface-2:#fff5f9;
-  --text:#16121b;
-  --muted:#675f6d;
-  --line:#f0dce6;
-  --pink:#e91e63;
-  --pink-dark:#c2185b;
-  --purple:#8b5cf6;
-  --shadow:0 18px 60px rgba(233,30,99,.08);
-  --shadow-strong:0 32px 100px rgba(233,30,99,.15);
+/* ============================================
+   PHANCY MCM — Mid-Century Modern Design System
+   "Kinfolk meets Architectural Digest"
+   Premium Editorial Affiliate Experience
+   ============================================ */
+
+:root {
+  /* Core MCM Palette - Strict Adherence */
+  --forest: #03854C;
+  --forest-dark: #026B3D;
+  --forest-light: #E8F5EE;
+  --forest-muted: #047A45;
+  --off-black: #1A1D19;
+  --cream: #F5F2ED;
+  --cream-dark: #EBE7E0;
+  --cream-light: #FAF9F7;
+  --sage: #8FAE8B;
+  --sage-light: #D4E4D1;
+  --sage-muted: #A8C4A4;
+  --terracotta: #C4785C;
+  --terracotta-light: #F5E6E0;
+  --terracotta-muted: #D4917A;
+  --warm-white: #FDFCFA;
+  --muted: #6B695F;
+  --muted-light: #8A877D;
+  --line: #E5E2DB;
+  --line-dark: #D4D0C7;
+
+  /* Typography */
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+
+  /* Shadows — Organic, sophisticated */
+  --shadow-xs: 0 1px 2px rgba(26, 29, 25, 0.04);
+  --shadow-sm: 0 2px 8px rgba(26, 29, 25, 0.05);
+  --shadow-md: 0 8px 24px rgba(26, 29, 25, 0.07);
+  --shadow-lg: 0 16px 48px rgba(26, 29, 25, 0.09);
+  --shadow-xl: 0 24px 64px rgba(26, 29, 25, 0.12);
+  --shadow-glow: 0 0 40px rgba(3, 133, 76, 0.08);
+
+  /* Radius — MCM aesthetic */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-2xl: 48px;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-html{
-  scroll-behavior:smooth;
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  box-sizing: border-box;
 }
 
-body{
-  margin:0;
-  color:var(--text);
-  font-family:Arial, Helvetica, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(255,224,238,.85), transparent 25%),
-    radial-gradient(circle at top right, rgba(244,228,255,.65), transparent 20%),
-    linear-gradient(180deg,#ffffff 0%,#fcfafc 100%);
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-a{
-  text-decoration:none;
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--off-black);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
-img{
-  display:block;
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s var(--ease-out);
 }
 
-.phancy-wrap{
-  width:min(1440px, calc(100% - 36px));
-  margin-inline:auto;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.phancy-section{
-  padding:96px 0;
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
-.phancy-card{
-  border:1px solid var(--line);
-  background:var(--surface);
-  border-radius:32px;
-  box-shadow:var(--shadow);
+input, textarea {
+  font-family: var(--font-display);
 }
 
-.phancy-copy{
-  color:var(--muted);
-  line-height:1.9;
+::selection {
+  background: var(--forest-light);
+  color: var(--forest-dark);
 }
 
-.phancy-eyebrow{
-  color:#cb2c6f;
-  font-size:.74rem;
-  font-weight:900;
-  letter-spacing:.18em;
-  text-transform:uppercase;
+/* ============================================
+   LAYOUT CONTAINERS
+   ============================================ */
+
+.phancy-wrap {
+  width: min(1400px, calc(100% - 48px));
+  margin-inline: auto;
 }
 
-.phancy-h1{
-  font-size:clamp(3rem, 6vw, 6.25rem);
-  line-height:.92;
-  letter-spacing:-.05em;
-  font-weight:900;
+.phancy-wrap-narrow {
+  width: min(960px, calc(100% - 48px));
+  margin-inline: auto;
 }
 
-.phancy-h2{
-  font-size:clamp(2rem, 3vw, 3.35rem);
-  line-height:.98;
-  letter-spacing:-.04em;
-  font-weight:900;
+.phancy-wrap-wide {
+  width: min(1600px, calc(100% - 48px));
+  margin-inline: auto;
 }
 
-.phancy-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:.5rem;
-  border-radius:999px;
-  padding:1rem 1.35rem;
-  font-size:.95rem;
-  font-weight:900;
-  transition:.25s ease;
+.phancy-section {
+  padding: var(--space-3xl) 0;
 }
 
-.phancy-btn-primary{
-  background:linear-gradient(135deg,#ff4ea4 0%, #e91e63 55%, #a61e66 100%);
-  color:#fff;
-  box-shadow:0 18px 40px rgba(233,30,99,.24);
+.phancy-section-sm {
+  padding: var(--space-2xl) 0;
 }
 
-.phancy-btn-primary:hover{
-  transform:translateY(-1px);
+.phancy-section-lg {
+  padding: 8rem 0;
 }
 
-.phancy-btn-secondary{
-  border:1px solid #f1cada;
-  background:#fff;
-  color:#ca2c6f;
-}
+@media (max-width: 768px) {
+  .phancy-wrap,
+  .phancy-wrap-narrow,
+  .phancy-wrap-wide {
+    width: calc(100% - 32px);
+  }
 
-.phancy-btn-secondary:hover{
-  background:#fff5f9;
-}
+  .phancy-section {
+    padding: var(--space-2xl) 0;
+  }
 
-.phancy-pill{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:999px;
-  padding:.55rem 1rem;
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
+  .phancy-section-sm {
+    padding: var(--space-xl) 0;
+  }
 
-.phancy-scroll-row{
-  display:grid;
-  grid-auto-flow:column;
-  grid-auto-columns:82%;
-  gap:1rem;
-  overflow-x:auto;
-  padding-bottom:.35rem;
-  scroll-snap-type:x proximity;
-}
-
-.phancy-scroll-row > *{
-  scroll-snap-align:start;
-}
-
-@media (min-width: 768px){
-  .phancy-scroll-row{
-    grid-auto-flow:unset;
-    grid-auto-columns:unset;
-    overflow:visible;
-    display:grid;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:1.5rem;
-    padding-bottom:0;
+  .phancy-section-lg {
+    padding: var(--space-3xl) 0;
   }
 }
 
-@media (max-width: 767px){
-  .phancy-wrap{
-    width:min(100%, calc(100% - 18px));
+/* ============================================
+   TYPOGRAPHY — Editorial System
+   ============================================ */
+
+.phancy-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--off-black);
+}
+
+.phancy-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--off-black);
+}
+
+.phancy-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--off-black);
+}
+
+.phancy-h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--off-black);
+}
+
+.phancy-h4 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--off-black);
+}
+
+.phancy-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--forest);
+}
+
+.phancy-body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.phancy-body-lg {
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.phancy-body-sm {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.phancy-caption {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+.phancy-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================
+   CARDS — MCM Container System
+   ============================================ */
+
+.phancy-card {
+  background: var(--warm-white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s var(--ease-out);
+}
+
+.phancy-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--line-dark);
+}
+
+.phancy-card-flat {
+  background: var(--warm-white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.phancy-card-elevated {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.phancy-card-forest {
+  background: var(--forest);
+  border-radius: var(--radius-lg);
+  color: white;
+}
+
+.phancy-card-cream {
+  background: var(--cream-dark);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+}
+
+.phancy-card-glass {
+  background: rgba(253, 252, 250, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(229, 226, 219, 0.6);
+  border-radius: var(--radius-lg);
+}
+
+/* ============================================
+   BUTTONS — Soft-Call CTAs
+   ============================================ */
+
+.phancy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.6rem;
+  transition: all 0.35s var(--ease-out);
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+.phancy-btn-lg {
+  padding: 1.1rem 2rem;
+  font-size: 0.95rem;
+  border-radius: var(--radius-lg);
+}
+
+.phancy-btn-sm {
+  padding: 0.65rem 1.2rem;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+}
+
+.phancy-btn-primary {
+  background: var(--forest);
+  color: white;
+  box-shadow: var(--shadow-sm), 0 4px 12px rgba(3, 133, 76, 0.2);
+}
+
+.phancy-btn-primary:hover {
+  background: var(--forest-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), 0 8px 20px rgba(3, 133, 76, 0.25);
+}
+
+.phancy-btn-secondary {
+  background: transparent;
+  color: var(--off-black);
+  border: 1.5px solid var(--line-dark);
+}
+
+.phancy-btn-secondary:hover {
+  background: var(--cream-dark);
+  border-color: var(--sage);
+  transform: translateY(-1px);
+}
+
+.phancy-btn-ghost {
+  background: transparent;
+  color: var(--forest);
+  padding: 0.5rem;
+}
+
+.phancy-btn-ghost:hover {
+  background: var(--forest-light);
+}
+
+.phancy-btn-soft {
+  background: var(--forest-light);
+  color: var(--forest);
+}
+
+.phancy-btn-soft:hover {
+  background: var(--sage-light);
+  transform: translateY(-1px);
+}
+
+.phancy-btn-terracotta {
+  background: var(--terracotta);
+  color: white;
+  box-shadow: var(--shadow-sm), 0 4px 12px rgba(196, 120, 92, 0.2);
+}
+
+.phancy-btn-terracotta:hover {
+  background: #B5694D;
+  transform: translateY(-2px);
+}
+
+.phancy-btn-white {
+  background: white;
+  color: var(--forest);
+  box-shadow: var(--shadow-sm);
+}
+
+.phancy-btn-white:hover {
+  background: var(--cream);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   BADGES & PILLS
+   ============================================ */
+
+.phancy-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--forest-light);
+  color: var(--forest);
+}
+
+.phancy-badge-sm {
+  font-size: 0.6rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.phancy-badge-cream {
+  background: var(--cream-dark);
+  color: var(--off-black);
+}
+
+.phancy-badge-terracotta {
+  background: var(--terracotta-light);
+  color: var(--terracotta);
+}
+
+.phancy-badge-white {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.phancy-badge-outline {
+  background: transparent;
+  border: 1px solid var(--line-dark);
+  color: var(--muted);
+}
+
+/* ============================================
+   INTERACTIVE ELEMENTS
+   ============================================ */
+
+.phancy-hover-lift {
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.phancy-hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.phancy-hover-glow:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+.phancy-fade-in,
+.animate-fade-in {
+  animation: fadeIn 0.6s var(--ease-out) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s var(--ease-out) forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s var(--ease-out) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s var(--ease-spring) forwards;
+}
+
+.animate-shake {
+  animation: shake 0.5s var(--ease-out);
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: slideUp 0.5s var(--ease-out) forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 250ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 350ms; }
+
+.phancy-slide-up {
+  animation: slideUp 0.7s var(--ease-out) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--cream-dark) 25%,
+    var(--cream) 50%,
+    var(--cream-dark) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* Soft-Fade Hover Effect */
+.phancy-soft-fade {
+  position: relative;
+  overflow: hidden;
+}
+
+.phancy-soft-fade::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(3, 133, 76, 0.04) 100%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-out);
+  pointer-events: none;
+}
+
+.phancy-soft-fade:hover::after {
+  opacity: 1;
+}
+
+/* Link hover */
+.phancy-link {
+  position: relative;
+  display: inline-block;
+}
+
+.phancy-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--forest);
+  transition: width 0.3s var(--ease-out);
+}
+
+.phancy-link:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   GRID SYSTEMS — Asymmetrical MCM Layouts
+   ============================================ */
+
+.phancy-ritual-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .phancy-ritual-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .phancy-ritual-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-2xl);
+  }
+}
+
+.phancy-ritual-grid-reverse {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .phancy-ritual-grid-reverse {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.phancy-ritual-grid-equal {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .phancy-ritual-grid-equal {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* Collection Grid — Product Display */
+.phancy-collection-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .phancy-collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .phancy-collection-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .phancy-collection-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Feature Grid — 3 columns on desktop */
+.phancy-feature-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .phancy-feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* ============================================
+   SCROLL & HORIZONTAL LAYOUTS
+   ============================================ */
+
+.phancy-scroll-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 280px;
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.phancy-scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
+.phancy-scroll-row > * {
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .phancy-scroll-row {
+    grid-auto-columns: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .phancy-scroll-row {
+    grid-auto-flow: unset;
+    grid-auto-columns: unset;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-lg);
+    padding-bottom: 0;
+  }
+}
+
+/* ============================================
+   DIVIDERS & DECORATIVE ELEMENTS
+   ============================================ */
+
+.phancy-divider {
+  height: 1px;
+  background: var(--line);
+  border: none;
+  margin: var(--space-xl) 0;
+}
+
+.phancy-divider-thick {
+  height: 2px;
+  background: var(--off-black);
+  border: none;
+  margin: var(--space-2xl) 0;
+  width: 60px;
+}
+
+.phancy-divider-dotted {
+  border: none;
+  border-top: 2px dotted var(--line);
+  margin: var(--space-xl) 0;
+}
+
+/* MCM Decorative elements */
+.phancy-mcm-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--forest-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phancy-mcm-line {
+  width: 40px;
+  height: 3px;
+  background: var(--forest);
+  border-radius: 2px;
+}
+
+/* ============================================
+   EDITORIAL CONTENT STYLES
+   ============================================ */
+
+.phancy-editor-note {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--muted);
+  padding-left: var(--space-md);
+  border-left: 2px solid var(--sage);
+}
+
+.phancy-pullquote {
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--off-black);
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.phancy-dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-right: 0.5rem;
+  color: var(--forest);
+  font-weight: 600;
+}
+
+/* ============================================
+   PRODUCT CARD STYLES
+   ============================================ */
+
+.phancy-product-card {
+  background: var(--warm-white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.45s var(--ease-out);
+}
+
+.phancy-product-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: var(--sage-muted);
+}
+
+.phancy-product-image {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.phancy-product-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 70%, rgba(0,0,0,0.02) 100%);
+  z-index: 1;
+}
+
+.phancy-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.phancy-product-card:hover .phancy-product-image img {
+  transform: scale(1.04);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+.phancy-input {
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--off-black);
+  background: var(--warm-white);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: all 0.3s var(--ease-out);
+}
+
+.phancy-input::placeholder {
+  color: var(--muted-light);
+}
+
+.phancy-input:focus {
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px var(--forest-light);
+}
+
+.phancy-input-lg {
+  padding: 1.1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: var(--radius-lg);
+}
+
+.phancy-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.phancy-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B695F' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.phancy-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--forest);
+  cursor: pointer;
+}
+
+.phancy-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--off-black);
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
   }
 
-  .phancy-section{
-    padding:56px 0;
+  .phancy-display {
+    font-size: 2.25rem;
   }
+
+  .phancy-h1 {
+    font-size: 1.75rem;
+  }
+
+  .phancy-h2 {
+    font-size: 1.375rem;
+  }
+
+  .phancy-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .phancy-btn-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .phancy-product-card {
+    border-radius: var(--radius-md);
+  }
+
+  .phancy-card {
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (pointer: coarse) {
+  .phancy-btn {
+    min-height: 48px;
+  }
+
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Safe area insets for notched phones */
+@supports (padding: max(0px)) {
+  .phancy-mobile-nav {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* ============================================
+   ADMIN PANEL STYLES
+   ============================================ */
+
+.admin-layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 260px 1fr;
+  background: var(--cream-light);
+}
+
+.admin-sidebar {
+  background: var(--off-black);
+  color: white;
+  padding: var(--space-lg);
+  position: fixed;
+  width: 260px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-main {
+  margin-left: 260px;
+  padding: var(--space-lg);
+  min-height: 100vh;
+}
+
+.admin-card {
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-lg);
+}
+
+.admin-stat {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.admin-stat-value {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.admin-stat-label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 2px solid var(--line);
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.admin-table tr:hover {
+  background: var(--cream-light);
+}
+
+@media (max-width: 1024px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .admin-main {
+    margin-left: 0;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-forest { color: var(--forest); }
+.text-muted { color: var(--muted); }
+.text-terracotta { color: var(--terracotta); }
+.text-off-black { color: var(--off-black); }
+.text-white { color: white; }
+
+.bg-forest { background: var(--forest); }
+.bg-cream { background: var(--cream); }
+.bg-cream-dark { background: var(--cream-dark); }
+.bg-warm-white { background: var(--warm-white); }
+.bg-forest-light { background: var(--forest-light); }
+
+.border-line { border-color: var(--line); }
+
+.rounded-mcm { border-radius: var(--radius-lg); }
+
+.shadow-mcm { box-shadow: var(--shadow-md); }
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

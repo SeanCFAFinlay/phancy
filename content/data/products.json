@@ -1,123 +1,588 @@
 [
   {
-    "id": "pink-probiotic-for-her",
-    "slug": "pink-probiotic-for-her",
-    "name": "Pink Probiotic for Her + Cranberry",
-    "brand": "Phancy Picks",
-    "category": "womens-health",
-    "subCategory": "probiotics",
-    "image": "/products/placeholder-product.svg",
-    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER1?tag=phcfastore-20",
-    "price": 24.99,
-    "rating": 4.6,
-    "reviewCount": 1243,
-    "badge": "Best for Women",
-    "description": "A daily probiotic formula with cranberry support for digestive and urinary wellness.",
-    "ingredients": [
-      "Probiotic blend",
-      "Cranberry extract",
-      "Vegetable capsule"
-    ],
-    "pros": [
-      "Supports digestive balance",
-      "Includes cranberry support",
-      "Easy daily format"
-    ],
-    "cons": [
-      "Bottle size may feel small",
-      "Premium supplement pricing"
-    ],
-    "featured": true,
-    "trending": true
-  },
-  {
-    "id": "womens-multi-daily",
-    "slug": "womens-multi-daily",
-    "name": "Women's Multi Daily Vitamin",
-    "brand": "Phancy Picks",
-    "category": "vitamins",
-    "subCategory": "multivitamins",
-    "image": "/products/placeholder-product.svg",
-    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER2?tag=phcfastore-20",
-    "price": 19.99,
-    "rating": 4.5,
-    "reviewCount": 902,
-    "badge": "Daily Essential",
-    "description": "A convenient daily multivitamin for women focused on wellness, energy, and routine support.",
-    "ingredients": [
-      "Vitamin D",
-      "B complex",
-      "Biotin"
-    ],
-    "pros": [
-      "Simple daily support",
-      "Broad vitamin profile",
-      "Affordable"
-    ],
-    "cons": [
-      "Not condition-specific",
-      "May require long-term use"
-    ],
-    "featured": true,
-    "trending": true
-  },
-  {
-    "id": "lions-mane-focus",
-    "slug": "lions-mane-focus",
-    "name": "Lion's Mane Mushroom Focus Support",
-    "brand": "Phancy Picks",
-    "category": "brain-health",
-    "subCategory": "mushrooms",
-    "image": "/products/placeholder-product.svg",
-    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER3?tag=phcfastore-20",
-    "price": 29.99,
-    "rating": 4.4,
-    "reviewCount": 677,
-    "badge": "Focus Support",
-    "description": "A mushroom-based supplement aimed at supporting focus, clarity, and cognitive routine wellness.",
-    "ingredients": [
-      "Lion's mane extract",
-      "Capsule blend"
-    ],
-    "pros": [
-      "Popular nootropic category",
-      "Easy capsule format",
-      "Brain-health angle"
-    ],
-    "cons": [
-      "Results vary by user",
-      "Higher price point"
-    ],
-    "featured": true,
-    "trending": true
-  },
-  {
-    "id": "collagen-beauty-support",
-    "slug": "collagen-beauty-support",
-    "name": "Collagen Beauty Support Powder",
-    "brand": "Phancy Picks",
-    "category": "collagen",
-    "subCategory": "beauty-wellness",
-    "image": "/products/placeholder-product.svg",
-    "amazonUrl": "https://www.amazon.ca/dp/B0PLACEHOLDER4?tag=phcfastore-20",
-    "price": 34.99,
+    "id": "grass-fed-collagen-peptides",
+    "slug": "grass-fed-collagen-peptides",
+    "name": "Premium Grass-Fed Collagen Peptides",
+    "brand": "Vital Proteins",
+    "category": "morning-ritual",
+    "subCategory": "collagen",
+    "collection": "morning-ritual",
+    "image": "/products/collagen-peptides.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B00K6JUG4K?tag=phcfastore-20",
+    "price": 54.99,
     "rating": 4.7,
-    "reviewCount": 1860,
-    "badge": "Beauty Wellness",
-    "description": "A collagen powder designed for daily beauty and wellness support with easy mixing.",
+    "reviewCount": 12450,
+    "badge": "Editor's Pick",
+    "description": "Sourced from grass-fed, pasture-raised bovine. Unflavored and dissolves completely in hot or cold liquids. The gold standard in collagen supplementation.",
     "ingredients": [
-      "Hydrolyzed collagen peptides"
+      "Bovine hide collagen peptides"
     ],
     "pros": [
-      "High-demand category",
-      "Versatile daily use",
-      "Strong review profile"
+      "Grass-fed sourcing",
+      "Unflavored versatility",
+      "Dissolves cleanly"
     ],
     "cons": [
-      "Powder may not suit everyone",
-      "Premium category pricing"
+      "Premium price point",
+      "Large container"
     ],
     "featured": true,
+    "trending": true
+  },
+  {
+    "id": "liposomal-vitamin-c",
+    "slug": "liposomal-vitamin-c",
+    "name": "Liposomal Vitamin C",
+    "brand": "Quicksilver Scientific",
+    "category": "morning-ritual",
+    "subCategory": "vitamins",
+    "collection": "morning-ritual",
+    "image": "/products/liposomal-c.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B07HGKFQJN?tag=phcfastore-20",
+    "price": 42.99,
+    "rating": 4.6,
+    "reviewCount": 3240,
+    "badge": "High Absorption",
+    "description": "Apothecary-style amber glass bottle. Liposomal delivery for superior bioavailability. The kind of vitamin C that sits well on any shelf.",
+    "ingredients": [
+      "Vitamin C (as sodium ascorbate)",
+      "Phospholipids from sunflower"
+    ],
+    "pros": [
+      "Superior absorption",
+      "Elegant packaging",
+      "No artificial colors"
+    ],
+    "cons": [
+      "Liquid format",
+      "Refrigeration recommended"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "plant-based-nootropic-stack",
+    "slug": "plant-based-nootropic-stack",
+    "name": "Plant-Based Nootropic Stack",
+    "brand": "Mind Lab Pro",
+    "category": "morning-ritual",
+    "subCategory": "brain-health",
+    "collection": "morning-ritual",
+    "image": "/products/nootropic-stack.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B08XZLNKQD?tag=phcfastore-20",
+    "price": 89.99,
+    "rating": 4.5,
+    "reviewCount": 2180,
+    "badge": "Cognitive Clarity",
+    "description": "Eleven evidence-based nootropics in one clean formula. For focus, memory, and mental clarity without stimulants.",
+    "ingredients": [
+      "Lion's Mane",
+      "Bacopa Monnieri",
+      "Citicoline",
+      "L-Theanine",
+      "Rhodiola Rosea"
+    ],
+    "pros": [
+      "Stimulant-free",
+      "Research-backed ingredients",
+      "Clean label"
+    ],
+    "cons": [
+      "Investment pricing",
+      "Takes time to feel effects"
+    ],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "ceremonial-grade-matcha",
+    "slug": "ceremonial-grade-matcha",
+    "name": "Organic Ceremonial Grade Matcha",
+    "brand": "Ippodo",
+    "category": "morning-ritual",
+    "subCategory": "superfoods",
+    "collection": "morning-ritual",
+    "image": "/products/ceremonial-matcha.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B00DDR8FQ8?tag=phcfastore-20",
+    "price": 38.99,
+    "rating": 4.8,
+    "reviewCount": 4560,
+    "badge": "Uji Origin",
+    "description": "Stone-ground in Uji, Japan. Vibrant jade color with umami sweetness. The only matcha worth whisking.",
+    "ingredients": [
+      "100% organic matcha green tea"
+    ],
+    "pros": [
+      "Authentic Uji sourcing",
+      "Ceremonial grade",
+      "No bitterness"
+    ],
+    "cons": [
+      "Requires proper preparation",
+      "Smaller quantity"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "probiotic-daily-ritual",
+    "slug": "probiotic-daily-ritual",
+    "name": "Probiotic Daily Ritual",
+    "brand": "Seed",
+    "category": "morning-ritual",
+    "subCategory": "probiotics",
+    "collection": "morning-ritual",
+    "image": "/products/probiotic-ritual.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B07V5ZYL7R?tag=phcfastore-20",
+    "price": 49.99,
+    "rating": 4.6,
+    "reviewCount": 5890,
+    "badge": "Synbiotic",
+    "description": "24 clinically-studied strains in a refillable glass jar. Sustainable packaging that belongs in a modern apothecary.",
+    "ingredients": [
+      "24 probiotic strains",
+      "Prebiotics",
+      "Digestive enzymes"
+    ],
+    "pros": [
+      "Refillable glass jar",
+      "Clinically studied",
+      "No refrigeration"
+    ],
+    "cons": [
+      "Subscription model",
+      "Premium pricing"
+    ],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "magnesium-glycinate-night-caps",
+    "slug": "magnesium-glycinate-night-caps",
+    "name": "Magnesium Glycinate Night Caps",
+    "brand": "Pure Encapsulations",
+    "category": "morning-ritual",
+    "subCategory": "minerals",
+    "collection": "morning-ritual",
+    "image": "/products/magnesium-glycinate.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B0021Q6GH8?tag=phcfastore-20",
+    "price": 32.99,
+    "rating": 4.7,
+    "reviewCount": 8760,
+    "badge": "Deep Sleep",
+    "description": "The most bioavailable form of magnesium for relaxation and deep sleep support. Clean, hypoallergenic formulation.",
+    "ingredients": [
+      "Magnesium glycinate"
+    ],
+    "pros": [
+      "Highly absorbable",
+      "No GI distress",
+      "Clean formula"
+    ],
+    "cons": [
+      "Multiple capsules needed",
+      "Tasteless"
+    ],
+    "featured": false,
+    "trending": true
+  },
+  {
+    "id": "ancestral-beef-liver-capsules",
+    "slug": "ancestral-beef-liver-capsules",
+    "name": "Ancestral Beef Liver Capsules",
+    "brand": "Ancestral Supplements",
+    "category": "morning-ritual",
+    "subCategory": "superfoods",
+    "collection": "morning-ritual",
+    "image": "/products/beef-liver.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B01MSBDY44?tag=phcfastore-20",
+    "price": 44.99,
+    "rating": 4.6,
+    "reviewCount": 6540,
+    "badge": "Nutrient Dense",
+    "description": "Grass-fed, grass-finished New Zealand beef liver. Nature's most nutrient-dense superfood in convenient capsule form.",
+    "ingredients": [
+      "Grass-fed beef liver",
+      "Gelatin capsule"
+    ],
+    "pros": [
+      "Whole food nutrition",
+      "No taste",
+      "High B12 and iron"
+    ],
+    "cons": [
+      "Not for vegetarians",
+      "Strong if opened"
+    ],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "hydration-electrolyte-salts",
+    "slug": "hydration-electrolyte-salts",
+    "name": "Hydration Electrolyte Salts",
+    "brand": "LMNT",
+    "category": "morning-ritual",
+    "subCategory": "hydration",
+    "collection": "morning-ritual",
+    "image": "/products/electrolyte-salts.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B084GLTBCC?tag=phcfastore-20",
+    "price": 45.99,
+    "rating": 4.8,
+    "reviewCount": 9870,
+    "badge": "Zero Sugar",
+    "description": "Designer stick-packs with optimal sodium, potassium, and magnesium ratios. No sugar, no fillers, just science.",
+    "ingredients": [
+      "Sodium chloride",
+      "Potassium chloride",
+      "Magnesium malate"
+    ],
+    "pros": [
+      "Muted packaging",
+      "Science-backed ratios",
+      "Travel-friendly"
+    ],
+    "cons": [
+      "Salty taste",
+      "Single-use packs"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "matte-ceramic-pour-over",
+    "slug": "matte-ceramic-pour-over",
+    "name": "Matte Ceramic Pour-Over Set",
+    "brand": "Hario",
+    "category": "high-end-home",
+    "subCategory": "coffee",
+    "collection": "high-end-home",
+    "image": "/products/pour-over-set.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B001RCZR7G?tag=phcfastore-20",
+    "price": 64.99,
+    "rating": 4.8,
+    "reviewCount": 7650,
+    "badge": "MCM Classic",
+    "description": "Mid-century cone design in matte ceramic. The sculptural silhouette that belongs on every modern kitchen counter.",
+    "ingredients": [],
+    "pros": [
+      "Iconic design",
+      "Heat retention",
+      "Easy to clean"
+    ],
+    "cons": [
+      "Requires filters",
+      "Fragile"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "ribbed-amber-glass-tumblers",
+    "slug": "ribbed-amber-glass-tumblers",
+    "name": "Ribbed Amber Glass Tumblers",
+    "brand": "Ferm Living",
+    "category": "high-end-home",
+    "subCategory": "drinkware",
+    "collection": "high-end-home",
+    "image": "/products/amber-tumblers.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B08PQKLD3R?tag=phcfastore-20",
+    "price": 58.99,
+    "rating": 4.7,
+    "reviewCount": 2340,
+    "badge": "Set of 4",
+    "description": "Heavy-bottomed with vertical ribbing. The amber hue catches light like nothing else. Set of four.",
+    "ingredients": [],
+    "pros": [
+      "Substantial weight",
+      "Beautiful light play",
+      "Dishwasher safe"
+    ],
+    "cons": [
+      "Hand-wash recommended",
+      "Investment piece"
+    ],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "travertine-stone-coasters",
+    "slug": "travertine-stone-coasters",
+    "name": "Travertine Stone Coasters",
+    "brand": "CB2",
+    "category": "high-end-home",
+    "subCategory": "tabletop",
+    "collection": "high-end-home",
+    "image": "/products/travertine-coasters.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B09N3THVXR?tag=phcfastore-20",
+    "price": 48.99,
+    "rating": 4.6,
+    "reviewCount": 1890,
+    "badge": "Raw Edge",
+    "description": "Raw edge travertine with natural veining. Each piece unique. The organic texture that grounds any tablescape.",
+    "ingredients": [],
+    "pros": [
+      "Natural stone",
+      "Each unique",
+      "Absorbs condensation"
+    ],
+    "cons": [
+      "Requires sealing",
+      "Heavy"
+    ],
+    "featured": false,
+    "trending": true
+  },
+  {
+    "id": "solid-walnut-serving-tray",
+    "slug": "solid-walnut-serving-tray",
+    "name": "Solid Walnut Serving Tray",
+    "brand": "Crate & Barrel",
+    "category": "high-end-home",
+    "subCategory": "serveware",
+    "collection": "high-end-home",
+    "image": "/products/walnut-tray.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B07XQGNTNM?tag=phcfastore-20",
+    "price": 89.99,
+    "rating": 4.8,
+    "reviewCount": 1240,
+    "badge": "MCM Lines",
+    "description": "Minimalist MCM lines in solid American walnut. Integrated handles. The tray that elevates every occasion.",
+    "ingredients": [],
+    "pros": [
+      "Solid hardwood",
+      "Timeless design",
+      "Multi-purpose"
+    ],
+    "cons": [
+      "Hand-wash only",
+      "Premium price"
+    ],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "brass-marble-oil-diffuser",
+    "slug": "brass-marble-oil-diffuser",
+    "name": "Brass & Marble Essential Oil Diffuser",
+    "brand": "Vitruvi",
+    "category": "high-end-home",
+    "subCategory": "wellness",
+    "collection": "high-end-home",
+    "image": "/products/oil-diffuser.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B074TJCNK2?tag=phcfastore-20",
+    "price": 119.99,
+    "rating": 4.5,
+    "reviewCount": 3560,
+    "badge": "Architectural",
+    "description": "Architectural silhouette in brushed brass and stone. Ultrasonic mist without the plastic aesthetic.",
+    "ingredients": [],
+    "pros": [
+      "Stunning design",
+      "Quiet operation",
+      "Large water tank"
+    ],
+    "cons": [
+      "Investment piece",
+      "Requires cleaning"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "linen-waffle-kitchen-linens",
+    "slug": "linen-waffle-kitchen-linens",
+    "name": "Linen Waffle-Weave Kitchen Linens",
+    "brand": "Parachute",
+    "category": "high-end-home",
+    "subCategory": "textiles",
+    "collection": "high-end-home",
+    "image": "/products/kitchen-linens.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B08HM8KLVY?tag=phcfastore-20",
+    "price": 42.99,
+    "rating": 4.7,
+    "reviewCount": 2780,
+    "badge": "Forest Green",
+    "description": "European flax linen in forest green. Waffle weave for absorbency. Softens beautifully with every wash.",
+    "ingredients": [],
+    "pros": [
+      "100% linen",
+      "Gets better with age",
+      "Quick drying"
+    ],
+    "cons": [
+      "May wrinkle",
+      "Hand-wash first"
+    ],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "architectural-ceramic-fruit-bowl",
+    "slug": "architectural-ceramic-fruit-bowl",
+    "name": "Architectural Ceramic Fruit Bowl",
+    "brand": "Raawii",
+    "category": "high-end-home",
+    "subCategory": "serveware",
+    "collection": "high-end-home",
+    "image": "/products/ceramic-bowl.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B08SHGKLMN?tag=phcfastore-20",
+    "price": 78.99,
+    "rating": 4.6,
+    "reviewCount": 890,
+    "badge": "Pedestal",
+    "description": "Pedestal style with sculptural curves. The functional art piece that makes everyday produce feel intentional.",
+    "ingredients": [],
+    "pros": [
+      "Statement piece",
+      "Stable pedestal",
+      "Matte finish"
+    ],
+    "cons": [
+      "Single purpose",
+      "Takes up space"
+    ],
+    "featured": false,
+    "trending": true
+  },
+  {
+    "id": "hand-blown-water-carafe",
+    "slug": "hand-blown-water-carafe",
+    "name": "Hand-Blown Glass Water Carafe",
+    "brand": "LSA International",
+    "category": "high-end-home",
+    "subCategory": "drinkware",
+    "collection": "high-end-home",
+    "image": "/products/water-carafe.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B004DEKNVG?tag=phcfastore-20",
+    "price": 68.99,
+    "rating": 4.8,
+    "reviewCount": 1560,
+    "badge": "Cork Stopper",
+    "description": "Hand-blown glass with spherical cork stopper. The bedside or dinner table essential that feels gallery-worthy.",
+    "ingredients": [],
+    "pros": [
+      "Hand-blown",
+      "Beautiful stopper",
+      "Perfect pour"
+    ],
+    "cons": [
+      "Fragile",
+      "Hand-wash only"
+    ],
+    "featured": true,
+    "trending": false
+  },
+  {
+    "id": "sustainable-cork-yoga-mat",
+    "slug": "sustainable-cork-yoga-mat",
+    "name": "Sustainable Cork Yoga Mat",
+    "brand": "Yoloha",
+    "category": "lifestyle-accessories",
+    "subCategory": "fitness",
+    "collection": "lifestyle-accessories",
+    "image": "/products/cork-yoga-mat.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B07H3N3V8H?tag=phcfastore-20",
+    "price": 129.99,
+    "rating": 4.7,
+    "reviewCount": 4230,
+    "badge": "Non-Toxic",
+    "description": "Portuguese cork surface with natural rubber base. Antimicrobial, non-toxic, and improves grip when wet.",
+    "ingredients": [],
+    "pros": [
+      "Sustainable materials",
+      "Better grip when wet",
+      "Beautiful aesthetic"
+    ],
+    "cons": [
+      "Heavier than foam",
+      "Higher investment"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "brushed-gold-wellness-journal",
+    "slug": "brushed-gold-wellness-journal",
+    "name": "Brushed Gold Wellness Journal",
+    "brand": "Appointed",
+    "category": "lifestyle-accessories",
+    "subCategory": "stationery",
+    "collection": "lifestyle-accessories",
+    "image": "/products/wellness-journal.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B07ZFHPLMK?tag=phcfastore-20",
+    "price": 38.99,
+    "rating": 4.6,
+    "reviewCount": 1870,
+    "badge": "Linen Bound",
+    "description": "Linen-bound with brushed gold foil details. Thick, fountain-pen-friendly paper. For tracking rituals that matter.",
+    "ingredients": [],
+    "pros": [
+      "Luxe materials",
+      "Lay-flat binding",
+      "Undated format"
+    ],
+    "cons": [
+      "No specific prompts",
+      "Compact size"
+    ],
+    "featured": false,
+    "trending": false
+  },
+  {
+    "id": "heavyweight-cotton-tote",
+    "slug": "heavyweight-cotton-tote",
+    "name": "Heavyweight Cotton Phancy Tote",
+    "brand": "Phancy",
+    "category": "lifestyle-accessories",
+    "subCategory": "bags",
+    "collection": "lifestyle-accessories",
+    "image": "/products/cotton-tote.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/PHANCYTOTE01?tag=phcfastore-20",
+    "price": 34.99,
+    "rating": 4.8,
+    "reviewCount": 560,
+    "badge": "Exclusive",
+    "description": "12oz organic cotton canvas with minimalist Phancy branding. Reinforced straps. The farmers market essential.",
+    "ingredients": [],
+    "pros": [
+      "Organic cotton",
+      "Minimalist design",
+      "Durable construction"
+    ],
+    "cons": [
+      "Limited availability",
+      "Single color"
+    ],
+    "featured": true,
+    "trending": true
+  },
+  {
+    "id": "sandstone-mortar-pestle",
+    "slug": "sandstone-mortar-pestle",
+    "name": "Sandstone Mortar and Pestle",
+    "brand": "Bloomingville",
+    "category": "lifestyle-accessories",
+    "subCategory": "kitchen",
+    "collection": "lifestyle-accessories",
+    "image": "/products/mortar-pestle.jpg",
+    "amazonUrl": "https://www.amazon.ca/dp/B07KPSKC7W?tag=phcfastore-20",
+    "price": 54.99,
+    "rating": 4.7,
+    "reviewCount": 2340,
+    "badge": "Organic Form",
+    "description": "Natural sandstone with organic sculptural form. For grinding fresh herbs, supplements, or spices. A kitchen sculpture.",
+    "ingredients": [],
+    "pros": [
+      "Natural stone",
+      "Weighted base",
+      "Beautiful display piece"
+    ],
+    "cons": [
+      "Porous surface",
+      "Heavy"
+    ],
+    "featured": false,
     "trending": false
   }
 ]

@@ -1,21 +1,22 @@
+import type { Metadata } from "next";
+import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import SiteHeader from "@/components/site-header";
-import SiteFooter from "@/components/site-footer";
-import { site } from "@/lib/site";
 
-export const metadata = {
-  title: site.title,
-  description: site.description,
-  applicationName: "Phancy",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Phancy"
-  },
-  icons: {
-    icon: "/products/placeholder-product.svg",
-    apple: "/products/placeholder-product.svg"
-  }
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  weight: ["700"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  style: ["italic", "normal"],
+});
+
+export const metadata: Metadata = {
+  title: "Phancy | Curated for Modern Living",
+  description: "A premium lifestyle brand bridging Nutrition and Home Wares for the modern Canadian entrepreneur. Experience curated wellness and biohacking aesthetics.",
 };
 
 export default function RootLayout({
@@ -25,12 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <div className="phancy-shell">
-          <SiteHeader />
-          {children}
-          <SiteFooter />
-        </div>
+      <body
+        className={`${outfit.variable} ${playfair.variable} bg-phancy-cream text-phancy-black antialiased font-editorial`}
+      >
+        {children}
       </body>
     </html>
   );

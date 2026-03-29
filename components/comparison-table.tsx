@@ -1,4 +1,4 @@
-import AmazonButton from "./amazon-button";
+import Link from "next/link";
 import type { Product } from "@/lib/products";
 
 export default function ComparisonTable({
@@ -9,32 +9,117 @@ export default function ComparisonTable({
   productB: Product;
 }) {
   return (
-    <div className="overflow-x-auto rounded-[2rem] border border-pink-100 bg-white shadow-[0_18px_50px_rgba(233,30,99,0.08)]">
-      <table className="w-full min-w-[700px] border-collapse">
-        <thead className="bg-gradient-to-r from-pink-50 to-rose-50">
-          <tr>
-            <th className="p-5 text-left text-sm font-black uppercase tracking-[0.14em] text-zinc-700">Product</th>
-            <th className="p-5 text-left text-sm font-black uppercase tracking-[0.14em] text-zinc-700">Price</th>
-            <th className="p-5 text-left text-sm font-black uppercase tracking-[0.14em] text-zinc-700">Rating</th>
-            <th className="p-5 text-left text-sm font-black uppercase tracking-[0.14em] text-zinc-700">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[productA, productB].map((product) => (
-            <tr key={product.id} className="border-t border-pink-100">
-              <td className="p-5">
-                <div className="font-black text-zinc-950">{product.name}</div>
-                <div className="mt-1 text-sm text-zinc-500">{product.category.replace(/-/g, " ")}</div>
-              </td>
-              <td className="p-5 text-lg font-black text-pink-700">${product.price.toFixed(2)}</td>
-              <td className="p-5 text-zinc-700">★ {product.rating}</td>
-              <td className="p-5">
-                <AmazonButton href={product.amazonUrl} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="grid gap-8 lg:grid-cols-2">
+      {[productA, productB].map((product) => (
+        <div
+          key={product.id}
+          className="phancy-card overflow-hidden"
+        >
+          {/* Product Image */}
+          <div className="phancy-product-image aspect-[4/3]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Product Details */}
+          <div className="p-6">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {product.badge && (
+                <span className="phancy-badge text-[9px]">{product.badge}</span>
+              )}
+              <span className="phancy-badge phancy-badge-cream text-[9px]">
+                {product.brand}
+              </span>
+            </div>
+
+            <h3 className="phancy-h3 mb-2">{product.name}</h3>
+
+            <p className="phancy-body text-sm mb-6 line-clamp-2">
+              {product.description}
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 py-4 border-y border-[var(--line)]">
+              <div className="text-center">
+                <div className="font-[var(--font-display)] text-2xl font-bold text-[var(--forest)]">
+                  ${product.price.toFixed(0)}
+                </div>
+                <div className="phancy-caption text-xs">Price</div>
+              </div>
+              <div className="text-center">
+                <div className="font-[var(--font-display)] text-2xl font-bold text-[var(--off-black)]">
+                  {product.rating}
+                </div>
+                <div className="phancy-caption text-xs">Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="font-[var(--font-display)] text-2xl font-bold text-[var(--off-black)]">
+                  {(product.reviewCount / 1000).toFixed(1)}k
+                </div>
+                <div className="phancy-caption text-xs">Reviews</div>
+              </div>
+            </div>
+
+            {/* Pros */}
+            <div className="mt-6">
+              <h4 className="font-[var(--font-display)] text-sm font-semibold text-[var(--forest)] mb-3">
+                What We Love
+              </h4>
+              <ul className="space-y-2">
+                {product.pros.slice(0, 3).map((pro) => (
+                  <li
+                    key={pro}
+                    className="flex items-start gap-2 font-[var(--font-body)] text-sm text-[var(--muted)]"
+                  >
+                    <span className="text-[var(--forest)]">✓</span>
+                    <span>{pro}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Cons */}
+            <div className="mt-4">
+              <h4 className="font-[var(--font-display)] text-sm font-semibold text-[var(--terracotta)] mb-3">
+                Worth Noting
+              </h4>
+              <ul className="space-y-2">
+                {product.cons.slice(0, 2).map((con) => (
+                  <li
+                    key={con}
+                    className="flex items-start gap-2 font-[var(--font-body)] text-sm text-[var(--muted)]"
+                  >
+                    <span className="text-[var(--terracotta)]">○</span>
+                    <span>{con}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-6 flex flex-col gap-3">
+              <a
+                href={product.amazonUrl}
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
+                className="phancy-btn phancy-btn-primary text-center"
+              >
+                Discover on Amazon
+              </a>
+              <Link
+                href={`/product/${product.slug}`}
+                className="phancy-btn phancy-btn-secondary text-center"
+              >
+                View Full Details
+              </Link>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

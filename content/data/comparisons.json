@@ -1,14 +1,62 @@
 [
   {
-    "slug": "pink-probiotic-for-her-vs-womens-multi-daily",
-    "title": "Pink Probiotic for Her + Cranberry vs Women's Multi Daily Vitamin",
-    "productA": "pink-probiotic-for-her",
-    "productB": "womens-multi-daily"
+    "slug": "grass-fed-collagen-peptides-vs-liposomal-vitamin-c",
+    "title": "Premium Grass-Fed Collagen Peptides vs Liposomal Vitamin C",
+    "productA": "grass-fed-collagen-peptides",
+    "productB": "liposomal-vitamin-c"
   },
   {
-    "slug": "lions-mane-focus-vs-collagen-beauty-support",
-    "title": "Lion's Mane Mushroom Focus Support vs Collagen Beauty Support Powder",
-    "productA": "lions-mane-focus",
-    "productB": "collagen-beauty-support"
+    "slug": "plant-based-nootropic-stack-vs-ceremonial-grade-matcha",
+    "title": "Plant-Based Nootropic Stack vs Organic Ceremonial Grade Matcha",
+    "productA": "plant-based-nootropic-stack",
+    "productB": "ceremonial-grade-matcha"
+  },
+  {
+    "slug": "probiotic-daily-ritual-vs-magnesium-glycinate-night-caps",
+    "title": "Probiotic Daily Ritual vs Magnesium Glycinate Night Caps",
+    "productA": "probiotic-daily-ritual",
+    "productB": "magnesium-glycinate-night-caps"
+  },
+  {
+    "slug": "ancestral-beef-liver-capsules-vs-hydration-electrolyte-salts",
+    "title": "Ancestral Beef Liver Capsules vs Hydration Electrolyte Salts",
+    "productA": "ancestral-beef-liver-capsules",
+    "productB": "hydration-electrolyte-salts"
+  },
+  {
+    "slug": "matte-ceramic-pour-over-vs-ribbed-amber-glass-tumblers",
+    "title": "Matte Ceramic Pour-Over Set vs Ribbed Amber Glass Tumblers",
+    "productA": "matte-ceramic-pour-over",
+    "productB": "ribbed-amber-glass-tumblers"
+  },
+  {
+    "slug": "travertine-stone-coasters-vs-solid-walnut-serving-tray",
+    "title": "Travertine Stone Coasters vs Solid Walnut Serving Tray",
+    "productA": "travertine-stone-coasters",
+    "productB": "solid-walnut-serving-tray"
+  },
+  {
+    "slug": "brass-marble-oil-diffuser-vs-linen-waffle-kitchen-linens",
+    "title": "Brass & Marble Essential Oil Diffuser vs Linen Waffle-Weave Kitchen Linens",
+    "productA": "brass-marble-oil-diffuser",
+    "productB": "linen-waffle-kitchen-linens"
+  },
+  {
+    "slug": "architectural-ceramic-fruit-bowl-vs-hand-blown-water-carafe",
+    "title": "Architectural Ceramic Fruit Bowl vs Hand-Blown Glass Water Carafe",
+    "productA": "architectural-ceramic-fruit-bowl",
+    "productB": "hand-blown-water-carafe"
+  },
+  {
+    "slug": "sustainable-cork-yoga-mat-vs-brushed-gold-wellness-journal",
+    "title": "Sustainable Cork Yoga Mat vs Brushed Gold Wellness Journal",
+    "productA": "sustainable-cork-yoga-mat",
+    "productB": "brushed-gold-wellness-journal"
+  },
+  {
+    "slug": "heavyweight-cotton-tote-vs-sandstone-mortar-pestle",
+    "title": "Heavyweight Cotton Phancy Tote vs Sandstone Mortar and Pestle",
+    "productA": "heavyweight-cotton-tote",
+    "productB": "sandstone-mortar-pestle"
   }
 ]

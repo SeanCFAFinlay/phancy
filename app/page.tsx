@@ -1,319 +1,174 @@
-import ProductGrid from "@/components/product-grid";
-import {
-  getAllBestOf,
-  getAllCategories,
-  getAllProducts,
-  getFeaturedProducts,
-  getTrendingProducts,
-  type BestOfGuide,
-  type Product,
-} from "@/lib/products";
-import Link from "next/link";
+import React from "react";
+import { ProductManifest } from "@/lib/manifest";
+import ProductCard from "@/components/ProductCard";
 
-type CategoryStat = {
-  slug: string;
-  title: string;
-  count: number;
-  tone: string;
-};
-
-function categoryStats(products: Product[]): CategoryStat[] {
-  const counts = new Map<string, number>();
-
-  for (const product of products) {
-    counts.set(product.category, (counts.get(product.category) ?? 0) + 1);
-  }
-
-  const tones = [
-    "from-pink-500 to-fuchsia-600",
-    "from-fuchsia-500 to-rose-500",
-    "from-rose-500 to-orange-400",
-    "from-violet-500 to-fuchsia-500",
-    "from-pink-400 to-rose-500",
-    "from-purple-500 to-pink-500",
-  ];
-
-  return Array.from(counts.entries())
-    .slice(0, 6)
-    .map(([slug, count], index) => ({
-      slug,
-      title: slug.replace(/-/g, " "),
-      count,
-      tone: tones[index % tones.length],
-    }));
-}
-
-function featuredGuides(guides: BestOfGuide[]) {
-  return guides.slice(0, 3);
-}
-
-export default function HomePage() {
-  const featured = getFeaturedProducts();
-  const trending = getTrendingProducts();
-  const allProducts = getAllProducts();
-  const categories = categoryStats(allProducts);
-  const guides = featuredGuides(getAllBestOf());
+export default function PhancyLandingPage() {
+  const nutrition = ProductManifest.filter(p => p.category === "The Morning Ritual");
+  const homeWares = ProductManifest.filter(p => p.category === "The Modern Home");
 
   return (
-    <main>
-      <section className="phancy-wrap pt-8 md:pt-10">
-        <div className="grid gap-6 xl:grid-cols-[1.05fr,0.95fr]">
-          <div className="overflow-hidden rounded-[40px] bg-gradient-to-br from-pink-500 via-fuchsia-500 to-rose-600 p-8 text-white shadow-[0_32px_100px_rgba(233,30,99,0.24)] md:p-12">
-            <div className="phancy-pill bg-white/15 text-white">Curated for modern Canadian living</div>
+    <main className="min-h-screen">
+      {/* Sticky Frosted Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-phancy-cream/80 backdrop-blur-md border-b border-phancy-black/5">
+        <div className="max-w-[1440px] mx-auto px-8 md:px-16 h-20 flex items-center justify-between">
+          <div className="font-display font-bold text-2xl tracking-[0.4em] text-phancy-black">
+            PHANCY
+          </div>
+          <nav className="hidden md:flex gap-12 font-display uppercase tracking-[0.2em] text-[10px] font-bold">
+            <a href="#rituals" className="hover:text-phancy-forest transition-colors">Rituals</a>
+            <a href="#home" className="hover:text-phancy-forest transition-colors">The Home</a>
+            <a href="#manifesto" className="hover:text-phancy-forest transition-colors">Manifesto</a>
+          </nav>
+          <div className="h-2 w-2 rounded-full bg-phancy-forest animate-pulse" />
+        </div>
+      </header>
 
-            <h1 className="phancy-h1 mt-6 max-w-4xl">
-              Wellness discovery that feels editorial, elevated, and actually usable.
+      {/* Asymmetrical Hero Section */}
+      <section className="pt-40 pb-20 px-8 md:px-16 max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-12 gap-12 items-center">
+          <div className="col-span-12 lg:col-span-5 space-y-12">
+            <div className="inline-block py-2 px-4 bg-phancy-forest/5 rounded-full">
+               <span className="font-display uppercase tracking-[0.3em] text-[10px] text-phancy-forest font-bold">EST. 2024 — Curated Wellness</span>
+            </div>
+            <h1 className="font-display text-7xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight uppercase">
+              Wellness<br />
+              <span className="text-phancy-forest italic font-editorial lowercase tracking-normal font-normal">Elevated.</span>
             </h1>
-
-            <p className="mt-6 max-w-2xl text-base leading-8 text-pink-50 md:text-lg">
-              Phancy brings together supplements, probiotics, collagen, vitamins, and wellness essentials in a cleaner product discovery experience designed to feel more like a modern brand than a basic affiliate page.
+            <p className="font-editorial text-2xl md:text-3xl max-w-lg leading-relaxed text-phancy-black/80 italic">
+              A considered bridge between nutrition and environment. For the modern Canadian entrepreneur.
             </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/deals" className="phancy-btn phancy-btn-secondary">
-                Explore Products
-              </Link>
-              <Link href="/trending" className="phancy-btn border border-white/25 text-white hover:bg-white/10">
-                See Trending
-              </Link>
-            </div>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-[24px] bg-white/12 p-4">
-                <div className="text-2xl font-black">Premium feel</div>
-                <div className="mt-2 text-sm text-pink-50">More white space, stronger hierarchy, and cleaner browsing.</div>
-              </div>
-              <div className="rounded-[24px] bg-white/12 p-4">
-                <div className="text-2xl font-black">Editorial UX</div>
-                <div className="mt-2 text-sm text-pink-50">Built like a product discovery publication, not a cluttered grid.</div>
-              </div>
-              <div className="rounded-[24px] bg-white/12 p-4">
-                <div className="text-2xl font-black">Mobile first</div>
-                <div className="mt-2 text-sm text-pink-50">Structured to work properly on phones, tablets, and desktop.</div>
-              </div>
+            <div className="flex gap-8">
+              <a href="#rituals" className="group flex items-center gap-4 font-display uppercase tracking-[0.2em] text-xs font-bold text-phancy-black">
+                Explore the Selection
+                <span className="w-12 h-[1px] bg-phancy-black group-hover:w-16 group-hover:bg-phancy-forest transition-all" />
+              </a>
             </div>
           </div>
-
-          <div className="grid gap-5">
-            <div className="phancy-card relative overflow-hidden p-8">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,228,239,.9),transparent_35%)]" />
-              <div className="relative">
-                <div className="phancy-eyebrow">Phancy spotlight</div>
-                <h2 className="mt-3 text-3xl font-black tracking-tight text-zinc-950">
-                  A storefront that feels more magazine than marketplace.
-                </h2>
-                <p className="phancy-copy mt-4">
-                  The strongest affiliate sites do not look like pages built only to sell. They feel curated, structured, and useful. That is the direction here.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid gap-5 sm:grid-cols-2">
-              <Link href="/best/best-womens-health-canada" className="phancy-card bg-gradient-to-br from-white to-pink-50 p-7 transition hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(233,30,99,0.14)]">
-                <div className="phancy-eyebrow">Guide</div>
-                <div className="mt-3 text-2xl font-black tracking-tight text-zinc-950">
-                  Best picks
-                </div>
-                <p className="phancy-copy mt-3 text-sm">
-                  Ranked lists that help users decide faster.
-                </p>
-              </Link>
-
-              <Link href="/compare/pink-probiotic-for-her-vs-womens-multi-daily" className="phancy-card bg-gradient-to-br from-white to-fuchsia-50 p-7 transition hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(233,30,99,0.14)]">
-                <div className="phancy-eyebrow">Compare</div>
-                <div className="mt-3 text-2xl font-black tracking-tight text-zinc-950">
-                  Side by side
-                </div>
-                <p className="phancy-copy mt-3 text-sm">
-                  Price, ratings, pros, and ingredient context.
-                </p>
-              </Link>
-            </div>
-
-            <div className="phancy-card bg-zinc-950 p-8 text-white">
-              <div className="phancy-eyebrow text-pink-300">Trust</div>
-              <div className="mt-3 text-3xl font-black tracking-tight">
-                Independent framing. Cleaner recommendations.
-              </div>
-              <p className="mt-4 max-w-2xl text-sm leading-8 text-zinc-300">
-                Product discovery should feel confidence-building. That comes from better structure, stronger design decisions, and less noise.
-              </p>
+          <div className="col-span-12 lg:col-span-7 h-[70vh] bg-phancy-forest/5 rounded-phancy-lg overflow-hidden relative shadow-phancy">
+            <div className="absolute inset-0 flex items-center justify-center">
+               <div className="text-center space-y-4">
+                  <div className="w-32 h-[1px] bg-phancy-forest mx-auto" />
+                  <span className="font-editorial italic text-phancy-black/20 text-6xl">Visual Ritual</span>
+                  <div className="w-32 h-[1px] bg-phancy-forest mx-auto" />
+               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="phancy-wrap phancy-section">
-        <div className="grid gap-5 md:grid-cols-3">
-          <div className="phancy-card p-8">
-            <div className="phancy-eyebrow">Why this works</div>
-            <div className="mt-4 text-2xl font-black tracking-tight text-zinc-950">
-              Trusted by wellness-first shoppers
-            </div>
-            <p className="phancy-copy mt-4">
-              Better visual hierarchy helps users focus on the products that matter instead of scanning clutter.
-            </p>
-          </div>
-          <div className="phancy-card p-8">
-            <div className="phancy-eyebrow">Editorial approach</div>
-            <div className="mt-4 text-2xl font-black tracking-tight text-zinc-950">
-              Guides, comparisons, and curation
-            </div>
-            <p className="phancy-copy mt-4">
-              The strongest affiliate storefronts feel like product publications with taste, structure, and point of view.
-            </p>
-          </div>
-          <div className="phancy-card p-8">
-            <div className="phancy-eyebrow">Professional flow</div>
-            <div className="mt-4 text-2xl font-black tracking-tight text-zinc-950">
-              Research before you click
-            </div>
-            <p className="phancy-copy mt-4">
-              Buying guides, category cards, and product reviews work together to create a more serious user experience.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="phancy-wrap phancy-section">
-        <div className="mb-10 max-w-3xl">
-          <div className="phancy-eyebrow mb-3">Category explorer</div>
-          <h2 className="phancy-h2">Browse by wellness intent, not by clutter.</h2>
-          <p className="phancy-copy mt-4 max-w-2xl">
-            Category cards make the homepage feel like a platform, not just a stack of products.
+      {/* The Ritual Grid (In-Situ Pairings) */}
+      <section id="rituals" className="py-40 px-8 md:px-16 max-w-[1440px] mx-auto space-y-32">
+        <div className="text-center max-w-2xl mx-auto space-y-8">
+          <h2 className="font-display text-4xl uppercase tracking-[0.2em]">The Ritual Grid</h2>
+          <div className="h-[1px] w-20 bg-phancy-forest mx-auto" />
+          <p className="font-editorial text-xl text-phancy-black/60 italic leading-relaxed">
+            Everyday objects should be intentional. We pair high-density nutrition with architectural home wares to manifest an environment of excellence.
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {categories.map((category) => (
-            <Link
-              key={category.slug}
-              href={`/category/${category.slug}`}
-              className="group overflow-hidden rounded-[34px] border border-pink-100 bg-white p-8 shadow-[0_18px_50px_rgba(233,30,99,0.08)] transition hover:-translate-y-1 hover:shadow-[0_26px_80px_rgba(233,30,99,0.14)]"
-            >
-              <div className={`h-14 w-14 rounded-[18px] bg-gradient-to-br ${category.tone}`} />
-              <div className="mt-6 text-3xl font-black capitalize tracking-tight text-zinc-950">
-                {category.title}
-              </div>
-              <div className="mt-2 text-sm font-black uppercase tracking-[0.14em] text-pink-600">
-                {category.count} curated products
-              </div>
-              <p className="mt-4 text-sm leading-8 text-zinc-600">
-                Explore a stronger discovery flow for {category.title}.
-              </p>
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* First Pair: Morning Focus */}
+          <ProductCard product={nutrition[0]} />
+          <ProductCard product={homeWares[0]} />
+          <ProductCard product={nutrition[2]} />
+          <ProductCard product={homeWares[1]} />
+        </div>
+
+        {/* Asymmetrical "Split" Feature */}
+        <div className="grid grid-cols-12 gap-8 items-stretch">
+          <div className="col-span-12 lg:col-span-8 bg-phancy-black rounded-phancy-lg p-16 flex flex-col justify-between text-phancy-cream space-y-12">
+             <div className="space-y-6">
+               <span className="font-display uppercase tracking-[0.3em] text-[10px] text-phancy-forest font-bold">Editor's Note</span>
+               <h3 className="font-display text-5xl uppercase leading-none tracking-tight">The Biohacking<br />Environment.</h3>
+             </div>
+             <p className="font-editorial text-3xl italic text-phancy-cream/60 leading-relaxed max-w-2xl">
+               &ldquo;We do not merely supplement our diet; we curate our biology. The vessel for your tea is as vital as the leaves themselves.&rdquo;
+             </p>
+             <div className="flex justify-end">
+               <span className="font-display uppercase tracking-[0.2em] text-xs opacity-40">Phancy Editorial 01</span>
+             </div>
+          </div>
+          <div className="col-span-12 lg:col-span-4 flex flex-col gap-8">
+             <ProductCard product={nutrition[3]} />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Second Row: Integrative Living */}
+          <ProductCard product={homeWares[2]} />
+          <ProductCard product={nutrition[6]} />
+          <ProductCard product={homeWares[3]} />
+          <ProductCard product={nutrition[1]} />
         </div>
       </section>
 
-      <section className="phancy-wrap phancy-section">
-        <div className="grid gap-6 xl:grid-cols-[0.9fr,1.1fr]">
-          <div className="phancy-card bg-gradient-to-br from-white to-pink-50 p-8 md:p-10">
-            <div className="phancy-eyebrow">Editorial guides</div>
-            <h2 className="phancy-h2 mt-4">
-              Buying guides that make the site feel like a real content brand.
-            </h2>
-            <p className="phancy-copy mt-5 max-w-xl">
-              Guides are one of the fastest ways to improve trust, SEO, and conversion. They create a more useful product discovery path than a plain storefront.
+      {/* The Modern Home Focus */}
+      <section id="home" className="py-40 bg-phancy-black text-phancy-cream">
+        <div className="max-w-[1440px] mx-auto px-8 md:px-16 grid grid-cols-12 gap-16 items-center">
+           <div className="col-span-12 lg:col-span-7 h-[80vh] bg-phancy-cream/5 rounded-phancy-lg relative overflow-hidden">
+             <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                <span className="font-editorial italic text-white text-[20vw]">Space</span>
+             </div>
+           </div>
+           <div className="col-span-12 lg:col-span-5 space-y-12">
+              <h2 className="font-display text-6xl uppercase tracking-tight leading-none">The Modern<br /><span className="text-phancy-forest">Sanctuary.</span></h2>
+              <p className="font-editorial text-2xl italic leading-relaxed opacity-60">
+                Wares for the Canadian workspace. Mid-century modernism meets the ritual of the morning ritual.
+              </p>
+              <div className="space-y-4">
+                 <div className="h-[1px] w-full bg-phancy-cream/10" />
+                 <div className="flex justify-between font-display uppercase tracking-widest text-[10px]">
+                    <span>Wares & Decor</span>
+                    <span>01 — 10</span>
+                 </div>
+              </div>
+              <a href="#rituals" className="phancy-btn inline-block px-12 py-6 bg-phancy-forest hover:bg-phancy-forestDark text-white font-display uppercase tracking-[0.2em] text-xs transition-all duration-300 rounded-xl">
+                 View the Detail
+              </a>
+           </div>
+        </div>
+      </section>
+
+      {/* Final Manifest Section */}
+      <section id="manifesto" className="py-60 px-8 md:px-16 max-w-[1440px] mx-auto text-center space-y-16">
+         <h2 className="font-display text-8xl md:text-9xl uppercase tracking-tighter opacity-10 select-none">MANIFESTO</h2>
+         <div className="max-w-4xl mx-auto">
+            <p className="font-editorial text-4xl md:text-6xl italic leading-tight text-phancy-black/90">
+              We believe everyday objects should be intentional. Phancy is the intersection of <span className="text-phancy-forest">performance</span> and <span className="text-phancy-forest">peace</span>.
             </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/best/best-womens-health-canada" className="phancy-btn phancy-btn-primary">
-                See Guides
-              </Link>
-              <Link href="/trending" className="phancy-btn phancy-btn-secondary">
-                See Trending
-              </Link>
+         </div>
+         <div className="flex flex-col md:flex-row justify-center items-center gap-12 font-display uppercase tracking-[0.2em] text-[10px] font-bold">
+            <div className="flex items-center gap-4">
+               <div className="w-12 h-[1px] bg-phancy-black/20" />
+               <span>Biohacking Aesthetics</span>
             </div>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {guides.map((guide: BestOfGuide) => (
-              <Link
-                key={guide.slug}
-                href={`/best/${guide.slug}`}
-                className="phancy-card p-8 transition hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(233,30,99,0.14)]"
-              >
-                <div className="phancy-pill bg-pink-100 text-pink-700">Buying guide</div>
-                <div className="mt-5 text-2xl font-black tracking-tight text-zinc-950">
-                  {guide.title}
-                </div>
-                <p className="mt-4 text-sm leading-8 text-zinc-600">
-                  {guide.description}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="phancy-wrap phancy-section">
-        <div className="mb-10 max-w-3xl">
-          <div className="phancy-eyebrow mb-3">Trending now</div>
-          <h2 className="phancy-h2">The current product edit.</h2>
-          <p className="phancy-copy mt-4 max-w-2xl">
-            This section should feel like an editorial selection, not a repetitive store row.
-          </p>
-        </div>
-        <ProductGrid products={trending} />
-      </section>
-
-      <section className="phancy-wrap phancy-section">
-        <div className="mb-10 max-w-3xl">
-          <div className="phancy-eyebrow mb-3">Featured picks</div>
-          <h2 className="phancy-h2">Curated recommendations with stronger card design.</h2>
-          <p className="phancy-copy mt-4 max-w-2xl">
-            These cards create the real shopping layer while the rest of the page adds trust and context.
-          </p>
-        </div>
-        <ProductGrid products={featured} />
-      </section>
-
-      <section className="phancy-wrap pb-24">
-        <div className="grid gap-6 xl:grid-cols-[1.05fr,0.95fr]">
-          <div className="overflow-hidden rounded-[40px] bg-zinc-950 p-8 text-white shadow-[0_32px_100px_rgba(0,0,0,0.18)] md:p-12">
-            <div className="phancy-pill bg-white/10 text-white">Newsletter</div>
-            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
-              Make Phancy feel like a brand people return to.
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-300">
-              Add email capture, deal alerts, and editor picks to turn this from a one-time visit into a repeat-use destination.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="h-14 rounded-full border border-white/15 bg-white/95 px-6 text-sm font-semibold text-zinc-900 outline-none"
-              />
-              <button className="phancy-btn bg-white text-pink-700">
-                Join the Edit
-              </button>
+            <div className="flex items-center gap-4">
+               <div className="w-12 h-[1px] bg-phancy-black/20" />
+               <span>Editorial Utility</span>
             </div>
+            <div className="flex items-center gap-4">
+               <div className="w-12 h-[1px] bg-phancy-black/20" />
+               <span>Curated Living</span>
+            </div>
+         </div>
+      </section>
+
+      {/* Minimalist Footer */}
+      <footer className="py-20 px-8 md:px-16 bg-white border-t border-phancy-black/5">
+        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+          <div className="font-display font-bold text-xl tracking-[0.4em] text-phancy-black">
+            PHANCY
           </div>
-
-          <div className="grid gap-5">
-            <Link href="/compare/pink-probiotic-for-her-vs-womens-multi-daily" className="phancy-card p-8 transition hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(233,30,99,0.14)]">
-              <div className="phancy-eyebrow">Comparison tools</div>
-              <div className="mt-4 text-3xl font-black tracking-tight text-zinc-950">
-                Compare before you buy
-              </div>
-              <p className="phancy-copy mt-4">
-                Product comparisons give the site a much more professional and useful structure.
-              </p>
-            </Link>
-
-            <Link href="/deals" className="phancy-card bg-gradient-to-br from-pink-50 to-white p-8 transition hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(233,30,99,0.14)]">
-              <div className="phancy-eyebrow">Deal layer</div>
-              <div className="mt-4 text-3xl font-black tracking-tight text-zinc-950">
-                A cleaner deal-driven conversion path
-              </div>
-              <p className="phancy-copy mt-4">
-                Keep direct shopping pages, but frame them within a polished editorial system.
-              </p>
-            </Link>
+          <div className="flex gap-12 font-display uppercase tracking-[0.2em] text-[9px] font-bold opacity-40">
+            <a href="#" className="hover:text-phancy-forest">Privacy</a>
+            <a href="#" className="hover:text-phancy-forest">Terms</a>
+            <a href="#" className="hover:text-phancy-forest">Disclosure</a>
+          </div>
+          <div className="font-editorial italic text-xs opacity-30">
+            &copy; 2024 Phancy Canada. All Rights Reserved.
           </div>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }

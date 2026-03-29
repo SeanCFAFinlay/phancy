@@ -1,34 +1,43 @@
 [
   {
-    "slug": "best-womens-health-canada",
-    "title": "Best womens health in Canada",
-    "description": "Top womens health products available on Amazon Canada.",
+    "slug": "best-morning-ritual-canada",
+    "title": "Best morning ritual in Canada",
+    "description": "Top morning ritual products available on Amazon Canada.",
     "products": [
-      "pink-probiotic-for-her"
+      "grass-fed-collagen-peptides",
+      "liposomal-vitamin-c",
+      "plant-based-nootropic-stack",
+      "ceremonial-grade-matcha",
+      "probiotic-daily-ritual",
+      "magnesium-glycinate-night-caps",
+      "ancestral-beef-liver-capsules",
+      "hydration-electrolyte-salts"
     ]
   },
   {
-    "slug": "best-vitamins-canada",
-    "title": "Best vitamins in Canada",
-    "description": "Top vitamins products available on Amazon Canada.",
+    "slug": "best-high-end-home-canada",
+    "title": "Best high end home in Canada",
+    "description": "Top high end home products available on Amazon Canada.",
     "products": [
-      "womens-multi-daily"
+      "matte-ceramic-pour-over",
+      "ribbed-amber-glass-tumblers",
+      "travertine-stone-coasters",
+      "solid-walnut-serving-tray",
+      "brass-marble-oil-diffuser",
+      "linen-waffle-kitchen-linens",
+      "architectural-ceramic-fruit-bowl",
+      "hand-blown-water-carafe"
     ]
   },
   {
-    "slug": "best-brain-health-canada",
-    "title": "Best brain health in Canada",
-    "description": "Top brain health products available on Amazon Canada.",
+    "slug": "best-lifestyle-accessories-canada",
+    "title": "Best lifestyle accessories in Canada",
+    "description": "Top lifestyle accessories products available on Amazon Canada.",
     "products": [
-      "lions-mane-focus"
-    ]
-  },
-  {
-    "slug": "best-collagen-canada",
-    "title": "Best collagen in Canada",
-    "description": "Top collagen products available on Amazon Canada.",
-    "products": [
-      "collagen-beauty-support"
+      "sustainable-cork-yoga-mat",
+      "brushed-gold-wellness-journal",
+      "heavyweight-cotton-tote",
+      "sandstone-mortar-pestle"
     ]
   }
 ]
