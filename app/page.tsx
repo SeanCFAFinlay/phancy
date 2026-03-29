@@ -78,7 +78,7 @@ export default function PhancyLandingPage() {
         <div className="grid grid-cols-12 gap-8 items-stretch">
           <div className="col-span-12 lg:col-span-8 bg-phancy-black rounded-phancy-lg p-16 flex flex-col justify-between text-phancy-cream space-y-12">
              <div className="space-y-6">
-               <span className="font-display uppercase tracking-[0.3em] text-[10px] text-phancy-forest font-bold">Editor's Note</span>
+               <span className="font-display uppercase tracking-[0.3em] text-[10px] text-phancy-forest font-bold">Editor&apos;s Note</span>
                <h3 className="font-display text-5xl uppercase leading-none tracking-tight">The Biohacking<br />Environment.</h3>
              </div>
              <p className="font-editorial text-3xl italic text-phancy-cream/60 leading-relaxed max-w-2xl">
