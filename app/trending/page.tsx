@@ -1,9 +1,11 @@
-import { getTrendingProducts } from "@/lib/products";
-import ProductCard from "@/components/product-card";
+import { getTrendingProducts } from "@/lib/manifest";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import ProductCard from "@/components/ProductCard";
 
 export const metadata = {
-  title: "Trending | Phancy",
-  description: "The pieces currently drawing the most attention in our curated collection.",
+  title: "Trending | Phancy - Curated Wellness & Homewares",
+  description: "The pieces currently drawing the most attention. Selected by our editorial team for quality, design, and lasting appeal.",
 };
 
 export default function TrendingPage() {
@@ -11,65 +13,45 @@ export default function TrendingPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-[var(--forest)]">
-        <div className="phancy-wrap py-16 md:py-24">
-          <div className="max-w-3xl">
-            <div className="font-[var(--font-display)] text-xs font-semibold uppercase tracking-[0.2em] text-[var(--sage-light)] mb-6">
-              Currently Popular
-            </div>
-            <h1 className="font-[var(--font-display)] text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-              Trending This Season
-            </h1>
-            <p className="font-[var(--font-body)] text-lg text-[var(--sage-light)] leading-relaxed max-w-xl">
-              The pieces currently drawing the most attention. Selected by our
-              editorial team for quality, design, and the way they elevate
-              everyday rituals.
-            </p>
-          </div>
-        </div>
-      </section>
+      <SiteHeader />
 
-      {/* Products Grid */}
-      <section className="phancy-wrap phancy-section">
-        <div className="mb-12">
-          <div className="phancy-eyebrow mb-4">Editor&apos;s Selection</div>
-          <h2 className="phancy-h2">What&apos;s Moving Now</h2>
-          <p className="phancy-body mt-4 max-w-xl">
-            These products are resonating with our community. Each has been
-            verified for quality and aligned with our editorial standards.
-          </p>
-        </div>
-
-        <div className="phancy-collection-grid">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </section>
-
-      {/* Newsletter CTA */}
-      <section className="bg-[var(--cream-dark)] border-t border-[var(--line)]">
-        <div className="phancy-wrap phancy-section-sm">
-          <div className="text-center max-w-xl mx-auto">
-            <div className="phancy-eyebrow mb-4">Stay Updated</div>
-            <h2 className="phancy-h3 mb-4">Get the Weekly Edit</h2>
-            <p className="phancy-body text-sm mb-6">
-              Be the first to know about new arrivals and trending pieces.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="rounded-[var(--radius-md)] border border-[var(--line)] bg-white px-5 py-3 font-[var(--font-display)] text-sm outline-none focus:border-[var(--forest)]"
-              />
-              <button className="phancy-btn phancy-btn-primary">
-                Subscribe
-              </button>
+      <main className="min-h-screen bg-[var(--cream)]">
+        {/* Hero */}
+        <section className="bg-[var(--soft-black)]">
+          <div className="phancy-wrap py-16 lg:py-24">
+            <div className="max-w-2xl">
+              <span className="phancy-eyebrow text-[var(--sage)] mb-4 block">Currently Popular</span>
+              <h1 className="font-[var(--font-display)] text-4xl lg:text-5xl font-semibold text-white mb-6">
+                Trending This Season
+              </h1>
+              <p className="font-[var(--font-body)] text-lg text-white/60 leading-relaxed">
+                The pieces currently drawing the most attention. Selected by our editorial team for quality, design, and the way they elevate everyday rituals.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Products Grid */}
+        <section className="phancy-section">
+          <div className="phancy-wrap">
+            <div className="mb-12">
+              <span className="phancy-eyebrow mb-3 block">Editor&apos;s Selection</span>
+              <h2 className="phancy-h2 mb-3">What&apos;s Moving Now</h2>
+              <p className="phancy-body max-w-xl">
+                These products are resonating with our community. Each has been verified for quality and aligned with our editorial standards.
+              </p>
+            </div>
+
+            <div className="phancy-grid-4">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
     </>
   );
 }

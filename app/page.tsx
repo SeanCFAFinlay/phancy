@@ -1,174 +1,429 @@
-import React from "react";
-import { ProductManifest } from "@/lib/manifest";
-import ProductCard from "@/components/ProductCard";
+import Link from "next/link";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import ProductCard, { ProductCardCompact, ProductCardFeature } from "@/components/ProductCard";
+import {
+  getBestSellers,
+  getProductsByCollection,
+} from "@/lib/manifest";
+import { rituals, rooms } from "@/lib/site";
 
-export default function PhancyLandingPage() {
-  const nutrition = ProductManifest.filter(p => p.category === "The Morning Ritual");
-  const homeWares = ProductManifest.filter(p => p.category === "The Modern Home");
+export default function HomePage() {
+  const bestSellers = getBestSellers().slice(0, 4);
+  const editorsPicks = getProductsByCollection("editors-picks").slice(0, 4);
+  const smallLuxuries = getProductsByCollection("small-luxuries").slice(0, 4);
 
   return (
-    <main className="min-h-screen">
-      {/* Sticky Frosted Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-phancy-cream/80 backdrop-blur-md border-b border-phancy-black/5">
-        <div className="max-w-[1440px] mx-auto px-8 md:px-16 h-20 flex items-center justify-between">
-          <div className="font-display font-bold text-2xl tracking-[0.4em] text-phancy-black">
-            PHANCY
-          </div>
-          <nav className="hidden md:flex gap-12 font-display uppercase tracking-[0.2em] text-[10px] font-bold">
-            <a href="#rituals" className="hover:text-phancy-forest transition-colors">Rituals</a>
-            <a href="#home" className="hover:text-phancy-forest transition-colors">The Home</a>
-            <a href="#manifesto" className="hover:text-phancy-forest transition-colors">Manifesto</a>
-          </nav>
-          <div className="h-2 w-2 rounded-full bg-phancy-forest animate-pulse" />
-        </div>
-      </header>
+    <>
+      <SiteHeader />
 
-      {/* Asymmetrical Hero Section */}
-      <section className="pt-40 pb-20 px-8 md:px-16 max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-12 gap-12 items-center">
-          <div className="col-span-12 lg:col-span-5 space-y-12">
-            <div className="inline-block py-2 px-4 bg-phancy-forest/5 rounded-full">
-               <span className="font-display uppercase tracking-[0.3em] text-[10px] text-phancy-forest font-bold">EST. 2024 — Curated Wellness</span>
-            </div>
-            <h1 className="font-display text-7xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight uppercase">
-              Wellness<br />
-              <span className="text-phancy-forest italic font-editorial lowercase tracking-normal font-normal">Elevated.</span>
-            </h1>
-            <p className="font-editorial text-2xl md:text-3xl max-w-lg leading-relaxed text-phancy-black/80 italic">
-              A considered bridge between nutrition and environment. For the modern Canadian entrepreneur.
-            </p>
-            <div className="flex gap-8">
-              <a href="#rituals" className="group flex items-center gap-4 font-display uppercase tracking-[0.2em] text-xs font-bold text-phancy-black">
-                Explore the Selection
-                <span className="w-12 h-[1px] bg-phancy-black group-hover:w-16 group-hover:bg-phancy-forest transition-all" />
-              </a>
-            </div>
-          </div>
-          <div className="col-span-12 lg:col-span-7 h-[70vh] bg-phancy-forest/5 rounded-phancy-lg overflow-hidden relative shadow-phancy">
-            <div className="absolute inset-0 flex items-center justify-center">
-               <div className="text-center space-y-4">
-                  <div className="w-32 h-[1px] bg-phancy-forest mx-auto" />
-                  <span className="font-editorial italic text-phancy-black/20 text-6xl">Visual Ritual</span>
-                  <div className="w-32 h-[1px] bg-phancy-forest mx-auto" />
-               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <main className="min-h-screen">
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 1: HERO
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="relative overflow-hidden bg-[var(--oat)]">
+          <div className="phancy-wrap py-20 lg:py-32">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Hero Content */}
+              <div className="space-y-8 max-w-xl">
+                <span className="phancy-eyebrow-accent">Curated Wellness & Homewares</span>
 
-      {/* The Ritual Grid (In-Situ Pairings) */}
-      <section id="rituals" className="py-40 px-8 md:px-16 max-w-[1440px] mx-auto space-y-32">
-        <div className="text-center max-w-2xl mx-auto space-y-8">
-          <h2 className="font-display text-4xl uppercase tracking-[0.2em]">The Ritual Grid</h2>
-          <div className="h-[1px] w-20 bg-phancy-forest mx-auto" />
-          <p className="font-editorial text-xl text-phancy-black/60 italic leading-relaxed">
-            Everyday objects should be intentional. We pair high-density nutrition with architectural home wares to manifest an environment of excellence.
-          </p>
-        </div>
+                <h1 className="phancy-display">
+                  Objects for<br />
+                  <span className="font-[var(--font-body)] italic font-normal text-[var(--walnut)]">
+                    Calmer Living
+                  </span>
+                </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* First Pair: Morning Focus */}
-          <ProductCard product={nutrition[0]} />
-          <ProductCard product={homeWares[0]} />
-          <ProductCard product={nutrition[2]} />
-          <ProductCard product={homeWares[1]} />
-        </div>
+                <p className="phancy-body-lg">
+                  A curated destination for wellness essentials and design-forward homewares. Every piece chosen for how it looks, how it works, and how it makes you feel.
+                </p>
 
-        {/* Asymmetrical "Split" Feature */}
-        <div className="grid grid-cols-12 gap-8 items-stretch">
-          <div className="col-span-12 lg:col-span-8 bg-phancy-black rounded-phancy-lg p-16 flex flex-col justify-between text-phancy-cream space-y-12">
-             <div className="space-y-6">
-               <span className="font-display uppercase tracking-[0.3em] text-[10px] text-phancy-forest font-bold">Editor&apos;s Note</span>
-               <h3 className="font-display text-5xl uppercase leading-none tracking-tight">The Biohacking<br />Environment.</h3>
-             </div>
-             <p className="font-editorial text-3xl italic text-phancy-cream/60 leading-relaxed max-w-2xl">
-               &ldquo;We do not merely supplement our diet; we curate our biology. The vessel for your tea is as vital as the leaves themselves.&rdquo;
-             </p>
-             <div className="flex justify-end">
-               <span className="font-display uppercase tracking-[0.2em] text-xs opacity-40">Phancy Editorial 01</span>
-             </div>
-          </div>
-          <div className="col-span-12 lg:col-span-4 flex flex-col gap-8">
-             <ProductCard product={nutrition[3]} />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Second Row: Integrative Living */}
-          <ProductCard product={homeWares[2]} />
-          <ProductCard product={nutrition[6]} />
-          <ProductCard product={homeWares[3]} />
-          <ProductCard product={nutrition[1]} />
-        </div>
-      </section>
-
-      {/* The Modern Home Focus */}
-      <section id="home" className="py-40 bg-phancy-black text-phancy-cream">
-        <div className="max-w-[1440px] mx-auto px-8 md:px-16 grid grid-cols-12 gap-16 items-center">
-           <div className="col-span-12 lg:col-span-7 h-[80vh] bg-phancy-cream/5 rounded-phancy-lg relative overflow-hidden">
-             <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                <span className="font-editorial italic text-white text-[20vw]">Space</span>
-             </div>
-           </div>
-           <div className="col-span-12 lg:col-span-5 space-y-12">
-              <h2 className="font-display text-6xl uppercase tracking-tight leading-none">The Modern<br /><span className="text-phancy-forest">Sanctuary.</span></h2>
-              <p className="font-editorial text-2xl italic leading-relaxed opacity-60">
-                Wares for the Canadian workspace. Mid-century modernism meets the ritual of the morning ritual.
-              </p>
-              <div className="space-y-4">
-                 <div className="h-[1px] w-full bg-phancy-cream/10" />
-                 <div className="flex justify-between font-display uppercase tracking-widest text-[10px]">
-                    <span>Wares & Decor</span>
-                    <span>01 — 10</span>
-                 </div>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/shop" className="phancy-btn phancy-btn-primary phancy-btn-lg">
+                    Explore the Edit
+                  </Link>
+                  <Link href="/collections/editors-picks" className="phancy-btn phancy-btn-secondary phancy-btn-lg">
+                    Editor&apos;s Picks
+                  </Link>
+                </div>
               </div>
-              <a href="#rituals" className="phancy-btn inline-block px-12 py-6 bg-phancy-forest hover:bg-phancy-forestDark text-white font-display uppercase tracking-[0.2em] text-xs transition-all duration-300 rounded-xl">
-                 View the Detail
-              </a>
-           </div>
-        </div>
-      </section>
 
-      {/* Final Manifest Section */}
-      <section id="manifesto" className="py-60 px-8 md:px-16 max-w-[1440px] mx-auto text-center space-y-16">
-         <h2 className="font-display text-8xl md:text-9xl uppercase tracking-tighter opacity-10 select-none">MANIFESTO</h2>
-         <div className="max-w-4xl mx-auto">
-            <p className="font-editorial text-4xl md:text-6xl italic leading-tight text-phancy-black/90">
-              We believe everyday objects should be intentional. Phancy is the intersection of <span className="text-phancy-forest">performance</span> and <span className="text-phancy-forest">peace</span>.
-            </p>
-         </div>
-         <div className="flex flex-col md:flex-row justify-center items-center gap-12 font-display uppercase tracking-[0.2em] text-[10px] font-bold">
-            <div className="flex items-center gap-4">
-               <div className="w-12 h-[1px] bg-phancy-black/20" />
-               <span>Biohacking Aesthetics</span>
-            </div>
-            <div className="flex items-center gap-4">
-               <div className="w-12 h-[1px] bg-phancy-black/20" />
-               <span>Editorial Utility</span>
-            </div>
-            <div className="flex items-center gap-4">
-               <div className="w-12 h-[1px] bg-phancy-black/20" />
-               <span>Curated Living</span>
-            </div>
-         </div>
-      </section>
+              {/* Hero Image */}
+              <div className="relative">
+                <div className="aspect-[4/5] bg-gradient-to-br from-[var(--sand)] to-[var(--cream)] rounded-[var(--radius-2xl)] flex items-center justify-center overflow-hidden shadow-xl">
+                  <div className="text-center p-8">
+                    <div className="w-24 h-0.5 bg-[var(--walnut)]/20 mx-auto mb-6" />
+                    <span className="font-[var(--font-body)] italic text-[var(--walnut)]/30 text-4xl">
+                      Beautiful & Useful
+                    </span>
+                    <div className="w-24 h-0.5 bg-[var(--walnut)]/20 mx-auto mt-6" />
+                  </div>
+                </div>
 
-      {/* Minimalist Footer */}
-      <footer className="py-20 px-8 md:px-16 bg-white border-t border-phancy-black/5">
-        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-          <div className="font-display font-bold text-xl tracking-[0.4em] text-phancy-black">
-            PHANCY
+                {/* Floating Badge */}
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-[var(--radius-lg)] p-5 shadow-lg">
+                  <p className="font-[var(--font-display)] text-xs font-medium text-[var(--muted)] uppercase tracking-wider mb-1">
+                    Featured This Week
+                  </p>
+                  <p className="font-[var(--font-display)] text-lg font-semibold text-[var(--soft-black)]">
+                    30 Curated Pieces
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-12 font-display uppercase tracking-[0.2em] text-[9px] font-bold opacity-40">
-            <a href="#" className="hover:text-phancy-forest">Privacy</a>
-            <a href="#" className="hover:text-phancy-forest">Terms</a>
-            <a href="#" className="hover:text-phancy-forest">Disclosure</a>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 2: FEATURED CATEGORIES STRIP
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--cream)] border-y border-[var(--line)]">
+          <div className="phancy-wrap py-6">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+              <Link
+                href="/wellness"
+                className="group flex items-center gap-3 px-5 py-3 rounded-full bg-[var(--oat)] hover:bg-[var(--sand)] transition-colors"
+              >
+                <span className="w-8 h-8 rounded-full bg-[var(--forest-light)] flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[var(--forest)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </span>
+                <span className="font-[var(--font-display)] text-sm font-medium text-[var(--soft-black)]">Wellness</span>
+              </Link>
+
+              <Link
+                href="/homewares"
+                className="group flex items-center gap-3 px-5 py-3 rounded-full bg-[var(--oat)] hover:bg-[var(--sand)] transition-colors"
+              >
+                <span className="w-8 h-8 rounded-full bg-[var(--terracotta-light)] flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[var(--terracotta)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </span>
+                <span className="font-[var(--font-display)] text-sm font-medium text-[var(--soft-black)]">Homewares</span>
+              </Link>
+
+              <Link
+                href="/rooms"
+                className="group flex items-center gap-3 px-5 py-3 rounded-full bg-[var(--oat)] hover:bg-[var(--sand)] transition-colors"
+              >
+                <span className="w-8 h-8 rounded-full bg-[var(--moss-light)] flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[var(--moss)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                </span>
+                <span className="font-[var(--font-display)] text-sm font-medium text-[var(--soft-black)]">Rooms</span>
+              </Link>
+
+              <Link
+                href="/collections/best-under-100"
+                className="group flex items-center gap-3 px-5 py-3 rounded-full bg-[var(--oat)] hover:bg-[var(--sand)] transition-colors"
+              >
+                <span className="w-8 h-8 rounded-full bg-[var(--sage-light)] flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[var(--sage)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <span className="font-[var(--font-display)] text-sm font-medium text-[var(--soft-black)]">Under $100</span>
+              </Link>
+
+              <Link
+                href="/journal"
+                className="group flex items-center gap-3 px-5 py-3 rounded-full bg-[var(--oat)] hover:bg-[var(--sand)] transition-colors"
+              >
+                <span className="w-8 h-8 rounded-full bg-[var(--oat)] border border-[var(--line-dark)] flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[var(--charcoal)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </span>
+                <span className="font-[var(--font-display)] text-sm font-medium text-[var(--soft-black)]">Journal</span>
+              </Link>
+            </div>
           </div>
-          <div className="font-editorial italic text-xs opacity-30">
-            &copy; 2024 Phancy Canada. All Rights Reserved.
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 3: EDITOR'S EDIT
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--cream)] phancy-section">
+          <div className="phancy-wrap">
+            {/* Section Header */}
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+              <div>
+                <span className="phancy-eyebrow mb-3 block">This Week&apos;s Selection</span>
+                <h2 className="phancy-h1">The Editor&apos;s Edit</h2>
+                <p className="phancy-body mt-3 max-w-xl">
+                  Our current obsessions. Pieces we have tested, loved, and believe will become part of your daily rituals.
+                </p>
+              </div>
+              <Link href="/collections/editors-picks" className="phancy-btn phancy-btn-secondary shrink-0">
+                View All Picks
+              </Link>
+            </div>
+
+            {/* Featured Product (Large) */}
+            {editorsPicks[0] && (
+              <div className="mb-8">
+                <ProductCardFeature product={editorsPicks[0]} />
+              </div>
+            )}
+
+            {/* Product Grid */}
+            <div className="phancy-grid-3">
+              {editorsPicks.slice(1, 4).map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
           </div>
-        </div>
-      </footer>
-    </main>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 4: SHOP BY RITUAL
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--oat)] phancy-section">
+          <div className="phancy-wrap">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <span className="phancy-eyebrow mb-3 block">Daily Practices</span>
+              <h2 className="phancy-h1">Shop by Ritual</h2>
+              <p className="phancy-body mt-4">
+                Beautiful objects organized around the moments that matter. Morning quiet, evening wind-down, and everything between.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {rituals.map((ritual) => (
+                <Link
+                  key={ritual.id}
+                  href={`/rituals/${ritual.id}`}
+                  className="group bg-[var(--warm-white)] border border-[var(--line)] rounded-[var(--radius-xl)] p-8 transition-all duration-300 hover:border-[var(--sand)] hover:shadow-[var(--shadow-hover)]"
+                >
+                  <div className="aspect-[4/3] bg-gradient-to-br from-[var(--oat)] to-[var(--sand)] rounded-[var(--radius-lg)] mb-6 flex items-center justify-center">
+                    <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-xl">
+                      {ritual.name}
+                    </span>
+                  </div>
+                  <h3 className="font-[var(--font-display)] text-lg font-semibold text-[var(--soft-black)] mb-2 group-hover:text-[var(--forest)] transition-colors">
+                    {ritual.name}
+                  </h3>
+                  <p className="font-[var(--font-body)] text-[var(--muted)] text-sm">
+                    {ritual.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 5: BEST SELLERS / MOST LOVED
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--cream)] phancy-section">
+          <div className="phancy-wrap">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+              <div>
+                <span className="phancy-eyebrow mb-3 block">Community Favorites</span>
+                <h2 className="phancy-h1">Most Loved</h2>
+                <p className="phancy-body mt-3 max-w-xl">
+                  The pieces our readers return to again and again. Proven quality, lasting appeal.
+                </p>
+              </div>
+              <Link href="/collections/most-loved" className="phancy-btn phancy-btn-secondary shrink-0">
+                See All Favorites
+              </Link>
+            </div>
+
+            <div className="phancy-scroll-grid">
+              {bestSellers.map((product) => (
+                <ProductCard key={product.id} product={product} compact />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 6: SHOP BY ROOM
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--soft-black)] text-white phancy-section">
+          <div className="phancy-wrap">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
+              <div>
+                <span className="phancy-eyebrow text-[var(--sage)] mb-3 block">Room by Room</span>
+                <h2 className="font-[var(--font-display)] text-4xl lg:text-5xl font-semibold mb-6">
+                  Shop by Space
+                </h2>
+                <p className="font-[var(--font-body)] text-lg text-white/60 leading-relaxed mb-8">
+                  Every room deserves intention. Find pieces curated for specific spaces in your home.
+                </p>
+                <Link href="/rooms" className="phancy-btn phancy-btn-white">
+                  Explore All Rooms
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {rooms.slice(0, 4).map((room) => (
+                  <Link
+                    key={room.id}
+                    href={`/rooms/${room.id}`}
+                    className="group aspect-square bg-white/5 rounded-[var(--radius-lg)] p-6 flex flex-col justify-end hover:bg-white/10 transition-colors"
+                  >
+                    <h3 className="font-[var(--font-display)] text-lg font-medium text-white group-hover:text-[var(--sage)] transition-colors">
+                      {room.name}
+                    </h3>
+                    <p className="font-[var(--font-body)] text-sm text-white/50 mt-1">
+                      {room.description.split('.')[0]}.
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 7: JOURNAL / EDITORIAL
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--oat)] phancy-section">
+          <div className="phancy-wrap">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <span className="phancy-eyebrow mb-3 block">The Journal</span>
+              <h2 className="phancy-h1">Read & Discover</h2>
+              <p className="phancy-body mt-4">
+                Design inspiration, product deep-dives, and guides to creating spaces you love.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Article 1 */}
+              <Link href="/journal/wellness-essentials-for-better-sleep" className="group">
+                <article className="bg-[var(--warm-white)] border border-[var(--line)] rounded-[var(--radius-xl)] overflow-hidden transition-all duration-300 hover:border-[var(--sand)] hover:shadow-[var(--shadow-hover)]">
+                  <div className="aspect-[3/2] bg-gradient-to-br from-[var(--cream)] to-[var(--sand)] flex items-center justify-center">
+                    <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-xl">Sleep</span>
+                  </div>
+                  <div className="p-6">
+                    <span className="phancy-badge phancy-badge-forest mb-3">Wellness</span>
+                    <h3 className="font-[var(--font-display)] text-lg font-semibold text-[var(--soft-black)] mb-2 group-hover:text-[var(--forest)] transition-colors">
+                      10 Wellness Pieces for Better Sleep
+                    </h3>
+                    <p className="font-[var(--font-body)] text-[var(--muted)] text-sm line-clamp-2">
+                      From weighted blankets to silk sleep masks, the essentials for a restorative night.
+                    </p>
+                  </div>
+                </article>
+              </Link>
+
+              {/* Article 2 */}
+              <Link href="/journal/sculptural-lamps-warm-modern" className="group">
+                <article className="bg-[var(--warm-white)] border border-[var(--line)] rounded-[var(--radius-xl)] overflow-hidden transition-all duration-300 hover:border-[var(--sand)] hover:shadow-[var(--shadow-hover)]">
+                  <div className="aspect-[3/2] bg-gradient-to-br from-[var(--cream)] to-[var(--sand)] flex items-center justify-center">
+                    <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-xl">Lighting</span>
+                  </div>
+                  <div className="p-6">
+                    <span className="phancy-badge phancy-badge-terracotta mb-3">Homewares</span>
+                    <h3 className="font-[var(--font-display)] text-lg font-semibold text-[var(--soft-black)] mb-2 group-hover:text-[var(--forest)] transition-colors">
+                      Best Sculptural Lamps for a Warm Modern Home
+                    </h3>
+                    <p className="font-[var(--font-body)] text-[var(--muted)] text-sm line-clamp-2">
+                      Light as sculpture. Our favorite table lamps that double as art.
+                    </p>
+                  </div>
+                </article>
+              </Link>
+
+              {/* Article 3 */}
+              <Link href="/journal/small-luxuries-under-50" className="group">
+                <article className="bg-[var(--warm-white)] border border-[var(--line)] rounded-[var(--radius-xl)] overflow-hidden transition-all duration-300 hover:border-[var(--sand)] hover:shadow-[var(--shadow-hover)]">
+                  <div className="aspect-[3/2] bg-gradient-to-br from-[var(--cream)] to-[var(--sand)] flex items-center justify-center">
+                    <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-xl">Gifts</span>
+                  </div>
+                  <div className="p-6">
+                    <span className="phancy-badge phancy-badge-walnut mb-3">Gift Guide</span>
+                    <h3 className="font-[var(--font-display)] text-lg font-semibold text-[var(--soft-black)] mb-2 group-hover:text-[var(--forest)] transition-colors">
+                      Small Luxuries That Improve Everyday Rituals
+                    </h3>
+                    <p className="font-[var(--font-body)] text-[var(--muted)] text-sm line-clamp-2">
+                      Thoughtful gifts under $50 for the design-conscious.
+                    </p>
+                  </div>
+                </article>
+              </Link>
+            </div>
+
+            <div className="text-center mt-10">
+              <Link href="/journal" className="phancy-btn phancy-btn-secondary">
+                Read the Journal
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 8: BRAND TRUST / PHILOSOPHY
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--cream)] phancy-section-lg">
+          <div className="phancy-wrap">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="phancy-divider-thick mx-auto mb-10" />
+
+              <h2 className="phancy-pullquote mb-10">
+                &ldquo;We believe beautiful objects create calmer spaces. Every piece is chosen for aesthetics, utility, and the way it makes a room feel.&rdquo;
+              </h2>
+
+              <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-10">
+                <div className="text-center">
+                  <p className="font-[var(--font-display)] text-3xl font-semibold text-[var(--soft-black)] mb-1">30</p>
+                  <p className="phancy-caption">Curated Pieces</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-[var(--font-display)] text-3xl font-semibold text-[var(--soft-black)] mb-1">2</p>
+                  <p className="phancy-caption">Categories</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-[var(--font-display)] text-3xl font-semibold text-[var(--soft-black)] mb-1">4+</p>
+                  <p className="phancy-caption">Rooms Covered</p>
+                </div>
+              </div>
+
+              <p className="phancy-body max-w-2xl mx-auto mb-8">
+                Phancy is not about having more. It is about having better. We curate wellness essentials and homewares that bring calm and warmth to your daily life, choosing pieces for their design integrity, material quality, and lasting appeal.
+              </p>
+
+              <Link href="/about" className="phancy-btn-link font-[var(--font-display)] text-sm font-medium">
+                Learn More About Us
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════════
+            SECTION 9: SMALL LUXURIES / UNDER $100
+            ═══════════════════════════════════════════════════════════════════════════════ */}
+        <section className="bg-[var(--oat)] phancy-section">
+          <div className="phancy-wrap">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+              <div>
+                <span className="phancy-eyebrow mb-3 block">Accessible Luxuries</span>
+                <h2 className="phancy-h1">Best Under $100</h2>
+                <p className="phancy-body mt-3 max-w-xl">
+                  Elevated everyday objects that do not require a big investment. Small luxuries, big impact.
+                </p>
+              </div>
+              <Link href="/collections/best-under-100" className="phancy-btn phancy-btn-secondary shrink-0">
+                Shop All Under $100
+              </Link>
+            </div>
+
+            <div className="phancy-grid-4">
+              {smallLuxuries.map((product) => (
+                <ProductCardCompact key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </>
   );
 }

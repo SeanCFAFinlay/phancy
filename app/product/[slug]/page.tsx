@@ -1,9 +1,13 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAllProducts, getProductBySlug, getCollectionById } from "@/lib/products";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import ProductCard from "@/components/ProductCard";
+import { ProductManifest, getProductBySlug, getProductsByCategory } from "@/lib/manifest";
+import { withAffiliateTag } from "@/lib/site";
 
 export function generateStaticParams() {
-  return getAllProducts().map((p) => ({ slug: p.slug }));
+  return ProductManifest.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -16,7 +20,7 @@ export async function generateMetadata({
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: `${product.name} | Phancy`,
+    title: `${product.title} | Phancy`,
     description: product.description,
   };
 }
@@ -31,184 +35,176 @@ export default async function ProductPage({
 
   if (!product) return notFound();
 
-  const collection = product.collection
-    ? getCollectionById(product.collection)
-    : null;
+  const affiliateUrl = withAffiliateTag(product.affiliateLink);
+  const relatedProducts = getProductsByCategory(product.category)
+    .filter(p => p.id !== product.id)
+    .slice(0, 4);
 
   return (
     <>
-      {/* Breadcrumb */}
-      <div className="bg-[var(--warm-white)] border-b border-[var(--line)]">
-        <div className="phancy-wrap py-4">
-          <nav className="flex items-center gap-2 font-[var(--font-display)] text-sm text-[var(--muted)]">
-            <Link href="/" className="hover:text-[var(--forest)]">
-              Home
-            </Link>
-            <span>/</span>
-            {collection && (
-              <>
-                <Link
-                  href={`/collections/${collection.id}`}
-                  className="hover:text-[var(--forest)]"
-                >
-                  {collection.name}
-                </Link>
-                <span>/</span>
-              </>
-            )}
-            <span className="text-[var(--off-black)]">{product.name}</span>
-          </nav>
-        </div>
-      </div>
+      <SiteHeader />
 
-      {/* Product Detail */}
-      <section className="phancy-wrap phancy-section">
-        <div className="grid gap-12 lg:grid-cols-2">
-          {/* Product Image */}
-          <div className="phancy-card-cream aspect-square flex items-center justify-center overflow-hidden rounded-[var(--radius-xl)] p-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={product.image}
-              alt={product.name}
-              className="max-h-full max-w-full object-contain"
-            />
+      <main className="min-h-screen bg-[var(--cream)]">
+        {/* Breadcrumb */}
+        <div className="bg-[var(--oat)] border-b border-[var(--line)]">
+          <div className="phancy-wrap py-4">
+            <nav className="flex items-center gap-2 font-[var(--font-display)] text-sm text-[var(--muted)]">
+              <Link href="/" className="hover:text-[var(--forest)] transition-colors">
+                Home
+              </Link>
+              <span className="text-[var(--line)]">/</span>
+              <Link
+                href={product.category === "Wellness" ? "/wellness" : "/homewares"}
+                className="hover:text-[var(--forest)] transition-colors"
+              >
+                {product.category}
+              </Link>
+              <span className="text-[var(--line)]">/</span>
+              <span className="text-[var(--soft-black)]">{product.title}</span>
+            </nav>
           </div>
+        </div>
 
-          {/* Product Info */}
-          <div className="flex flex-col justify-center">
-            <div className="flex flex-wrap gap-2 mb-4">
-              {product.badge && (
-                <span className="phancy-badge">{product.badge}</span>
-              )}
-              <span className="phancy-badge phancy-badge-cream">
-                {product.brand}
-              </span>
-            </div>
-
-            <h1 className="phancy-h1 mb-4">{product.name}</h1>
-
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex items-center gap-2">
-                <span className="text-[var(--terracotta)] text-lg">★</span>
-                <span className="font-[var(--font-display)] font-semibold text-[var(--off-black)]">
-                  {product.rating}
+        {/* Product Detail */}
+        <section className="phancy-section">
+          <div className="phancy-wrap">
+            <div className="grid gap-12 lg:grid-cols-2">
+              {/* Product Image */}
+              <div className="aspect-square bg-gradient-to-br from-[var(--oat)] to-[var(--sand)] rounded-[var(--radius-2xl)] flex items-center justify-center overflow-hidden relative">
+                {product.badge && (
+                  <div className="absolute top-6 left-6 z-10">
+                    <span className={`phancy-badge ${
+                      product.badge.includes("Editor") ? "phancy-badge-forest" :
+                      product.badge.includes("Most") ? "phancy-badge-terracotta" :
+                      "phancy-badge-walnut"
+                    }`}>
+                      {product.badge}
+                    </span>
+                  </div>
+                )}
+                <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-4xl">
+                  {product.category}
                 </span>
               </div>
-              <span className="text-[var(--line)]">|</span>
-              <span className="font-[var(--font-display)] text-[var(--muted)]">
-                {product.reviewCount.toLocaleString()} reviews
-              </span>
-            </div>
 
-            <div className="font-[var(--font-display)] text-4xl font-bold text-[var(--forest)] mb-6">
-              ${product.price.toFixed(2)}
-            </div>
+              {/* Product Info */}
+              <div className="flex flex-col justify-center">
+                <div className="mb-6">
+                  <span className="phancy-eyebrow mb-2 block">{product.subCategory}</span>
+                  <h1 className="phancy-h1 mb-3">{product.title}</h1>
+                  <p className="font-[var(--font-display)] text-[var(--muted)]">{product.brand}</p>
+                </div>
 
-            <p className="phancy-body-lg mb-8">{product.description}</p>
+                <p className="phancy-editorial text-[var(--charcoal)] mb-6">
+                  &ldquo;{product.editorNote}&rdquo;
+                </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={product.amazonUrl}
-                target="_blank"
-                rel="nofollow sponsored noopener noreferrer"
-                className="phancy-btn phancy-btn-primary text-center"
-              >
-                Discover on Amazon
-              </a>
-              {collection && (
-                <Link
-                  href={`/collections/${collection.id}`}
-                  className="phancy-btn phancy-btn-secondary text-center"
-                >
-                  View Collection
-                </Link>
-              )}
-            </div>
+                <p className="phancy-body mb-8">{product.description}</p>
 
-            {/* Ingredients */}
-            {product.ingredients && product.ingredients.length > 0 && (
-              <div className="mt-10 pt-8 border-t border-[var(--line)]">
-                <h2 className="phancy-h3 mb-4">Key Ingredients</h2>
-                <div className="flex flex-wrap gap-2">
-                  {product.ingredients.map((ingredient) => (
-                    <span
-                      key={ingredient}
-                      className="phancy-badge phancy-badge-cream"
-                    >
-                      {ingredient}
+                {/* Attributes */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {product.attributes.map((attr, idx) => (
+                    <span key={idx} className="phancy-product-attribute">
+                      {attr}
                     </span>
                   ))}
                 </div>
+
+                {/* Price & CTA */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 bg-[var(--oat)] rounded-[var(--radius-xl)] mb-8">
+                  <div>
+                    <p className="phancy-caption mb-1">Price</p>
+                    <p className="font-[var(--font-display)] text-3xl font-semibold text-[var(--soft-black)]">
+                      ${product.price.toFixed(0)}
+                    </p>
+                  </div>
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="phancy-btn phancy-btn-primary phancy-btn-lg flex-1 sm:flex-initial text-center"
+                  >
+                    View on Amazon
+                  </a>
+                </div>
+
+                {/* Collections */}
+                {product.collection && product.collection.length > 0 && (
+                  <div className="pt-6 border-t border-[var(--line)]">
+                    <p className="phancy-caption mb-3">Found In</p>
+                    <div className="flex flex-wrap gap-2">
+                      {product.collection.map((col) => (
+                        <Link
+                          key={col}
+                          href={`/collections/${col}`}
+                          className="phancy-badge hover:bg-[var(--sand)] transition-colors"
+                        >
+                          {col.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Rooms */}
+                {product.room && product.room.length > 0 && (
+                  <div className="pt-6 border-t border-[var(--line)] mt-6">
+                    <p className="phancy-caption mb-3">Perfect For</p>
+                    <div className="flex flex-wrap gap-2">
+                      {product.room.map((room) => (
+                        <Link
+                          key={room}
+                          href={`/rooms/${room}`}
+                          className="phancy-badge phancy-badge-outline hover:bg-[var(--oat)] transition-colors"
+                        >
+                          {room.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Pros & Cons */}
-      <section className="bg-[var(--warm-white)] border-y border-[var(--line)]">
-        <div className="phancy-wrap phancy-section-sm">
-          <div className="mb-10 text-center">
-            <div className="phancy-eyebrow mb-4">Editor&apos;s Assessment</div>
-            <h2 className="phancy-h2">What We Think</h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-            {/* Pros */}
-            <div className="phancy-card p-8 bg-[var(--forest-light)] border-[var(--sage-light)]">
-              <h3 className="font-[var(--font-display)] text-lg font-semibold text-[var(--forest)] mb-4">
-                What We Love
-              </h3>
-              <ul className="space-y-3">
-                {product.pros.map((pro) => (
-                  <li
-                    key={pro}
-                    className="flex items-start gap-3 font-[var(--font-body)] text-[var(--off-black)]"
-                  >
-                    <span className="text-[var(--forest)] mt-1">✓</span>
-                    <span>{pro}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Cons */}
-            <div className="phancy-card p-8 bg-[var(--terracotta-light)] border-[var(--terracotta-light)]">
-              <h3 className="font-[var(--font-display)] text-lg font-semibold text-[var(--terracotta)] mb-4">
-                Worth Noting
-              </h3>
-              <ul className="space-y-3">
-                {product.cons.map((con) => (
-                  <li
-                    key={con}
-                    className="flex items-start gap-3 font-[var(--font-body)] text-[var(--off-black)]"
-                  >
-                    <span className="text-[var(--terracotta)] mt-1">○</span>
-                    <span>{con}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Banner */}
-      <section className="bg-[var(--forest)]">
-        <div className="phancy-wrap py-12 text-center">
-          <h2 className="font-[var(--font-display)] text-2xl md:text-3xl font-bold text-white mb-4">
-            Ready to add this to your collection?
-          </h2>
-          <a
-            href={product.amazonUrl}
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
-            className="phancy-btn bg-white text-[var(--forest)] hover:bg-[var(--cream)] inline-flex"
-          >
-            Discover on Amazon
-          </a>
-        </div>
-      </section>
+        {/* Related Products */}
+        {relatedProducts.length > 0 && (
+          <section className="phancy-section bg-[var(--oat)]">
+            <div className="phancy-wrap">
+              <div className="mb-10">
+                <span className="phancy-eyebrow mb-2 block">You Might Also Like</span>
+                <h2 className="phancy-h2">More {product.category}</h2>
+              </div>
+
+              <div className="phancy-grid-4">
+                {relatedProducts.map((p) => (
+                  <ProductCard key={p.id} product={p} showDescription={false} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* CTA Banner */}
+        <section className="bg-[var(--soft-black)]">
+          <div className="phancy-wrap py-12 text-center">
+            <h2 className="font-[var(--font-display)] text-2xl md:text-3xl font-semibold text-white mb-4">
+              Ready to add this to your home?
+            </h2>
+            <a
+              href={affiliateUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="phancy-btn phancy-btn-white inline-flex"
+            >
+              View on Amazon
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
     </>
   );
 }

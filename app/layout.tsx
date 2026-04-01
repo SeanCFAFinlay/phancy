@@ -5,18 +5,28 @@ import "./globals.css";
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
-  weight: ["700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   style: ["italic", "normal"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Phancy | Curated for Modern Living",
-  description: "A premium lifestyle brand bridging Nutrition and Home Wares for the modern Canadian entrepreneur. Experience curated wellness and biohacking aesthetics.",
+  title: "Phancy | Curated Wellness & Homewares",
+  description: "A curated destination for wellness essentials and design-forward homewares. Objects for calmer living, chosen for aesthetics, utility, and warmth.",
+  keywords: ["wellness", "homewares", "home decor", "interior design", "lifestyle", "curated", "design"],
+  authors: [{ name: "Phancy" }],
+  openGraph: {
+    title: "Phancy | Curated Wellness & Homewares",
+    description: "Objects for calmer living. A curated destination for wellness essentials and design-forward homewares.",
+    type: "website",
+    locale: "en_CA",
+    siteName: "Phancy",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${playfair.variable} bg-phancy-cream text-phancy-black antialiased font-editorial`}
+        className={`${outfit.variable} ${playfair.variable} antialiased`}
       >
         {children}
       </body>
