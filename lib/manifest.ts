@@ -1,3 +1,5 @@
+import { AffiliateLink, AffiliateNetwork, resolveAffiliateLink, getPrimaryAffiliateUrl } from "./affiliates";
+
 export interface Product {
   id: string;
   slug: string;
@@ -12,7 +14,8 @@ export interface Product {
   editorNote: string;
   description: string;
   attributes: string[];
-  affiliateLink: string;
+  affiliateLink: string; // Primary link (backwards compatible)
+  affiliateLinks?: AffiliateLink[]; // Multiple network links
   image: string;
   badge?: string;
   featured?: boolean;
@@ -40,7 +43,7 @@ export const ProductManifest: Product[] = [
     editorNote: "The robe you reach for every morning. Stonewashed Belgian linen that softens beautifully over time.",
     description: "Luxuriously soft stonewashed linen robe in a relaxed, unstructured silhouette. Features a tie waist, patch pockets, and a shawl collar. Gets softer with every wash.",
     attributes: ["Belgian Linen", "Stonewashed", "Unisex", "OEKO-TEX Certified"],
-    affiliateLink: "https://www.amazon.ca/dp/B09LMQRHKS?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B0BKJF8VQN?tag=phcfastore-20",
     image: "/products/linen-robe.jpg",
     badge: "Editor's Pick",
     featured: true,
@@ -63,7 +66,7 @@ export const ProductManifest: Product[] = [
     editorNote: "An architectural piece that happens to be a diffuser. Matte ceramic finish that disappears into any room.",
     description: "Ultrasonic essential oil diffuser crafted from matte porcelain ceramic. Whisper-quiet operation with 7-hour runtime. The diffuser that finally looks like furniture.",
     attributes: ["Porcelain Ceramic", "Ultrasonic", "7hr Runtime", "BPA-Free"],
-    affiliateLink: "https://www.amazon.ca/dp/B074TJCNK2?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B01N0S0Y9G?tag=phcfastore-20",
     image: "/products/ceramic-diffuser.jpg",
     badge: "Design Classic",
     featured: true,
@@ -86,7 +89,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Amber jar, cotton wick, no synthetic fragrance. The small luxury that transforms any space.",
     description: "Soy wax candle hand-poured in Los Angeles. Notes of teakwood, orange, and geranium. 50-hour burn time in the signature amber glass vessel.",
     attributes: ["Soy Wax", "Cotton Wick", "50hr Burn", "Phthalate-Free"],
-    affiliateLink: "https://www.amazon.ca/dp/B07BGKMJ4V?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07MDHF2CL?tag=phcfastore-20",
     image: "/products/natural-candle.jpg",
     badge: "Best Under $100",
     featured: false,
@@ -109,7 +112,7 @@ export const ProductManifest: Product[] = [
     editorNote: "The bath ritual you deserve. Mineral-rich Dead Sea salts with algae and essential oils.",
     description: "Therapeutic bath soak blending Dead Sea salts with undaria algae and pure essential oils. Detoxifies and softens skin while promoting deep relaxation.",
     attributes: ["Dead Sea Salts", "Algae Infused", "Vegan", "Clean Ingredients"],
-    affiliateLink: "https://www.amazon.ca/dp/B01NCVYQP8?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B075DHX5CS?tag=phcfastore-20",
     image: "/products/bath-soak.jpg",
     badge: "Small Luxury",
     featured: false,
@@ -132,7 +135,7 @@ export const ProductManifest: Product[] = [
     editorNote: "15 lbs of calm. Chemical-free glass beads in GOTS-certified organic cotton. Sleep as it should be.",
     description: "Premium weighted blanket with chemical-free glass micro-beads evenly distributed in quilted organic cotton. Removable, machine-washable cover. Available in 12, 15, 20 lb options.",
     attributes: ["Organic Cotton", "Glass Beads", "Machine Washable", "GOTS Certified"],
-    affiliateLink: "https://www.amazon.ca/dp/B07PMKKCC4?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07L2RPCDZ?tag=phcfastore-20",
     image: "/products/weighted-blanket.jpg",
     badge: "Most Loved",
     featured: true,
@@ -155,7 +158,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Six single-origin herbal blends in apothecary-style tins. The tea collection that belongs on display.",
     description: "Curated collection of six organic herbal teas: chamomile lavender, peppermint, ginger turmeric, rooibos chai, hibiscus rose, and lemon balm. Loose leaf in reusable metal tins.",
     attributes: ["Organic", "Loose Leaf", "6 Varieties", "Caffeine-Free"],
-    affiliateLink: "https://www.amazon.ca/dp/B08K3PRLX5?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07MCDQ7TZ?tag=phcfastore-20",
     image: "/products/herbal-tea-set.jpg",
     badge: "Curated Set",
     featured: false,
@@ -178,7 +181,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Traditional zafu form, modern materials. Buckwheat hull fill with organic cotton cover in warm neutrals.",
     description: "Round meditation cushion filled with organic buckwheat hulls that conform to your body. Removable, washable cover in GOTS-certified organic cotton. Designed to align your spine naturally.",
     attributes: ["Buckwheat Fill", "Organic Cotton", "Removable Cover", "15\" Diameter"],
-    affiliateLink: "https://www.amazon.ca/dp/B07D5XHXCJ?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B01M0UVHCA?tag=phcfastore-20",
     image: "/products/meditation-cushion.jpg",
     badge: "Editor's Pick",
     featured: true,
@@ -201,7 +204,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Four essential oils in amber glass. Lavender, eucalyptus, peppermint, and bergamot. The aromatherapy edit.",
     description: "Quartet of pure essential oils in signature amber glass bottles. Includes lavender for calm, eucalyptus for clarity, peppermint for energy, and bergamot for balance.",
     attributes: ["Pure Oils", "Amber Glass", "4 Varieties", "Therapeutic Grade"],
-    affiliateLink: "https://www.amazon.ca/dp/B07KZLMP2R?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B06XNQP1TY?tag=phcfastore-20",
     image: "/products/essential-oil-set.jpg",
     badge: "Small Luxury",
     featured: false,
@@ -224,7 +227,7 @@ export const ProductManifest: Product[] = [
     editorNote: "The daily ritual that wakes up your lymphatic system. Natural bristles, beechwood handle, and an elegant loop for hanging.",
     description: "Traditional dry brush with firm natural sisal bristles and sustainably-harvested beechwood handle. Promotes lymphatic drainage and skin renewal. Cotton hanging loop included.",
     attributes: ["Sisal Bristles", "Beechwood Handle", "Vegan", "Sustainable"],
-    affiliateLink: "https://www.amazon.ca/dp/B0746GRNZT?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07CKBG6WN?tag=phcfastore-20",
     image: "/products/body-brush.jpg",
     badge: "Best Under $100",
     featured: false,
@@ -247,7 +250,7 @@ export const ProductManifest: Product[] = [
     editorNote: "The mug that makes every morning feel intentional. Hand-thrown in North Carolina with a perfect weighted base.",
     description: "Hand-thrown stoneware mug with comfortable handle and weighted base. Lead-free glaze in seasonal colors. Holds 12oz perfectly. Dishwasher and microwave safe.",
     attributes: ["Hand-Thrown", "Lead-Free Glaze", "12oz", "Made in USA"],
-    affiliateLink: "https://www.amazon.ca/dp/B08BNHD6VF?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07PQKMPNV?tag=phcfastore-20",
     image: "/products/stoneware-mug.jpg",
     badge: "Design Classic",
     featured: false,
@@ -270,7 +273,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Grade 6A mulberry silk with zero pressure on your eyes. The sleep upgrade you did not know you needed.",
     description: "Pure mulberry silk sleep mask with adjustable elastic band. Hypoallergenic, breathable, and gentle on skin and hair. Complete darkness without pressure.",
     attributes: ["Mulberry Silk", "Adjustable Fit", "Hypoallergenic", "Grade 6A"],
-    affiliateLink: "https://www.amazon.ca/dp/B07CQKN32R?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07KCNK3H9?tag=phcfastore-20",
     image: "/products/sleep-mask.jpg",
     badge: "Small Luxury",
     featured: false,
@@ -293,7 +296,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Five minutes morning and night. Gratitude, intentions, and reflection in a linen-bound package.",
     description: "Guided journal for daily gratitude and mindfulness practice. Morning and evening prompts, weekly challenges, and inspirational quotes. Linen cover with gold foil details.",
     attributes: ["Linen Bound", "Guided Prompts", "6 Months", "Lay-Flat Binding"],
-    affiliateLink: "https://www.amazon.ca/dp/B07PQ3Y34S?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B01HIEZ58Y?tag=phcfastore-20",
     image: "/products/wellness-journal.jpg",
     badge: "Best Under $100",
     featured: false,
@@ -316,7 +319,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Finally, a humidifier that looks like it belongs. Handmade ceramic with ultrasonic technology and auto shut-off.",
     description: "Sculptural ultrasonic humidifier in handmade ceramic. Whisper-quiet operation with adjustable mist and auto shut-off when water runs low. 1.5L tank for all-night use.",
     attributes: ["Ceramic", "Ultrasonic", "1.5L Tank", "Auto Shut-Off"],
-    affiliateLink: "https://www.amazon.ca/dp/B07Y5LGXLS?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07H2M2VRP?tag=phcfastore-20",
     image: "/products/humidifier.jpg",
     badge: "Design Classic",
     featured: true,
@@ -339,7 +342,7 @@ export const ProductManifest: Product[] = [
     editorNote: "The at-home recovery ritual that actually delivers. Far infrared heat therapy in a portable, storable blanket.",
     description: "Professional-grade infrared sauna blanket with far infrared technology. Promotes detoxification, muscle recovery, and deep relaxation. Folds flat for storage, wipes clean.",
     attributes: ["Far Infrared", "8 Heat Levels", "Portable", "Auto Timer"],
-    affiliateLink: "https://www.amazon.ca/dp/B07XHVQKMC?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B08B5P9XJQ?tag=phcfastore-20",
     image: "/products/sauna-blanket.jpg",
     badge: "Editor's Pick",
     featured: true,
@@ -362,7 +365,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Mouth-blown glass with a cork stopper. On the bedside table or the dinner table, it is always right.",
     description: "Hand-blown glass carafe with natural cork stopper. Elegant pour spout and weighted base for stability. Perfect for bedside water or table service.",
     attributes: ["Hand-Blown", "Cork Stopper", "1L Capacity", "Lead-Free"],
-    affiliateLink: "https://www.amazon.ca/dp/B004DEKNVG?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B01LYQXUG6?tag=phcfastore-20",
     image: "/products/water-carafe.jpg",
     badge: "Design Classic",
     featured: false,
@@ -388,7 +391,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Mid-century legs, solid walnut top, warm modern presence. The side table that anchors any seating arrangement.",
     description: "Solid American walnut side table with tapered legs and brass-tipped feet. Clean lines and warm grain patterns. Some assembly required.",
     attributes: ["Solid Walnut", "Brass Feet", "MCM Design", "17\" Height"],
-    affiliateLink: "https://www.amazon.ca/dp/B07XS8HKQM?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07YNZV4JJ?tag=phcfastore-20",
     image: "/products/walnut-side-table.jpg",
     badge: "Design Classic",
     featured: true,
@@ -410,7 +413,7 @@ export const ProductManifest: Product[] = [
     editorNote: "The chair everyone asks about. Cream boucle, solid oak base, sculptural form that somehow works in every room.",
     description: "Sculptural accent chair upholstered in premium cream boucle fabric with solid oak legs. Generously padded seat and back for comfortable lounging.",
     attributes: ["Boucle Fabric", "Solid Oak Base", "31\" Width", "Foam Fill"],
-    affiliateLink: "https://www.amazon.ca/dp/B08K5HJLM4?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B08QMZR24B?tag=phcfastore-20",
     image: "/products/boucle-accent-chair.jpg",
     badge: "Most Loved",
     featured: true,
@@ -432,7 +435,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Light as sculpture. Organic ceramic form with linen shade. Warm ambient glow that makes any corner feel intentional.",
     description: "Sculptural table lamp with organic ceramic base in matte sand finish. Drum shade in natural linen. Inline dimmer switch for adjustable ambiance.",
     attributes: ["Ceramic Base", "Linen Shade", "Dimmable", "E26 Bulb"],
-    affiliateLink: "https://www.amazon.ca/dp/B08RLMHP3V?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07Y3BQPDH?tag=phcfastore-20",
     image: "/products/sculptural-lamp.jpg",
     badge: "Editor's Pick",
     featured: true,
@@ -454,7 +457,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Portuguese merino wool in warm neutral. The throw you will actually use, on the sofa or the bed.",
     description: "Pure merino wool throw blanket woven in Portugal. Soft hand feel with subtle texture. Generous 51\" x 67\" size. Dry clean recommended.",
     attributes: ["Merino Wool", "Made in Portugal", "51x67\"", "OEKO-TEX"],
-    affiliateLink: "https://www.amazon.ca/dp/B09HGP3TRK?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07PQYJNSS?tag=phcfastore-20",
     image: "/products/throw-blanket.jpg",
     badge: "Most Loved",
     featured: true,
@@ -476,7 +479,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Sculptural curves in matte ceramic. Beautiful empty, even better with a single branch or dried stems.",
     description: "Sculptural ceramic vase with organic, asymmetrical form. Matte sand finish that complements any palette. Watertight for fresh flowers.",
     attributes: ["Ceramic", "Matte Finish", "Watertight", "10\" Height"],
-    affiliateLink: "https://www.amazon.ca/dp/B08DTJSQPV?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B08B5HT8G5?tag=phcfastore-20",
     image: "/products/ceramic-vase.jpg",
     badge: "Design Classic",
     featured: false,
@@ -499,7 +502,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Live edge, food-safe finish, and a form that makes even cheese and crackers look like an event.",
     description: "Solid walnut serving board with natural live edge. Food-safe mineral oil finish. Each piece is unique. Hand-wash and oil occasionally.",
     attributes: ["Solid Walnut", "Live Edge", "Food Safe", "18\" Length"],
-    affiliateLink: "https://www.amazon.ca/dp/B07XQGNTNM?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07ZQSV3S2?tag=phcfastore-20",
     image: "/products/wood-serving-board.jpg",
     badge: "Most Loved",
     featured: false,
@@ -522,7 +525,7 @@ export const ProductManifest: Product[] = [
     editorNote: "French flax linen that gets better with every wash. Duvet cover and two shams in warm white.",
     description: "Complete bedding set in stonewashed French flax linen. Includes duvet cover and two standard shams. Button closure. Gets softer with every wash.",
     attributes: ["French Flax Linen", "Stonewashed", "Button Closure", "Queen Size"],
-    affiliateLink: "https://www.amazon.ca/dp/B08K52LM4P?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07VTHM8GX?tag=phcfastore-20",
     image: "/products/modern-bedding-set.jpg",
     badge: "Editor's Pick",
     featured: true,
@@ -545,7 +548,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Long-staple Turkish cotton in warm white. The towel set that makes your bathroom feel like a boutique hotel.",
     description: "Set of four bath towels in plush long-staple Turkish cotton. 700 GSM weight for superior absorbency. OEKO-TEX certified. Gets softer with washing.",
     attributes: ["Turkish Cotton", "700 GSM", "Set of 4", "OEKO-TEX"],
-    affiliateLink: "https://www.amazon.ca/dp/B08HM8KLVY?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07HNQC1D8?tag=phcfastore-20",
     image: "/products/bathroom-towel-set.jpg",
     badge: "Most Loved",
     featured: false,
@@ -567,7 +570,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Slow living interiors from around the world. The book that started a movement, and still belongs on every coffee table.",
     description: "Beautifully photographed exploration of slow living spaces around the world. Hardcover with linen spine. 368 pages of interior inspiration.",
     attributes: ["Hardcover", "368 Pages", "Linen Spine", "Full Color"],
-    affiliateLink: "https://www.amazon.ca/dp/B01N7QZK9B?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/1579657184?tag=phcfastore-20",
     image: "/products/coffee-table-book.jpg",
     badge: "Small Luxury",
     featured: false,
@@ -589,7 +592,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Handwoven seagrass with leather handles. Blankets, magazines, towels, plants. Useful and beautiful.",
     description: "Handwoven basket in natural seagrass with genuine leather handles. Versatile size works for storage or as a planter. Each piece is unique.",
     attributes: ["Seagrass", "Leather Handles", "Handwoven", "14\" Diameter"],
-    affiliateLink: "https://www.amazon.ca/dp/B07KPSQJ2W?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07GVPJTRK?tag=phcfastore-20",
     image: "/products/storage-basket.jpg",
     badge: "Best Under $100",
     featured: false,
@@ -611,7 +614,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Arched silhouette, solid oak frame, floor-to-ceiling presence. The mirror that makes any room feel larger and more elegant.",
     description: "Full-length arched mirror in solid oak frame with natural finish. Leans against wall or mounts. Shatter-resistant glass. 68\" x 24\".",
     attributes: ["Solid Oak", "Arched Design", "68x24\"", "Shatter-Resistant"],
-    affiliateLink: "https://www.amazon.ca/dp/B08N5QHPLX?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B08GLPDMF6?tag=phcfastore-20",
     image: "/products/entryway-mirror.jpg",
     badge: "Design Classic",
     featured: true,
@@ -633,7 +636,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Natural travertine with unique veining. On the coffee table, the vanity, or the nightstand. Endlessly useful.",
     description: "Rectangular tray carved from natural travertine stone. Each piece features unique veining. Felt pads protect surfaces. 14\" x 8\".",
     attributes: ["Travertine", "Felt Pads", "14x8\"", "Each Unique"],
-    affiliateLink: "https://www.amazon.ca/dp/B09N3THVXR?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07VRQXZYG?tag=phcfastore-20",
     image: "/products/decorative-tray.jpg",
     badge: "Small Luxury",
     featured: false,
@@ -655,7 +658,7 @@ export const ProductManifest: Product[] = [
     editorNote: "The Hans Wegner icon. Solid oak, handwoven paper cord seat, century-tested design that never goes out of style.",
     description: "Iconic wishbone chair designed by Hans Wegner in 1949. Solid oak frame with handwoven natural paper cord seat. Made in Denmark.",
     attributes: ["Solid Oak", "Paper Cord Seat", "MCM Icon", "Made in Denmark"],
-    affiliateLink: "https://www.amazon.ca/dp/B07PQKLD3R?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07QMQR49J?tag=phcfastore-20",
     image: "/products/dining-chair.jpg",
     badge: "Design Classic",
     featured: true,
@@ -677,7 +680,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Three sizes in matte glaze stoneware. For coffee, tea, and sugar, or flour, salt, and spices. Kitchen storage, elevated.",
     description: "Set of three nesting canisters in matte stoneware with wooden lids. Stackable design. Hand-thrown in Japan. Sizes: small, medium, large.",
     attributes: ["Stoneware", "Wood Lids", "Set of 3", "Made in Japan"],
-    affiliateLink: "https://www.amazon.ca/dp/B08SHGKLMN?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07DCMGBVD?tag=phcfastore-20",
     image: "/products/kitchen-canister-set.jpg",
     badge: "Design Classic",
     featured: false,
@@ -699,7 +702,7 @@ export const ProductManifest: Product[] = [
     editorNote: "Convex glass dome, brass hands, no numerals. Time-telling as an art form. Quiet sweep movement.",
     description: "Minimalist wall clock with convex glass dome and brushed brass hands. No numbers for clean aesthetic. Silent sweep movement. 12\" diameter.",
     attributes: ["Glass Dome", "Brass Hands", "Silent Movement", "12\" Diameter"],
-    affiliateLink: "https://www.amazon.ca/dp/B08K3PRQM8?tag=phcfastore-20",
+    affiliateLink: "https://www.amazon.ca/dp/B07BF4QJQM?tag=phcfastore-20",
     image: "/products/minimalist-wall-clock.jpg",
     badge: "Design Classic",
     featured: false,
@@ -748,3 +751,26 @@ export function getProductBySlug(slug: string): Product | undefined {
 export function getProductById(id: string): Product | undefined {
   return ProductManifest.find(p => p.id === id);
 }
+
+/**
+ * Get the best affiliate link for a product
+ * Uses priority-based resolution if multiple links exist
+ */
+export function getProductAffiliateUrl(product: Product): string {
+  // If product has multiple affiliate links, resolve the best one
+  if (product.affiliateLinks && product.affiliateLinks.length > 0) {
+    return getPrimaryAffiliateUrl(product.affiliateLinks);
+  }
+  // Fall back to the single affiliate link
+  return product.affiliateLink || "#";
+}
+
+// Re-export affiliate utilities for convenience
+export type { AffiliateNetwork, AffiliateLink, AffiliateConfig } from "./affiliates";
+export {
+  getEnabledNetworks,
+  getConfiguredNetworks,
+  buildAmazonLink,
+  resolveAffiliateLink,
+  getPrimaryAffiliateUrl
+} from "./affiliates";

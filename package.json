@@ -12,7 +12,11 @@
     "generate": "node scripts/generate-pages.mjs",
     "sync": "npm run affiliate:update && npm run generate",
     "import:links": "node scripts/import-products-from-links.mjs",
-    "weekly:batch": "node scripts/prepare-weekly-batch.mjs"
+    "weekly:batch": "node scripts/prepare-weekly-batch.mjs",
+    "enrich-products": "node automation/engines/product-enricher.js",
+    "update-manifest": "node automation/engines/manifest-updater.js",
+    "sync-products": "npm run enrich-products && npm run update-manifest",
+    "populate-images": "node automation/engines/image-populator.js"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0",
