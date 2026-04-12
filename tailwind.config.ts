@@ -15,23 +15,34 @@ const config: Config = {
           oat: "#F5F2ED",
           sand: "#E8E4DD",
           "warm-white": "#FDFCFA",
+          parchment: "#F0EBE3",
+          // Natural Materials
+          walnut: "#5C4033",
+          oak: "#8B7355",
+          brass: "#B5986D",
+          clay: "#A67B5B",
+          olive: "#6B7355",
+          stone: "#8A8479",
           // Darks
           black: "#1A1D19",
           charcoal: "#3D3D3D",
+          "smoked-glass": "#5A5A5A",
           // Brand
           forest: "#03854C",
           forestDark: "#026B3D",
           "forest-light": "#E8F5EE",
           // Accents
-          walnut: "#5C4033",
           terracotta: "#C4785C",
           "terracotta-light": "#F5E6E0",
           moss: "#6B7D5C",
+          "moss-light": "#E8EDE5",
           sage: "#8FAE8B",
           "sage-light": "#D4E4D1",
           // Supporting
           muted: "#6B695F",
+          "muted-light": "#9A9890",
           line: "#E5E2DB",
+          "line-dark": "#D5D0C7",
         },
       },
       fontFamily: {

@@ -2,8 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Product } from "@/lib/manifest";
-import { withAffiliateTag } from "@/lib/site";
+import { Product, getProductAffiliateUrl } from "@/lib/manifest";
+import { formatPrice, getCtaText } from "@/lib/site";
 
 interface ProductCardProps {
   product: Product;
@@ -23,12 +23,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
     fetch('/api/analytics', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type: 'affiliate_click', productId: product.id })
+      body: JSON.stringify({
+        type: 'affiliate_click',
+        productId: product.id,
+        retailer: product.retailerName,
+        price: product.price
+      })
     }).catch(() => {});
   };
 
-  const affiliateUrl = withAffiliateTag(product.affiliateLink);
-  const displayAttributes = product.attributes.slice(0, compact ? 2 : 4);
+  const affiliateUrl = getProductAffiliateUrl(product);
+  const displayMaterials = product.materials.slice(0, compact ? 2 : 4);
 
   return (
     <article className="phancy-product-card group">
@@ -40,8 +45,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <div className="phancy-product-badge">
               <span className={`phancy-badge ${
                 product.badge.includes("Editor") ? "phancy-badge-forest" :
-                product.badge.includes("Most") ? "phancy-badge-terracotta" :
-                "phancy-badge-walnut"
+                product.badge.includes("Classic") ? "phancy-badge-walnut" :
+                product.badge.includes("American") ? "phancy-badge-terracotta" :
+                product.badge.includes("Artisan") || product.badge.includes("Fair") ? "phancy-badge-moss" :
+                "phancy-badge-charcoal"
               }`}>
                 {product.badge}
               </span>
@@ -49,20 +56,27 @@ const ProductCard: React.FC<ProductCardProps> = ({
           )}
 
           {/* Image placeholder - replace with actual image when available */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-2xl opacity-30">
-              {product.category}
-            </span>
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[var(--oat)] to-[var(--sand)]">
+            <div className="text-center px-4">
+              <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-lg opacity-50">
+                {product.brand}
+              </span>
+            </div>
           </div>
         </div>
       </Link>
 
       {/* Content */}
       <div className="phancy-product-content">
-        {/* Category */}
-        <span className="phancy-product-category">
-          {product.subCategory}
-        </span>
+        {/* Category & Retailer */}
+        <div className="flex items-center justify-between mb-2">
+          <span className="phancy-product-category">
+            {product.subCategory}
+          </span>
+          <span className="text-[0.6rem] font-medium uppercase tracking-wider text-[var(--muted)] opacity-60">
+            {product.retailerName}
+          </span>
+        </div>
 
         {/* Title */}
         <Link href={`/product/${product.slug}`}>
@@ -83,12 +97,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </p>
         )}
 
-        {/* Attributes */}
-        {showAttributes && displayAttributes.length > 0 && (
+        {/* Materials */}
+        {showAttributes && displayMaterials.length > 0 && (
           <div className="phancy-product-attributes">
-            {displayAttributes.map((attr, idx) => (
+            {displayMaterials.map((material, idx) => (
               <span key={idx} className="phancy-product-attribute">
-                {attr}
+                {material}
               </span>
             ))}
           </div>
@@ -97,7 +111,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {/* Footer: Price + CTA */}
         <div className="phancy-product-footer">
           <span className="phancy-product-price">
-            ${product.price.toFixed(0)}
+            {formatPrice(product.price, product.currency)}
           </span>
 
           <a
@@ -107,7 +121,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             rel="noopener noreferrer sponsored"
             className="phancy-product-cta"
           >
-            View on Amazon
+            {getCtaText(product.retailerName)}
           </a>
         </div>
       </div>
@@ -119,15 +133,17 @@ export default ProductCard;
 
 // Compact variant for smaller grids
 export const ProductCardCompact: React.FC<{ product: Product }> = ({ product }) => {
-  const affiliateUrl = withAffiliateTag(product.affiliateLink);
+  const affiliateUrl = getProductAffiliateUrl(product);
 
   return (
     <article className="group bg-[var(--warm-white)] border border-[var(--line)] rounded-[var(--radius-lg)] overflow-hidden transition-all duration-300 hover:border-[var(--sand)] hover:shadow-[var(--shadow-md)]">
       <Link href={`/product/${product.slug}`} className="block">
         <div className="aspect-square bg-gradient-to-br from-[var(--oat)] to-[var(--sand)] flex items-center justify-center relative overflow-hidden">
-          <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-xl opacity-30">
-            {product.category}
-          </span>
+          <div className="text-center px-3">
+            <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-sm opacity-50">
+              {product.brand}
+            </span>
+          </div>
         </div>
       </Link>
 
@@ -142,7 +158,7 @@ export const ProductCardCompact: React.FC<{ product: Product }> = ({ product }) 
         </Link>
         <div className="flex items-center justify-between">
           <span className="font-[var(--font-display)] font-semibold text-[var(--soft-black)]">
-            ${product.price.toFixed(0)}
+            {formatPrice(product.price, product.currency)}
           </span>
           <a
             href={affiliateUrl}
@@ -160,7 +176,20 @@ export const ProductCardCompact: React.FC<{ product: Product }> = ({ product }) 
 
 // Feature card for larger displays
 export const ProductCardFeature: React.FC<{ product: Product }> = ({ product }) => {
-  const affiliateUrl = withAffiliateTag(product.affiliateLink);
+  const affiliateUrl = getProductAffiliateUrl(product);
+
+  const handleAffiliateClick = () => {
+    fetch('/api/analytics', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'affiliate_click',
+        productId: product.id,
+        retailer: product.retailerName,
+        price: product.price
+      })
+    }).catch(() => {});
+  };
 
   return (
     <article className="group bg-[var(--warm-white)] border border-[var(--line)] rounded-[var(--radius-xl)] overflow-hidden transition-all duration-500 hover:border-[var(--sand)] hover:shadow-[var(--shadow-lg)]">
@@ -173,15 +202,22 @@ export const ProductCardFeature: React.FC<{ product: Product }> = ({ product }) 
                 <span className="phancy-badge phancy-badge-forest">{product.badge}</span>
               </div>
             )}
-            <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-3xl opacity-30">
-              {product.category}
-            </span>
+            <div className="text-center px-6">
+              <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-2xl opacity-40">
+                {product.brand}
+              </span>
+            </div>
           </div>
         </Link>
 
         {/* Content */}
         <div className="p-8 md:p-10 flex flex-col justify-center">
-          <span className="phancy-eyebrow-accent mb-3">{product.subCategory}</span>
+          <div className="flex items-center justify-between mb-3">
+            <span className="phancy-eyebrow-accent">{product.subCategory}</span>
+            <span className="text-[0.65rem] font-medium uppercase tracking-wider text-[var(--muted)]">
+              {product.retailerName}
+            </span>
+          </div>
 
           <Link href={`/product/${product.slug}`}>
             <h3 className="phancy-h2 mb-2 group-hover:text-[var(--forest)] transition-colors">
@@ -198,26 +234,88 @@ export const ProductCardFeature: React.FC<{ product: Product }> = ({ product }) 
           </p>
 
           <div className="flex flex-wrap gap-2 mb-6">
-            {product.attributes.slice(0, 4).map((attr, idx) => (
+            {product.materials.slice(0, 4).map((material, idx) => (
               <span key={idx} className="phancy-product-attribute">
-                {attr}
+                {material}
               </span>
             ))}
           </div>
 
+          {/* Style Tags */}
+          {product.styleTags && product.styleTags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {product.styleTags.slice(0, 3).map((tag, idx) => (
+                <span key={idx} className="text-[0.65rem] font-medium uppercase tracking-wider text-[var(--muted)] bg-[var(--oat)] px-2 py-1 rounded">
+                  {tag.replace(/-/g, ' ')}
+                </span>
+              ))}
+            </div>
+          )}
+
           <div className="flex items-center justify-between pt-6 border-t border-[var(--line)]">
             <span className="font-[var(--font-display)] text-2xl font-semibold text-[var(--soft-black)]">
-              ${product.price.toFixed(0)}
+              {formatPrice(product.price, product.currency)}
             </span>
             <a
               href={affiliateUrl}
+              onClick={handleAffiliateClick}
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="phancy-btn phancy-btn-primary"
             >
-              View on Amazon
+              {getCtaText(product.retailerName)}
             </a>
           </div>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+// Gallery card for collection pages
+export const ProductCardGallery: React.FC<{ product: Product }> = ({ product }) => {
+  const affiliateUrl = getProductAffiliateUrl(product);
+
+  return (
+    <article className="group relative">
+      <Link href={`/product/${product.slug}`} className="block">
+        <div className="aspect-[3/4] bg-gradient-to-br from-[var(--oat)] to-[var(--sand)] rounded-[var(--radius-lg)] overflow-hidden mb-4 relative">
+          {product.badge && (
+            <div className="absolute top-3 left-3 z-10">
+              <span className="phancy-badge phancy-badge-forest text-xs">{product.badge}</span>
+            </div>
+          )}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-xl opacity-40">
+              {product.brand}
+            </span>
+          </div>
+          {/* Hover overlay */}
+          <div className="absolute inset-0 bg-[var(--soft-black)]/0 group-hover:bg-[var(--soft-black)]/5 transition-colors duration-300" />
+        </div>
+      </Link>
+
+      <div className="space-y-1">
+        <p className="font-[var(--font-display)] text-[0.65rem] font-medium tracking-wider uppercase text-[var(--muted)]">
+          {product.brand}
+        </p>
+        <Link href={`/product/${product.slug}`}>
+          <h3 className="font-[var(--font-display)] text-base font-semibold text-[var(--soft-black)] leading-snug group-hover:text-[var(--forest)] transition-colors">
+            {product.title}
+          </h3>
+        </Link>
+        <div className="flex items-center justify-between pt-2">
+          <span className="font-[var(--font-display)] font-semibold text-[var(--soft-black)]">
+            {formatPrice(product.price, product.currency)}
+          </span>
+          <a
+            href={affiliateUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="text-xs font-[var(--font-display)] font-medium text-[var(--forest)] hover:underline"
+          >
+            {product.retailerName}
+          </a>
         </div>
       </div>
     </article>

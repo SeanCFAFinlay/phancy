@@ -3,8 +3,8 @@ import Link from "next/link";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import ProductCard from "@/components/ProductCard";
-import { ProductManifest, getProductBySlug, getProductsByCategory } from "@/lib/manifest";
-import { withAffiliateTag } from "@/lib/site";
+import { ProductManifest, getProductBySlug, getProductsByCategory, getProductAffiliateUrl } from "@/lib/manifest";
+import { formatPrice, getCtaText } from "@/lib/site";
 
 export function generateStaticParams() {
   return ProductManifest.map((p) => ({ slug: p.slug }));
@@ -20,7 +20,7 @@ export async function generateMetadata({
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: `${product.title} | Phancy`,
+    title: `${product.title} by ${product.brand} | Phancy`,
     description: product.description,
   };
 }
@@ -35,10 +35,13 @@ export default async function ProductPage({
 
   if (!product) return notFound();
 
-  const affiliateUrl = withAffiliateTag(product.affiliateLink);
+  const affiliateUrl = getProductAffiliateUrl(product);
   const relatedProducts = getProductsByCategory(product.category)
     .filter(p => p.id !== product.id)
     .slice(0, 4);
+
+  // Get category URL
+  const categoryUrl = `/${product.category.toLowerCase()}`;
 
   return (
     <>
@@ -54,7 +57,7 @@ export default async function ProductPage({
               </Link>
               <span className="text-[var(--line)]">/</span>
               <Link
-                href={product.category === "Wellness" ? "/wellness" : "/homewares"}
+                href={categoryUrl}
                 className="hover:text-[var(--forest)] transition-colors"
               >
                 {product.category}
@@ -75,24 +78,33 @@ export default async function ProductPage({
                   <div className="absolute top-6 left-6 z-10">
                     <span className={`phancy-badge ${
                       product.badge.includes("Editor") ? "phancy-badge-forest" :
-                      product.badge.includes("Most") ? "phancy-badge-terracotta" :
-                      "phancy-badge-walnut"
+                      product.badge.includes("Classic") ? "phancy-badge-walnut" :
+                      product.badge.includes("American") ? "phancy-badge-terracotta" :
+                      "phancy-badge-charcoal"
                     }`}>
                       {product.badge}
                     </span>
                   </div>
                 )}
-                <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-4xl">
-                  {product.category}
-                </span>
+                <div className="text-center px-6">
+                  <span className="font-[var(--font-body)] italic text-[var(--muted-light)] text-3xl opacity-40">
+                    {product.brand}
+                  </span>
+                </div>
               </div>
 
               {/* Product Info */}
               <div className="flex flex-col justify-center">
                 <div className="mb-6">
-                  <span className="phancy-eyebrow mb-2 block">{product.subCategory}</span>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="phancy-eyebrow">{product.subCategory}</span>
+                    <span className="text-[var(--line)]">|</span>
+                    <span className="text-xs font-medium uppercase tracking-wider text-[var(--muted)]">
+                      {product.retailerName}
+                    </span>
+                  </div>
                   <h1 className="phancy-h1 mb-3">{product.title}</h1>
-                  <p className="font-[var(--font-display)] text-[var(--muted)]">{product.brand}</p>
+                  <p className="font-[var(--font-display)] text-lg text-[var(--muted)]">{product.brand}</p>
                 </div>
 
                 <p className="phancy-editorial text-[var(--charcoal)] mb-6">
@@ -101,21 +113,40 @@ export default async function ProductPage({
 
                 <p className="phancy-body mb-8">{product.description}</p>
 
-                {/* Attributes */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {product.attributes.map((attr, idx) => (
-                    <span key={idx} className="phancy-product-attribute">
-                      {attr}
-                    </span>
-                  ))}
-                </div>
+                {/* Materials */}
+                {product.materials && product.materials.length > 0 && (
+                  <div className="mb-6">
+                    <p className="phancy-caption mb-3">Materials</p>
+                    <div className="flex flex-wrap gap-2">
+                      {product.materials.map((material, idx) => (
+                        <span key={idx} className="phancy-product-attribute">
+                          {material}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Style Tags */}
+                {product.styleTags && product.styleTags.length > 0 && (
+                  <div className="mb-8">
+                    <p className="phancy-caption mb-3">Style</p>
+                    <div className="flex flex-wrap gap-2">
+                      {product.styleTags.map((tag, idx) => (
+                        <span key={idx} className="text-xs font-medium uppercase tracking-wider text-[var(--muted)] bg-[var(--oat)] px-3 py-1.5 rounded-full">
+                          {tag.replace(/-/g, ' ')}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Price & CTA */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 bg-[var(--oat)] rounded-[var(--radius-xl)] mb-8">
                   <div>
                     <p className="phancy-caption mb-1">Price</p>
                     <p className="font-[var(--font-display)] text-3xl font-semibold text-[var(--soft-black)]">
-                      ${product.price.toFixed(0)}
+                      {formatPrice(product.price, product.currency)}
                     </p>
                   </div>
                   <a
@@ -124,9 +155,22 @@ export default async function ProductPage({
                     rel="noopener noreferrer sponsored"
                     className="phancy-btn phancy-btn-primary phancy-btn-lg flex-1 sm:flex-initial text-center"
                   >
-                    View on Amazon
+                    {getCtaText(product.retailerName)}
                   </a>
                 </div>
+
+                {/* Source URL Note */}
+                <p className="text-xs text-[var(--muted)] mb-6">
+                  Available at{" "}
+                  <a
+                    href={product.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[var(--forest)]"
+                  >
+                    {product.retailerName}
+                  </a>
+                </p>
 
                 {/* Collections */}
                 {product.collection && product.collection.length > 0 && (
@@ -198,7 +242,7 @@ export default async function ProductPage({
               rel="noopener noreferrer sponsored"
               className="phancy-btn phancy-btn-white inline-flex"
             >
-              View on Amazon
+              {getCtaText(product.retailerName)}
             </a>
           </div>
         </section>
